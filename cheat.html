@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Modelica Cheat Sheet</title>
+    <title>Modelica Quick Reference</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">  </head>
     <link href="css/cheatsheet.css" rel="stylesheet" media="screen">
-  </head>
   <body>
     <div class="row">
-      <div class="span2 module">
+      <div class="span2">
+	Xogeny
+      </div>
+      <div class="span8">
+	<h4 class="heading centered">Modelica Quick Reference</h4>
+      </div>
+      <div class="span2 rightjust">
+	CyDesign
+      </div>
+    </div>
+    <ul class="nav nav-tabs" id="maintabs">
+      <li class="active"><a data-toggle="tab" href="#basic">Basic</a></li>
+      <li><a data-toggle="tab" href="#functions">Functions</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="basic">
+	<div class="row">
+	  <div id="basic_col1" class="span2">
+	  </div>
+	  <div id="basic_col2" class="span5">
+	  </div>
+	  <div id="basic_col3" class="span4">
+	  </div>
+	</div>
+      </div>
+      <div class="tab-pane" id="functions">
+	<div class="row">
+	  <div id="func_col1" class="span2">
+	  </div>
+	  <div id="func_col2" class="span5">
+	  </div>
+	  <div id="func_col3" class="span4">
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <div>
+
+      <!--- Information about built-in types -->
+      <div id="types" class="span2 module">
 	<h5>Builtin Types</h5>
 	<div class="modbod">
-<span id="tt1">hover over me</span><br>
 <span id="rtype"><tt>Real</tt></span>
 <br>
 <tt id="itype">Integer</tt><br>
@@ -19,7 +58,9 @@
 <tt id="stype">String</tt>
 	</div>
       </div>
-      <div class="span8 module">
+
+      <!--- An outline of a sample model --->
+      <div id="model_template" class="span8 module">
 	<h5>Model Template</h5>
 	<div class="modbod">
 
@@ -30,22 +71,16 @@
 <tt>&nbsp;&nbsp;</tt><i>TypeName</i><tt>   </tt><i>varName</i><tt>;</tt>
 <br>
 <b><tt>end </tt></b><i>ModelName</i></b><tt>;</tt>
+<br>
+<button id="ex1" href="#">Example 1</button>
 	</div>
       </div>
     </div>
+
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $("#tt1").tooltip({
-      "title": "First Tooltip",
-      });
-      $("#rtype").tooltip({
-      "title": "Used to represent floating point number",
-      "placement": "right",
-      });
-      $("#rc").popover({
-      "title": "This is a restricted class"
-      })
-    </script>
+    <script src="js/layout.js"></script>
+    <script src="js/tooltips.js"></script>
+    <script src="js/popovers.js"></script>
   </body>
 </html>
