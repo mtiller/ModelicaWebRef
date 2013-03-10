@@ -4,6 +4,7 @@ $("#ex1").popover({
     "content": "<tt>model FirstOrder \"First order response\"</tt>"
 });
 
+/*
 $("#real_attrs").popover({
     "title": "Common Attributes",
     "html": true,
@@ -17,3 +18,4 @@ $("#real_attrs").popover({
 <tt>nominal: Real</tt><br>\
 <tt>stateSelect: StateSelect</tt><br>"
 })
+*/
