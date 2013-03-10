@@ -7,6 +7,7 @@
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">  </head>
     <link href="css/cheatsheet.css" rel="stylesheet" media="screen">
   <body>
+    <!-- Header block -->
     <div class="row">
       <div class="span2">
 	Xogeny
@@ -18,11 +19,18 @@
 	CyDesign
       </div>
     </div>
+
+    <!-- Tabs -->
     <ul class="nav nav-tabs" id="maintabs">
       <li class="active"><a data-toggle="tab" href="#basic">Basic</a></li>
+      <li><a data-toggle="tab" href="#discrete">Discrete</a></li>
       <li><a data-toggle="tab" href="#functions">Functions</a></li>
     </ul>
+
+    <!-- Tab pages -->
     <div class="tab-content">
+
+      <!-- Basic information -->
       <div class="tab-pane active" id="basic">
 	<div class="row">
 	  <div id="basic_col1" class="span2">
@@ -33,6 +41,20 @@
 	  </div>
 	</div>
       </div>
+
+      <!-- Discrete behavior -->
+      <div class="tab-pane" id="discrete">
+	<div class="row">
+	  <div id="discrete_col1" class="span2">
+	  </div>
+	  <div id="discrete_col2" class="span5">
+	  </div>
+	  <div id="discrete_col3" class="span4">
+	  </div>
+	</div>
+      </div>
+
+      <!-- Functions -->
       <div class="tab-pane" id="functions">
 	<div class="row">
 	  <div id="func_col1" class="span2">
@@ -44,36 +66,58 @@
 	</div>
       </div>
     </div>
-
-    <div>
-
-      <!--- Information about built-in types -->
-      <div id="types" class="span2 module">
-	<h5>Builtin Types</h5>
-	<div class="modbod">
-<span id="rtype"><tt>Real</tt></span>
-<br>
-<tt id="itype">Integer</tt><br>
-<tt id="btype">Boolean</tt><br>
-<tt id="stype">String</tt>
-	</div>
+    
+    <!--- MODULE: Information about built-in types -->
+    <div id="types" class="module">
+      <h5>Builtin Types</h5>
+      <div class="modbod">
+	<span>
+	  <tt id="rtype">Real</tt>
+	  <i id="real_attrs" class="icon-comment pull-right"></i>
+	</span><br>
+	<span>
+	  <tt id="itype">Integer</tt>
+	  <i id="int_attrs" class="icon-comment pull-right"></i>
+	</span><br>
+	<span>
+	  <tt id="btype">Boolean</tt>
+	  <i id="bool_attrs" class="icon-comment pull-right"></i>
+	</span><br>
+	<span>
+	  <tt id="stype">String</tt>
+	  <i id="str_attrs" class="icon-comment pull-right"></i>
+	</span><br>
       </div>
+    </div>
 
-      <!--- An outline of a sample model --->
-      <div id="model_template" class="span8 module">
-	<h5>Model Template</h5>
-	<div class="modbod">
+    <!--- MODULE: Information about variability qualifiers -->
+    <div id="variability" class="module">
+      <h5>Variability</h5>
+      <div class="modbod">
+	<span id="constant"><tt>constant</tt></span><br>
+	<span id="parameter"><tt>parameter</tt></span><br>
+	<span id="discrete"><tt>discrete</tt></span><br>
+      </div>
+    </div>
 
-<b><tt id="rc">model </tt></b><i>ModelName</i> <i>["Descriptive String"]</i>
-<br>
-<tt>&nbsp;&nbsp;//Declarations</tt>
-<br>
-<tt>&nbsp;&nbsp;</tt><i>TypeName</i><tt>   </tt><i>varName</i><tt>;</tt>
-<br>
-<b><tt>end </tt></b><i>ModelName</i></b><tt>;</tt>
-<br>
-<button id="ex1" href="#">Example 1</button>
-	</div>
+    <!--- MODULE: An outline of a sample model --->
+    <div id="model_template" class="module">
+      <h5>Model Template</h5>
+      <div class="modbod">
+	<b><tt id="rc">model </tt></b><i class="classname">ModelName</i> <i id="descstr">"Descriptive String"</i>
+	<br>
+	<tt>&nbsp;&nbsp;</tt><i>TypeName</i><tt>   </tt><i>varName</i><tt> "Declaration syntax";</tt>
+	<br>
+	<b><tt id="initeqs">initial equation</tt></b>
+	<br>
+	<b><tt id="initeqs">equation</tt></b>
+	<br>
+	<b><tt>end </tt></b><i class="classname">ModelName</i><tt>;</tt>
+	<br>
+	<br>
+<!--	<div class="btn-group"> -->
+	  <button class="btn" id="ex1" href="#">Example 1</button>
+<!--	</div> -->
       </div>
     </div>
 
