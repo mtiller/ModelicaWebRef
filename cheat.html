@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modelica Cheat Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/cheatsheet.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="row">
+      <div class="span2 module">
+	<h5>Builtin Types</h5>
+	<div class="modbod">
+<span id="tt1">hover over me</span><br>
+<span id="rtype"><tt>Real</tt></span>
+<br>
+<tt id="itype">Integer</tt><br>
+<tt id="btype">Boolean</tt><br>
+<tt id="stype">String</tt>
+	</div>
+      </div>
+      <div class="span8 module">
+	<h5>Model Template</h5>
+	<div class="modbod">
+
+<b><tt id="rc">model </tt></b><i>ModelName</i> <i>["Descriptive String"]</i>
+<br>
+<tt>&nbsp;&nbsp;//Declarations</tt>
+<br>
+<tt>&nbsp;&nbsp;</tt><i>TypeName</i><tt>   </tt><i>varName</i><tt>;</tt>
+<br>
+<b><tt>end </tt></b><i>ModelName</i></b><tt>;</tt>
+	</div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $("#tt1").tooltip({
+      "title": "First Tooltip",
+      });
+      $("#rtype").tooltip({
+      "title": "Used to represent floating point number",
+      "placement": "right",
+      });
+      $("#rc").popover({
+      "title": "This is a restricted class"
+      })
+    </script>
+  </body>
+</html>
