@@ -1,0 +1,55 @@
+<!-- MODULE: Syntax guide -->
+<div id="syntax" class="module">
+  <h5>Syntax Guide</h5>
+  <table class="table table-striped">
+    <tr>
+      <td>Normal Identifiers:</td>
+      <td><tt class="pull-right">[A-Za-z_][A-Za-z_0-9]*</tt></td>
+      <td>
+	<span>{{ example }}
+	  <div class="popover" title="Sample Identifiers"
+	       data-placement="bottom">
+	    <table class="table table-striped">
+	      <tr>
+		<td><tt>aVariable</tt></td>
+		<td><i>(variable names typically start with lower case letters)</i></td>
+	      </tr>
+	      <tr>
+		<td><tt>another_variable</tt></td>
+		<td><i>(underscores are allowed <b>except at the start</b>)</i></td>
+	      </tr>
+	      <tr>
+		<td><tt>ClassName</tt></td>
+		<td><i>(class names typically start with upper case letters)</i></td>
+	      </tr>
+	    </table>
+	  </div>
+	</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Quoted Identifiers:</td>
+      <td><tt class="pull-right">'...'</tt></td>
+      <td><i id="qid_samples" class="icon-align-left"></i></td>
+    </tr>
+
+    <tr>
+      <td>Vector Literals:</td>
+      <td><tt class="pull-right">{..., ...}</tt></td>
+      <td><i id="vector_samples" class="icon-align-left"></i></td>
+    </tr>
+
+    <tr>
+      <td>Array Literals:</td>
+      <td><tt class="pull-right">[..., ...; ..., ...]</tt></td>
+      <td><i id="array_samples" class="icon-align-left"></i></td>
+    </tr>
+
+    <tr>
+      <td>Array Comprehension:</td>
+      <td><tt class="pull-right">{ f(i,j) <b>for</b> i <b>in</b> 1:ni, <b>for</b> j <b>in</b> 1:nj }</tt></td>
+      <td><i id="acomp_samples" class="icon-align-left"></i></td>
+    </tr>
+  </table>
+</div>

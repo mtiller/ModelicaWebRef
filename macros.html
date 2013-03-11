@@ -1,0 +1,14 @@
+{% macro tab(name,active=True) %}
+{% if active %}
+<li class="active">
+{% else %}
+<li>
+{% endif %}
+  <a data-toggle="tab" href="#{{name}}">{{name}}</a>
+</li>
+{% endmacro %}
+
+{% macro rj(text) %}
+<span class="pull-right">{{text}}</span>
+{% endmacro %}
+

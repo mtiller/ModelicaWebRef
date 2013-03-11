@@ -1,0 +1,80 @@
+{% macro rib_attrs(T) %}
+<tt>fixed:
+  <span class="pull-right typename">Boolean</span>
+</tt><br>
+{% endmacro %}
+{% macro ri_attrs(T) %}
+<tt>min:
+  <span class="pull-right typename">{{T}}</span>
+</tt><br>
+<tt>max:
+  <span class="pull-right typename">{{T}}</span>
+</tt><br>
+{% endmacro %}
+{% macro r_attrs(T) %}
+<tt>unit:
+  <span class="pull-right typename">String</span>
+</tt><br>
+<tt>displayUnit:
+  <span class="pull-right typename">String</span>
+</tt><br>
+<tt>nominal:
+  <span class="pull-right typename">{{T}}</span>
+</tt><br>
+<tt>stateSelect:&nbsp;&nbsp;
+  <span class="pull-right typename">StateSelect</span>
+</tt><br>
+{% endmacro %}
+{% macro ribs_attrs(T) %}
+<tt>quantity:&nbsp;&nbsp;
+  <span class="pull-right typename">String</span>
+</tt><br>
+<tt>start:
+  <span class="pull-right typename">{{T}}</span>
+</tt><br>
+{% endmacro %}
+
+<!--- MODULE: Information about built-in types -->
+<div id="types" class="module">
+  <h5>Builtin Types</h5>
+  <div class="modbod">
+    <span>
+      <tt class="typename">Real</tt>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" title="Real Attributes" data-placement="bottom">
+	  {{ r_attrs("Real") }}
+	  {{ ri_attrs("Real") }}
+	  {{ rib_attrs("Real") }}
+	  {{ ribs_attrs("Real") }}
+	</div>
+      </span>
+    </span><br>
+    <span>
+      <tt class="typename">Integer</tt>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" title="Real Attributes" data-placement="bottom">
+	  {{ ri_attrs("Integer") }}
+	  {{ rib_attrs("Integer") }}
+	  {{ ribs_attrs("Integer") }}
+	</div>
+      </span>
+    </span><br>
+    <span>
+      <tt class="typename">Boolean</tt>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" title="Real Attributes" data-placement="bottom">
+	  {{ rib_attrs("Boolean") }}
+	  {{ ribs_attrs("Boolean") }}
+	</div>
+      </span>
+    </span><br>
+    <span>
+      <tt class="typename">String</tt>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" title="Real Attributes" data-placement="bottom">
+	  {{ ribs_attrs("String") }}
+	</div>
+      </span>
+    </span><br>
+  </div>
+</div>

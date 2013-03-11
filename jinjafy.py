@@ -36,6 +36,7 @@ env = jinja2.Environment(loader=loader)
 
 # Read in JSON data
 if args.vars==None:
+    print "No vars file specified"
     vars = {}
 else:
     try:
@@ -43,7 +44,8 @@ else:
         jsondata = vf.read()
         vf.close()
         vars = json.loads(jsondata)
-    except:
+    except Exception as e:
+	print "Unable to open vars file %s: %s" % (args.vars, str(e))
         vars = {}
 
 #print "Variables:"

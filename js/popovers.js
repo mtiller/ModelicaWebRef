@@ -1,7 +1,18 @@
-$("#ex1").popover({
-    "title": "Example 1",
-    "html": true,
-    "content": "<tt>model FirstOrder \"First order response\"</tt>"
+/* This code traverses the DOM looking for any element
+   that has the class "popover" and attaches it as a popover
+   to it's parent element.  The 'title' attribute of the
+   element is used as the title in the popover.
+*/
+$("* > [class=\"popover\"]").each(function(index) {
+    var parent = $(this).parent()
+    var content = $(this).html()
+    $(parent).popover({
+	"title": $(this).attr("title"),
+	"placement": $(this).attr("data-placement"),
+	"html": true,
+	"content": content
+    });
+    $(this).remove()
 });
 
 /*

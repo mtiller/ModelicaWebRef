@@ -120,3 +120,11 @@ button {
     padding: 9px 15px;
     background-color: #e0e0e0;
 }
+
+.typename {
+    color: #222288;
+}
+
+.funcname {
+    color: #EE44EE;
+}

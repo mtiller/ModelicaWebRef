@@ -1,0 +1,56 @@
+{% from "macros.html" import tab %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }} - v{{ version }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">  </head>
+    <link href="css/cheatsheet.css" rel="stylesheet" media="screen">
+  <body>
+    <!-- Header block -->
+    <div class="container">
+      <div class="row">
+	<div class="span2">
+	  Xogeny
+	</div>
+	<div class="span8">
+	  <h4 class="heading centered">{{ title }} - v{{ version }}</h4>
+	</div>
+	<div class="span2 rightjust">
+	  CyDesign
+	</div>
+      </div>
+
+      <!-- Tabs -->
+      <ul class="nav nav-tabs" id="maintabs">
+	{{ tab("Basic",True) }}
+	{{ tab("Templates",False) }}
+      </ul>
+
+      <!-- Tab pages -->
+      <div id="tab_content" class="tab-content">
+	{% include "basic_tab.html" %}
+
+	{% include "template_tab.html" %}
+      </div>
+      <div id="legend" class="row">
+	<div class="span12">
+	  <ul class="hlist">
+	    <li>{{ comment }}: Read more</li>
+	    <li>{{ warning }}: Note of caution</li>
+	    <li>{{ example }}: Sample code</li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    
+    {% include "modules.html" %}
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/tooltips.js"></script>
+    <script src="js/popovers.js"></script>
+  </body>
+</html>
