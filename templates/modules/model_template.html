@@ -2,28 +2,24 @@
     <div id="model_template" class="module">
       <h5>Model Template</h5>
       <div class="modbod">
-	<b><tt id="rc">model </tt></b><i class="classname">ModelName</i> <i id="descstr">"Descriptive String"</i>
+	<b><tt>model</tt></b> <span class="typename">ModelName</span> <span class="descstr">"Descriptive String"</span>
 	<br>
-	<tt>&nbsp;&nbsp;</tt><i>TypeName</i><tt>   </tt><i>varName</i><tt> "Declaration syntax";</tt>
+	<tt>&nbsp;&nbsp;</tt><span class="typename">TypeName</span><tt>   </tt><i>varName</i><tt> <span class="descstr">"Declaration syntax"</span>;</tt>
 	<br>
 	<b><tt id="initeqs">initial equation</tt></b>
 	<br>
 	<b><tt id="initeqs">equation</tt></b>
 	<br>
-	<b><tt>end </tt></b><i class="classname">ModelName</i><tt>;</tt>
+	<b><tt>end </tt></b><span class="typename">ModelName</span><tt>;</tt>
 	<br>
 	<br>
 	<ul class="hlist">
 	  <li id="ex1">{{ example }}: Example 1
-	  </li>
-	  <li>{{ example }}: Example 2
-	    <div title="Example 2" class="popover">
-	      Popover text
+	    <div class="popover" title="Example 1" data-placement="bottom">
+	      <tt><b>model</b> <span class="typename">FirstOrder</span> <span class="descstr">"First order response"</span></tt><br>
+	      <tt><b>end</b> <span class="typename">FirstOrder</span>;
 	    </div>
 	  </li>
-	  <div id="ex1_div">
-	    <tt>model FirstOrder "First order response"</tt>
-	  </div>
 	</ul>
       </div>
     </div>
