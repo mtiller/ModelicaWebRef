@@ -42,6 +42,7 @@ button {
 }
 
 .row {
+    margin-left: -15px;
     height: auto;
 }
 
@@ -81,7 +82,7 @@ button {
 }
 
 [class*="span"] {
-    margin-left: 18px; 
+    margin-left: 17px; 
 }
 
 
