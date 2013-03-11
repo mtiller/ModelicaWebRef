@@ -128,3 +128,11 @@ button {
 .funcname {
     color: #EE44EE;
 }
+
+.nobreak {
+    white-space: nowrap;
+}
+
+.popover {
+    max-width: 40%;
+}

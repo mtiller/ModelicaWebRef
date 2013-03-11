@@ -35,6 +35,17 @@
     </tr>
 
     <tr>
+      <td>Enumeration Definition:</td>
+      <td><tt class="pull-right"><b>type</b> <span class="typename">X</span> = <b>enumeration</b>(...);</tt></td>
+      <td>{{ example }}
+	<div class="popover">
+	  <tt><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</tt><br>
+	  <tt><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</tt><br>
+	</div>
+      </td>
+    </tr>
+
+    <tr>
       <td>Vector Literals:</td>
       <td><tt class="pull-right">{..., ...}</tt></td>
       <td><i id="vector_samples" class="icon-align-left"></i></td>
@@ -48,8 +59,22 @@
 
     <tr>
       <td>Array Comprehension:</td>
-      <td><tt class="pull-right">{ f(i,j) <b>for</b> i <b>in</b> 1:ni, <b>for</b> j <b>in</b> 1:nj }</tt></td>
-      <td><i id="acomp_samples" class="icon-align-left"></i></td>
+      <td><tt class="pull-right">{ f(i) <b>for</b> i <b>in</b> 1:ni }</tt></td>
+      <td>
+	{{ example }}
+	<div class="popover" data-placement="bottom">
+	  <table class="table table-striped">
+	    <tr>
+	      <td>Two indices</td>
+	      <td>
+		<span class="nobreak">
+		  <tt class="pull-right">{ f(i,j) <b>for</b> i <b>in</b> 1:ni, <b>for</b> j <b>in</b> 1:nj }</tt>
+		</span>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </td>
     </tr>
   </table>
 </div>

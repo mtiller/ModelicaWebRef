@@ -4,11 +4,19 @@
   <div class="modbod">
     <span>
       <tt class="typename">AssertionLevel</tt>
-      <i id="assert_levels" class="icon-comment pull-right"></i>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" data-placement="left">
+	  <tt><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</tt><br>
+	</div>
+      </span>
     </span><br>
     <span>
       <tt class="typename">StateSelect</tt>
-      <i id="state_select" class="icon-comment pull-right"></i>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" data-placement="left">
+	  <tt><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</tt><br>
+	</div>
+      </span>
     </span><br>
   </div>
 </div>
