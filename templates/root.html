@@ -5,20 +5,22 @@
     <title>{{ title }} - v{{ version }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">  </head>
+    <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"> 
     <link href="css/cheatsheet.css" rel="stylesheet" media="screen">
+  </head>
   <body>
     <!-- Header block -->
     <div class="container">
       <div class="row">
 	<div class="span2">
-	  Xogeny
+	  <a href="http://www.xogeny.com"><img src="img/Xogeny.png"></a>
 	</div>
 	<div class="span8">
 	  <h4 class="heading centered">{{ title }} - v{{ version }}</h4>
 	</div>
 	<div class="span2 rightjust">
-	  CyDesign
+	  <a href="http://www.cydesign.com"><img src="img/CyDesign.png"></a>
 	</div>
       </div>
 
@@ -40,11 +42,39 @@
 	    <li>{{ comment }}: Read more</li>
 	    <li>{{ warning }}: Note of caution</li>
 	    <li>{{ example }}: Sample code</li>
+	    <li class="pull-right">
+	      &copy; <a href="http://www.xogeny.com/">
+		<span class="xogeny">Xogeny</span>
+	      </a>, 2013
+	      &nbsp; &nbsp;
+	      <a href="#acks" role="button" data-toggle="modal">
+		<i class="icon-bullhorn"></i>
+	      </a>
+	    </li>
 	  </ul>
 	</div>
       </div>
     </div>
     
+    <div id="acks" class="modal hide fade">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	<h3>Acknowledgments</h3>
+      </div>
+      <div class="modal-body">
+	<p>
+	  The inspiration for this quick reference card came from
+	  Derek Cheng at <a href="www.cydesign.com">CyDesign</a>.
+	<p>
+	<p>
+	  Both the style and functionality of this quick reference
+	  page is enabled
+	  by <a href="http://twitter.github.com/bootstrap">Bootstrap</a>
+	  and <a href="http://glyphicons.com/">Glyphicons</a>.
+	</p>
+      </div>
+    </div>
+
     {% include "modules.html" %}
 
     <script src="http://code.jquery.com/jquery.js"></script>

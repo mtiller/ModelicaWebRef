@@ -4,7 +4,7 @@ html {
 
 body {
     padding: 0px;
-    background-color: #f9f9f9;
+    background-color: #c0c0c0;
     height: 100%;
 }
 
@@ -139,4 +139,24 @@ button {
 
 .popover {
     max-width: 40%;
+}
+
+.nav-tabs > li > a {
+    color: #808080;
+}
+
+.nav-tabs > .active > a {
+    color: black;
+}
+
+.nav-tabs > .active > a:hover {
+    color: black;
+}
+
+.nav-tabs > .active > a:focus {
+    color: black;
+}
+
+.xogeny {
+    font-family: 'Philosopher', sans-serif;
 }

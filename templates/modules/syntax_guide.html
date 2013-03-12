@@ -36,12 +36,47 @@
 
     <tr>
       <td>Enumeration Definition:</td>
-      <td><tt class="pull-right"><b>type</b> <span class="typename">X</span> = <b>enumeration</b>(...);</tt></td>
-      <td>{{ example }}
-	<div class="popover">
-	  <tt><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</tt><br>
-	  <tt><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</tt><br>
-	</div>
+      <td><tt class="pull-right"><b>type</b> <span class="typename">E</span> = <b>enumeration</b>(e1, e2, ..., en);</tt></td>
+      <td>
+	<span>{{ comment }}
+	  <div class="popover" data-placement="bottom">
+	    <table class="table table-striped">
+	      <tr>
+		<td>Attributes</td>
+		<td>Conversions</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <tt><span class="typename">E</span>.e1</tt>,
+		  ...,
+		  <tt><span class="typename">E</span>.en</tt>
+		  <br>
+		  <tt><span class="typename">E</span>.start=e1</tt>
+		  <br>
+		  <tt><span class="typename">E</span>.min=e1</tt>, 
+		  <br>
+		  <tt><span class="typename">E</span>.max=en</tt>
+		</td>
+		<td>
+		  <tt>Integer(<span class="typename">E</span>.e1)=1</tt>
+		  <br>
+		  <tt>Integer(<span class="typename">E</span>.en)=n</tt>
+		  <br>
+		  <tt>String(<span class="typename">E</span>.e1)="e1"</tt>
+		</td>
+	      </tr>
+	      <tr>
+		<td colspan="2">Examples</td>
+	      </tr>
+	      <tr>
+		<td colspan="2">
+		  <tt><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</tt><br>
+		  <tt><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</tt><br>
+		</td>
+	      </tr>
+	    </table>
+	  </div>
+	</span>
       </td>
     </tr>
 
