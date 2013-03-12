@@ -1,0 +1,44 @@
+{% from "macros.html" import xref %}
+
+<!--- MODULE: Lexical conventions -->
+<div class="module">
+  <span class="pull-right headbut">
+    {{ comment }}
+    <div class="popover" data-placement="top">
+      See {{ xref("2",11) }} for more details.
+    </div>
+  </span>
+
+  <h5>Lexical Rules</h5>
+  <div class="modbod">
+    <span>
+      Comments
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      Identifiers
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      Numbers
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+  </div>
+</div>

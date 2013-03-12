@@ -1,6 +1,7 @@
 {% from "macros.html" import xref %}
 
 <tt>
+<b>within</b> <span class="typename">ParentPackage</span>; <span class="comment">// <b>within</b>; for top-level packages</span><br>
 <b>package</b> <span class="typename">PackageName</span> <span class="descstr">"Package description"</span><br>
 &nbsp;&nbsp;<span class="comment">// The fully qualified name for this package</span><br>
 &nbsp;&nbsp;<span class="comment">// will be PackageName.NestedPackage</span><br>
@@ -13,7 +14,8 @@
 &nbsp;&nbsp;<b>model</b> <span class="typename">SomeModel</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;...<br>
 &nbsp;&nbsp;<b>end</b> <span class="typename">SomeModel</span>;<br><br>
-&nbsp;&nbsp;<b>annotation</b>(version="1.0", <span class="comment">// This package's version number, if it is a top-level package</span><br>
+&nbsp;&nbsp;<b>annotation</b>(version="1.0", <span class="comment">// This package's version number,</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// if it is a top-level package</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Set of packages this package depends on</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uses(AnotherPackageName(version="2.0"),<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YetAnother(version="1.2")));<br>

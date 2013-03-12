@@ -1,3 +1,5 @@
+{% from "macros.html" import xref %}
+
 <!-- MODULE: Syntax guide -->
 <div id="syntax" class="module">
   <h5>Syntax Guide</h5>
@@ -9,7 +11,7 @@
       </td>
       <td>
 	<span class="pull-right">
-	  <tt>// until EOL</tt>
+	  <tt><span class="comment">// until EOL</span></tt>
 	</span>
       </td>
       <td>
@@ -19,7 +21,11 @@
       <td colspan="2">Multi-Line Comment:</td>
       <td>
 	<span class="pull-right">
-	  <tt>/* Can span multiple<br>&nbsp;&nbsp;&nbsp;lines */</tt>
+	  <tt>
+	    <span class="comment">
+	      /* Can span multiple<br>&nbsp;&nbsp;&nbsp;lines */
+	    </span>
+	  </tt>
 	</span>
       </td>
       <td>
@@ -121,11 +127,23 @@
 		</td>
 	      </tr>
 	    </table>
+	    <div class="footnote">
+	      Complete details on enumerations can be found in {{
+	      xref("4.8.5",50) }}
+	    </div>
 	  </div>
 	</span>
       </td>
     </tr>
 
+    <tr>
+      <td>Inheritance</td>
+      <td colspan="2">
+	<tt class="pull-right nobreak"><b>extends</b> <span class="typename">BaseClass</span>(<span class="comment">/* modifications */</span>);</tt>
+      </td>
+      <td>
+      </td>
+    </tr>
     <tr>
       <td colspan="2" class="nobreak">Replaceable Component:</td>
       <td>
@@ -149,38 +167,6 @@
     </tr>
 
     <tr>
-      <td colspan="2">Vector Literals:</td>
-      <td><tt class="pull-right">{..., ...}</tt></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td colspan="2">Array Literals:</td>
-      <td><tt class="pull-right">[..., ...; ..., ...]</tt></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td colspan="2">Array Comprehension:</td>
-      <td><tt class="pull-right">{ f(i) <b>for</b> i <b>in</b> 1:ni }</tt></td>
-      <td>
-	{{ example }}
-	<div class="popover" data-placement="bottom">
-	  <table class="table table-striped">
-	    <tr>
-	      <td>Two indices</td>
-	      <td>
-		<span class="nobreak">
-		  <tt class="pull-right">{ f(i,j) <b>for</b> i <b>in</b> 1:ni, <b>for</b> j <b>in</b> 1:nj }</tt>
-		</span>
-	      </td>
-	    </tr>
-	  </table>
-	</div>
-      </td>
-    </tr>
-
-    <tr>
       <td colspan="2">Relations:</td>
       <td>
 	<tt class="pull-right">
@@ -191,34 +177,14 @@
     </tr>
 
     <tr>
-      <td colspan="2">For Loop:</td>
+      <td colspan="2">Connect Statement:</td>
       <td>
 	<tt class="pull-right">
-	  <b>for</b> i <b>in</b> 1:n <b>loop</b> ... <b>end</b> <b>for</b>;
+	  <b>connect</b>(a, b);
 	</tt>
       </td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td colspan="2">While Loop:</td>
       <td>
-	<tt class="pull-right">
-	  <b>while</b> ... <b>loop</b> ... <b>end</b> <b>while</b>;
-	</tt>
       </td>
-      <td></td>
     </tr>
-
-    <tr>
-      <td colspan="2">When Clause:</td>
-      <td>
-	<tt class="pull-right">
-	  <b>when</b> ... <b>then</b> ... <b>end</b> <b>when</b>;
-	</tt>
-      </td>
-      <td></td>
-    </tr>
-
   </table>
 </div>

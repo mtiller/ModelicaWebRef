@@ -1,0 +1,51 @@
+{% from "macros.html" import xref %}
+
+<!--- MODULE: Different statement types -->
+<div class="module">
+  <h5>Statements</h5>
+  <div class="modbod">
+    <span>
+      <b><tt>if</tt></b>
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	    <b>if</b> expr1 <b>then</b> ... <b>end</b> <b>if</b>;
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>when</tt></b>
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	    <b>when</b> expr1 <b>then</b> ... <b>end</b> <b>when</b>;
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>while</tt></b>
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	    <b>while</b> expr <b>loop</b> ... <b>end</b> <b>while</b>;
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>for</tt></b>
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right">
+	  <tt>
+	    <b>for</b> i <b>in</b> 1:n <b>loop</b> ... <b>end</b> <b>for</b>;
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+  </div>
+</div>

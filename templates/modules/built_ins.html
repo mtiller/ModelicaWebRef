@@ -1,39 +1,64 @@
 {% from "macros.html" import xref %}
 
+{% macro attr_headers() %}
+<tr>
+  <th>Attribute</th>
+  <th><span class="pull-right">Type</span></th>
+  <th>&nbsp;&nbsp;<span class="pull-right">Default</span></th>
+</tr>
+{% endmacro %}
 {% macro rib_attrs(T) %}
-<tt>fixed:
-  <span class="pull-right typename">Boolean</span>
-</tt><br>
+<tr>
+  <td><tt>fixed:</tt></td>
+  <td><tt><span class="pull-right typename">Boolean</span></tt></td>
+  <td><span class="pull-right">&nbsp;<tt>false</tt><sup>*</sup></span></td>
+</tr>
 {% endmacro %}
 {% macro ri_attrs(T) %}
-<tt>min:
-  <span class="pull-right typename">{{T}}</span>
-</tt><br>
-<tt>max:
-  <span class="pull-right typename">{{T}}</span>
-</tt><br>
+<tr>
+  <td><tt>min:</tt></td>
+  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td><span class="pull-right">&nbsp;-infinity</span></td>
+</tr>
+<tr>
+  <td><tt>max:</tt></td>
+  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td><span class="pull-right">&nbsp;-infinity</span></td>
+</tr>
 {% endmacro %}
 {% macro r_attrs(T) %}
-<tt>unit:
-  <span class="pull-right typename">String</span>
-</tt><br>
-<tt>displayUnit:
-  <span class="pull-right typename">String</span>
-</tt><br>
-<tt>nominal:
-  <span class="pull-right typename">{{T}}</span>
-</tt><br>
-<tt>stateSelect:&nbsp;&nbsp;
-  <span class="pull-right typename">StateSelect</span>
-</tt><br>
+<tr>
+  <td><tt>unit:</tt></td>
+  <td><tt><span class="pull-right typename">String</span></tt></td>
+  <td><tt><span class="pull-right">&nbsp;""</span></tt></td>
+</tr>
+<tr>
+  <td><tt>displayUnit:</tt></td>
+  <td><tt><span class="pull-right typename">String</span></tt></td>
+  <td><tt><span class="pull-right">""</span></tt></td>
+</tr>
+<tr>
+  <td><tt>nominal:</tt></td>
+  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td></td>
+</tr>
+<tr>
+  <td><tt>stateSelect:&nbsp;&nbsp;</tt></td>
+  <td><tt><span class="pull-right typename">StateSelect</span></tt></td>
+  <td><tt><span class="pull-right">&nbsp;default</span></tt></td>
+</tr>
 {% endmacro %}
-{% macro ribs_attrs(T) %}
-<tt>quantity:&nbsp;&nbsp;
-  <span class="pull-right typename">String</span>
-</tt><br>
-<tt>start:
-  <span class="pull-right typename">{{T}}</span>
-</tt><br>
+{% macro ribs_attrs(T,start) %}
+<tr>
+  <td><tt>quantity:&nbsp;&nbsp;</tt></td>
+  <td><tt><span class="pull-right typename">String</span></tt></td>
+  <td><tt><span class="pull-right">&nbsp;""</span></tt></td>
+</tr>
+<tr>
+  <td><tt>start:</tt></td>
+  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td><tt><span class="pull-right">&nbsp;{{start}}</span></tt></td>
+</tr>
 {% endmacro %}
 
 <!--- MODULE: Information about built-in types -->
@@ -52,10 +77,13 @@
       <tt class="typename">Real</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Real Attributes" data-placement="bottom">
-	  {{ r_attrs("Real") }}
-	  {{ ri_attrs("Real") }}
-	  {{ rib_attrs("Real") }}
-	  {{ ribs_attrs("Real") }}
+	  <table>
+	    {{ attr_headers() }}
+	    {{ r_attrs("Real") }}
+	    {{ ri_attrs("Real") }}
+	    {{ rib_attrs("Real") }}
+	    {{ ribs_attrs("Real", "0.0") }}
+	  </table>
 	</div>
       </span>
     </span><br>
@@ -63,9 +91,12 @@
       <tt class="typename">Integer</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Integer Attributes" data-placement="bottom">
-	  {{ ri_attrs("Integer") }}
-	  {{ rib_attrs("Integer") }}
-	  {{ ribs_attrs("Integer") }}
+	  <table>
+	    {{ attr_headers() }}
+	    {{ ri_attrs("Integer") }}
+	    {{ rib_attrs("Integer") }}
+	    {{ ribs_attrs("Integer", "0") }}
+	  </table>
 	</div>
       </span>
     </span><br>
@@ -73,8 +104,11 @@
       <tt class="typename">Boolean</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Boolean Attributes" data-placement="bottom">
-	  {{ rib_attrs("Boolean") }}
-	  {{ ribs_attrs("Boolean") }}
+	  <table>
+	    {{ attr_headers() }}
+	    {{ rib_attrs("Boolean") }}
+	    {{ ribs_attrs("Boolean", "false") }}
+	  </table>
 	</div>
       </span>
     </span><br>
@@ -82,7 +116,10 @@
       <tt class="typename">String</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="String Attributes" data-placement="bottom">
-	  {{ ribs_attrs("String") }}
+	  <table>
+	    {{ attr_headers() }}
+	    {{ ribs_attrs("String", "\"\"") }}
+	  </table>
 	</div>
       </span>
     </span><br>

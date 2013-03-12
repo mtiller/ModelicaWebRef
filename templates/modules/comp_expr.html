@@ -1,0 +1,55 @@
+{% from "macros.html" import xref %}
+
+<!--- MODULE: Complex expressions -->
+<div class="module">
+  <h5>Complex Expression</h5>
+  <div class="modbod">
+    <span>
+      Vector Literal
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="top">
+	  <tt>
+	    {..., ....}
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      Array Literals
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="top">
+	  <tt>
+	    [..., ...; ..., ...]
+	  </tt>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      Array Comprehensions
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="top">
+	  <table class="table table-striped">
+	    <tr>
+	      <td>Once index</td>
+	      <td>
+		<span class="nobreak">
+		  <tt class="pull-right">{ f(i) <b>for</b> i <b>in</b> 1:ni }</tt>
+		</span>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>Two indices</td>
+	      <td>
+		<span class="nobreak">
+		  <tt class="pull-right">{ f(i,j) <b>for</b> i <b>in</b> 1:ni, <b>for</b> j <b>in</b> 1:nj }</tt>
+		</span>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </span>
+    </span><br>
+  </div>
+</div>
