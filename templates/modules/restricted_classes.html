@@ -1,24 +1,72 @@
+{% from "macros.html" import xref %}
+
 <!--- MODULE: Restricted classes -->
-<div id="classes" class="module">
-  <h5>Restricted Classes</h5>
+<div class="module">
+  <span class="pull-right headbut">
+    {{ comment }}
+    <div class="popover">
+      More information on the various kinds of classes can be found
+      in {{ xref("4.6", 41) }}.
+    </div>
+  </span>
+  <h5>Classes
+  </h5>
   <div class="modbod">
     <span id="model">
       <b><tt>model</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Model">
+	  {% include "samples/sample_model.html" %}
+	</div>
+      </span>
     </span><br>
     <span id="record">
       <b><tt>record</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Sample Record">
+	  {% include "samples/sample_records.html" %}
+	</div>
+      </span>
     </span><br>
     <span id="connector">
       <b><tt>connector</tt></b>
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right" title="Connector Examples">
+	  {% include "samples/sample_connector.html" %}
+	</div>
+      </span>
     </span><br>
     <span id="block">
       <b><tt>block</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Block">
+	  {% include "samples/sample_block.html" %}
+	</div>
+      </span>
     </span><br>
     <span id="type">
       <b><tt>type</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Type Examples">
+	  {% include "samples/sample_types.html" %}
+	</div>
+      </span>
     </span><br>
     <span id="package">
       <b><tt>package</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Package">
+	  {% include "samples/sample_package.html" %}
+	</div>
+      </span>
+    </span><br>
+    <span id="function">
+      <b><tt>function</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Function">
+	  {% include "samples/sample_function.html" %}
+	</div>
+      </span>
     </span><br>
   </div>
 </div>

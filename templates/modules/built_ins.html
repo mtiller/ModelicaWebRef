@@ -1,3 +1,5 @@
+{% from "macros.html" import xref %}
+
 {% macro rib_attrs(T) %}
 <tt>fixed:
   <span class="pull-right typename">Boolean</span>
@@ -35,8 +37,16 @@
 {% endmacro %}
 
 <!--- MODULE: Information about built-in types -->
-<div id="types" class="module">
-  <h5>Builtin Types</h5>
+<div class="module">
+    <div class="pull-right headbut">
+      {{comment}}
+      <div class="popover" data-placement="right">
+	  For complete details on all the predefined types, see {{
+	  xref("4.8",48) }}.
+      </div>
+    </div>
+  <h5>Builtin Types
+  </h5>
   <div class="modbod">
     <span>
       <tt class="typename">Real</tt>

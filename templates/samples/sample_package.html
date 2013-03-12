@@ -1,0 +1,27 @@
+{% from "macros.html" import xref %}
+
+<tt>
+<b>package</b> <span class="typename">PackageName</span> <span class="descstr">"Package description"</span><br>
+&nbsp;&nbsp;<span class="comment">// The fully qualified name for this package</span><br>
+&nbsp;&nbsp;<span class="comment">// will be PackageName.NestedPackage</span><br>
+&nbsp;&nbsp;<b>package</b> <span class="typename">NestedPackage</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Package contents</span><br>
+&nbsp;&nbsp;<b>end</b> <span class="typename">NestedPackage</span>;<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<span class="comment">// The fully qualified name for this model</span><br>
+&nbsp;&nbsp;<span class="comment">// will be PackageName.SomeModel</span><br>
+&nbsp;&nbsp;<b>model</b> <span class="typename">SomeModel</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<b>end</b> <span class="typename">SomeModel</span>;<br><br>
+&nbsp;&nbsp;<b>annotation</b>(version="1.0", <span class="comment">// This package's version number, if it is a top-level package</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Set of packages this package depends on</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uses(AnotherPackageName(version="2.0"),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YetAnother(version="1.2")));<br>
+<b>end</b> <span class="typename">PackageName</span>;
+</tt>
+<div class="footnote">
+  <p>
+    <i>For more details about packages, see {{ xref("13", 161) }}</i>
+  </p>
+</div>
+

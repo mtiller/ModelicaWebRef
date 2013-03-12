@@ -1,0 +1,36 @@
+<b><tt>block</tt></b> <span class="typename">BlockName</span> <span class="descstr">"Descriptive String"</span>
+<br>
+<tt class="comment">&nbsp;&nbsp;// parameters, connectors and sub-compoennts</tt>
+<br>
+<tt>&nbsp;&nbsp;<b>parameter</b> <span class="typename">TypeName</span>   varName <span class="descstr">"Parameter declaration"</span>;</tt><br>
+<tt>&nbsp;&nbsp;<b>input</b> <span class="typename">ConnectorType</span>   conName <span class="descstr">"Connector declaration"</span>;</tt><br>
+<tt>&nbsp;&nbsp;<span class="typename">ModelType</span>   subcompName <span class="descstr">"Sub-component declaration"</span>;</tt>
+<br>
+<tt><b>protected</b></tt><br>
+<tt>&nbsp;&nbsp;<span class="typename">TypeName</span>   varName <span class="descstr">"Protected declaration"</span>;</tt><br>
+<b><tt id="initeqs">initial equation</tt></b>
+<br>
+<tt><span class="comment">
+&nbsp;&nbsp;// Place any equations that apply only at the
+<br>
+&nbsp;&nbsp;// start of a simulation here</span></tt>
+<br>
+<b><tt id="eqs">equation</tt></b><br>
+<tt><span class="comment">
+&nbsp;&nbsp;// Equations go here
+</span>
+</tt>
+<br>
+<tt>&nbsp;&nbsp;<b>annotation</b>(...);</tt>
+<br>
+<b><tt>end </tt></b><span class="typename">BlockName</span><tt>;</tt>
+<div class="footnote">
+  <p>
+    <i>Note: a</i> <tt><b>block</b></tt> <i>is just like
+    a</i> <tt><b>model</b></tt> <i>except that all connector instances
+    (or their constituents) must have
+    either</i> <tt><b>input</b></tt> <i>or</i> <tt><b>output</b></tt>
+    <i>qualifiers.
+    </i>
+  </p>
+</div>

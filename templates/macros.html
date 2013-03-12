@@ -1,3 +1,5 @@
+{% set spec="https://www.modelica.org/documents/ModelicaSpec33.pdf" %}
+
 {% macro tab(name,active=True) %}
 {% if active %}
 <li class="active">
@@ -7,3 +9,7 @@
   <a data-toggle="tab" href="#{{name|lower}}">{{name}}</a>
 </li>
 {% endmacro %}
+
+{%- macro xref(sec,page) -%}
+<a href="{{spec}}#page={{page}}" target="_blank">&sect;{{sec}}</a>
+{%- endmacro -%}

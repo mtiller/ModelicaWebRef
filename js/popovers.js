@@ -3,7 +3,8 @@
    to it's parent element.  The 'title' attribute of the
    element is used as the title in the popover.
 */
-$("* > [class=\"popover\"]").each(function(index) {
+/* $("* > [class=\"popover\"]").each(function(index) { */
+$("* > .popover").each(function(index) {
     var parent = $(this).parent()
     var content = $(this).html()
     $(parent).popover({

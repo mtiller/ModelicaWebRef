@@ -3,7 +3,30 @@
   <h5>Syntax Guide</h5>
   <table class="table table-striped">
     <tr>
-      <td>Normal Identifiers:</td>
+      <td>Single Line Comment:</td>
+      <td>
+	&nbsp;&nbsp;
+      </td>
+      <td>
+	<span class="pull-right">
+	  <tt>// until EOL</tt>
+	</span>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Multi-Line Comment:</td>
+      <td>
+	<span class="pull-right">
+	  <tt>/* Can span multiple<br>&nbsp;&nbsp;&nbsp;lines */</tt>
+	</span>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Normal Identifier:</td>
       <td><tt class="pull-right">[A-Za-z_][A-Za-z_0-9]*</tt></td>
       <td>
 	<span>{{ example }}
@@ -12,15 +35,28 @@
 	    <table class="table table-striped">
 	      <tr>
 		<td><tt>aVariable</tt></td>
-		<td><i>(variable names typically start with lower case letters)</i></td>
+		<td>
+		  <i>(variable names typically start with lower
+		    case letters)
+		  </i>
+		</td>
 	      </tr>
 	      <tr>
 		<td><tt>another_variable</tt></td>
-		<td><i>(underscores are allowed <b>except at the start</b>)</i></td>
+		<td>
+		  <i>
+		    (underscores are allowed <b>except at the start</b>)
+		  </i>
+		</td>
 	      </tr>
 	      <tr>
 		<td><tt>ClassName</tt></td>
-		<td><i>(class names typically start with upper case letters)</i></td>
+		<td>
+		  <i>
+		    (class names typically start with upper
+		    case letters)
+		  </i>
+		</td>
 	      </tr>
 	    </table>
 	  </div>
@@ -29,14 +65,24 @@
     </tr>
 
     <tr>
-      <td>Quoted Identifiers:</td>
+      <td colspan="2">Quoted Identifier:</td>
       <td><tt class="pull-right">'...'</tt></td>
-      <td></td>
+      <td>{{comment}}
+	<div class="popover" data-placement="bottom">
+	  <p>
+	    If an identifier is surrounded by single quotes, it can
+	    contains spaces, digits and non-digits anywhere in the
+	    name.  Furthermore, it can contain any of the following
+	    characters:
+	  </p>
+	  <tt>! # $ % & ( ) * + , - . / : ; < > = ? @ [ ] ^ { } | ~</tt>
+	</div>
+      </td>
     </tr>
 
     <tr>
-      <td>Enumeration Definition:</td>
-      <td><tt class="pull-right"><b>type</b> <span class="typename">E</span> = <b>enumeration</b>(e1, e2, ..., en);</tt></td>
+      <td colspan="2">Enumerations:</td>
+      <td><tt class="pull-right"><b>type</b> <span class="typename">E</span> = <b>enumeration</b>(e1, ..., en);</tt></td>
       <td>
 	<span>{{ comment }}
 	  <div class="popover" data-placement="bottom">
@@ -81,19 +127,41 @@
     </tr>
 
     <tr>
-      <td>Vector Literals:</td>
+      <td colspan="2" class="nobreak">Replaceable Component:</td>
+      <td>
+	<tt class="pull-right nobreak">
+	  <b>replaceable</b> <span class="typename">D</span> comp
+	  <b>constrainedby</b> <span class="typename">C</span>;
+	</tt>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>Replaceable Type:</td>
+      <td colspan="2">
+	<tt class="pull-right nobreak">
+	  <b>replaceable</b> <b>model</b>
+	  <span class="typename">M</span> = <span class="typename">D</span> <b>constrainedby</b> <span class="typename">C</span>;
+	</tt>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">Vector Literals:</td>
       <td><tt class="pull-right">{..., ...}</tt></td>
       <td></td>
     </tr>
 
     <tr>
-      <td>Array Literals:</td>
+      <td colspan="2">Array Literals:</td>
       <td><tt class="pull-right">[..., ...; ..., ...]</tt></td>
       <td></td>
     </tr>
 
     <tr>
-      <td>Array Comprehension:</td>
+      <td colspan="2">Array Comprehension:</td>
       <td><tt class="pull-right">{ f(i) <b>for</b> i <b>in</b> 1:ni }</tt></td>
       <td>
 	{{ example }}
@@ -111,5 +179,46 @@
 	</div>
       </td>
     </tr>
+
+    <tr>
+      <td colspan="2">Relations:</td>
+      <td>
+	<tt class="pull-right">
+	  <b>not</b> <b>and</b> <b>or</b> &gt; &gt;= &lt; &lt;=
+	</tt>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">For Loop:</td>
+      <td>
+	<tt class="pull-right">
+	  <b>for</b> i <b>in</b> 1:n <b>loop</b> ... <b>end</b> <b>for</b>;
+	</tt>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">While Loop:</td>
+      <td>
+	<tt class="pull-right">
+	  <b>while</b> ... <b>loop</b> ... <b>end</b> <b>while</b>;
+	</tt>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">When Clause:</td>
+      <td>
+	<tt class="pull-right">
+	  <b>when</b> ... <b>then</b> ... <b>end</b> <b>when</b>;
+	</tt>
+      </td>
+      <td></td>
+    </tr>
+
   </table>
 </div>

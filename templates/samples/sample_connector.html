@@ -1,0 +1,17 @@
+<tt>
+  <span class="comment">// Typical Phyical Connector</span><br>
+  <b>connector</b> <span class="typename">ConName</span><br>
+  &nbsp;&nbsp;<span class="typename">Real</span> acrossVar;<br>
+  &nbsp;&nbsp;<b>flow</b> <span class="typename">Real</span> throughVar;<br>
+  <b>end</b> <span class="typename">ConName</span>;<br>
+  <br>
+  <span class="comment">// Causal Connector</span><br>
+  <b>connector</b> <span class="typename">ConName</span> = <b>input</b> <span class="typename">Real</span>;<br>
+  <br>
+  <span class="comment">// Expandable Connector</span><br>
+  <b>expandable</b> <b>connector</b> <span class="typename">ConName</span><br>
+  &nbsp;&nbsp;<span class="comment">// Minimum connector elements</span><br>
+  &nbsp;&nbsp;<b>input</b> <span class="typename">Real</span> alwaysPresent;<br>
+  <b>end</b> <span class="typename">ConName</span>;<br>
+  <br>
+</tt>

@@ -79,6 +79,8 @@ button {
     padding-top: 1px;
     padding-bottom: 1px;
     margin-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 [class*="span"] {
@@ -125,6 +127,10 @@ button {
     color: #222288;
 }
 
+.comment {
+    color: #882222;
+}
+
 .descstr {
     color: #228822;
 }
@@ -138,7 +144,11 @@ button {
 }
 
 .popover {
-    max-width: 40%;
+    max-width: 60%;
+}
+
+.narrow {
+    max-width: 30%;
 }
 
 .nav-tabs > li > a {
@@ -159,4 +169,28 @@ button {
 
 .xogeny {
     font-family: 'Philosopher', sans-serif;
+}
+
+.footnote {
+    background-color: #F8F8F8;
+    margin-top: 5px;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 1px 0 #FFFFFF inset;
+    margin-bottom: 0;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footnote p {
+    margin-bottom: 0px;
+}
+
+.table.borderless td {
+    border-top: none;
+}
+
+/* Not what it sounds like ;-) */
+.headbut {
+    padding-right: 5px;
 }
