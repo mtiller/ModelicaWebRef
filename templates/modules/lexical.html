@@ -15,8 +15,32 @@
       Comments
       <span class="pull-right">{{ example }}
 	<div class="popover" data-placement="right">
-	  <tt>
-	  </tt>
+	  <table class="table">
+	    <tr>
+	      <th>
+		Single line comments
+	      </th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt><span class="comment">// until EOL</span></tt>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>
+		Multi-Line Comment
+	      </th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt>
+		  <span class="comment">
+		    /* Can span multiple<br>&nbsp;&nbsp;&nbsp;lines */
+		  </span>
+		</tt>
+	      </td>
+	    </tr>
+	  </table>
 	</div>
       </span>
     </span><br>
@@ -24,9 +48,74 @@
     <span>
       Identifiers
       <span class="pull-right">{{ example }}
-	<div class="popover" data-placement="right">
-	  <tt>
-	  </tt>
+	<div class="popover" data-placement="left">
+	  <table class="table">
+	    <tr>
+	      <th>
+		Normal Identifier
+	      </th>
+	      <th>
+		Examples
+	      </th>
+	      <th>
+	      </th>
+	    </tr>
+	    <tr>
+	      <td rowspan="3">
+		Syntax:<br>
+		<tt class="pull-right">[A-Za-z_][A-Za-z_0-9]*</tt>
+	      </td>
+	      <td>
+		<tt>aVariable</tt>
+	      </td>
+	      <td>
+		<i class="pull-right">
+		  Variable names typically start with lower
+		  case letters.
+		</i>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt>another_variable</tt>
+	      </td>
+	      <td>
+		<i class="pull-right">
+		  Word breaks are sometimes represented with underscores.
+		</i>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt>ClassNames</tt>
+	      </td>
+	      <td>
+		<i class="pull-right">
+		  By convention, class names start with upper case letter.
+		</i>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>Quoted Identifiers</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	    <tr>
+	      <td>
+		Syntax:
+		<tt class="pull-right">'...'</tt>
+	      </td>
+	      <td colspan="2" class="narrow">
+		<p>
+		  If an identifier is surrounded by single quotes, it can
+		  contains spaces, digits and non-digits anywhere in the
+		  name.  Furthermore, it can contain any of the following
+		  characters:
+		</p>
+		<tt>! # $ % & ( ) * + , - . / : ; < > = ? @ [ ] ^ { } | ~</tt>
+	      </td>
+	    </tr>
+	  </table>
 	</div>
       </span>
     </span><br>

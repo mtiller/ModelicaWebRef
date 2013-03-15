@@ -148,7 +148,7 @@ button {
 }
 
 .narrow {
-    max-width: 30%;
+    width: 200px;
 }
 
 .nav-tabs > li > a {
@@ -193,4 +193,8 @@ button {
 /* Not what it sounds like ;-) */
 .headbut {
     padding-right: 5px;
+}
+
+.table th {
+    background-color: #f4f4f4;
 }

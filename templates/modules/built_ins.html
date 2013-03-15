@@ -77,7 +77,7 @@
       <tt class="typename">Real</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Real Attributes" data-placement="bottom">
-	  <table>
+	  <table class="table table-striped">
 	    {{ attr_headers() }}
 	    {{ r_attrs("Real") }}
 	    {{ ri_attrs("Real") }}
@@ -91,7 +91,7 @@
       <tt class="typename">Integer</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Integer Attributes" data-placement="bottom">
-	  <table>
+	  <table class="table table-striped">
 	    {{ attr_headers() }}
 	    {{ ri_attrs("Integer") }}
 	    {{ rib_attrs("Integer") }}
@@ -104,7 +104,7 @@
       <tt class="typename">Boolean</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Boolean Attributes" data-placement="bottom">
-	  <table>
+	  <table class="table table-striped">
 	    {{ attr_headers() }}
 	    {{ rib_attrs("Boolean") }}
 	    {{ ribs_attrs("Boolean", "false") }}
@@ -116,12 +116,68 @@
       <tt class="typename">String</tt>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="String Attributes" data-placement="bottom">
-	  <table>
+	  <table class="table table-striped">
 	    {{ attr_headers() }}
 	    {{ ribs_attrs("String", "\"\"") }}
 	  </table>
 	</div>
       </span>
     </span><br>
+    <span>
+      <tt><b>enumeration</b></tt>
+      <span class="pull-right">{{comment}}
+	<div class="popover" title="Enumerations" data-placement="right">
+	  <table class="table">
+	    <tr>
+	      <th colspan="2">
+		Syntax
+	      </th>
+	    </tr>
+	    <tr>
+	      <td colspan="2">
+		<tt><b>type</b> <span class="typename">E</span> = <b>enumeration</b>(e1, ..., en);</tt>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>Attributes</th>
+	      <th>Conversions</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt><span class="typename">E</span>.e1</tt>,
+		...,
+		<tt><span class="typename">E</span>.en</tt>
+		<br>
+		<tt><span class="typename">E</span>.start=e1</tt>
+		<br>
+		<tt><span class="typename">E</span>.min=e1</tt>, 
+		<br>
+		<tt><span class="typename">E</span>.max=en</tt>
+	      </td>
+	      <td>
+		<tt>Integer(<span class="typename">E</span>.e1)=1</tt>
+		<br>
+		<tt>Integer(<span class="typename">E</span>.en)=n</tt>
+		<br>
+		<tt>String(<span class="typename">E</span>.e1)="e1"</tt>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th colspan="2">Examples</td>
+	    </tr>
+	    <tr>
+	      <td colspan="2">
+		<tt><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</tt><br>
+		<tt><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</tt><br>
+	      </td>
+	    </tr>
+	  </table>
+	  <div class="footnote">
+	    Complete details on enumerations can be found in {{
+	    xref("4.8.5",50) }}
+	  </div>
+	</div>
+      </span>
+    </span>
   </div>
 </div>

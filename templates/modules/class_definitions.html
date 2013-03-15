@@ -1,0 +1,86 @@
+{% from "macros.html" import xref %}
+
+<div class="module">
+    <div class="pull-right headbut">
+      {{comment}}
+      <div class="popover" data-placement="right">
+	  For complete details on all the predefined types, see {{
+	  xref("4.8",48) }}.
+      </div>
+    </div>
+  <h5>Class Definitions
+  </h5>
+  <div class="modbod">
+    <span>
+      <b><tt>extends</tt></b> (inheritance)
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Model">
+	  {% include "samples/sample_extends.html" %}
+	</div>
+      </span>
+    </span><br>
+    <span>
+      <b><tt>replaceable</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Model">
+	  <table class="table">
+	    <tr>
+	      <th>Replaceable Component</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt class="pull-right nobreak">
+		  <b>replaceable</b> <span class="typename">D</span> comp;
+		</tt>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>Replaceable Class</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt class="pull-right nobreak">
+		  <b>replaceable</b> <b>model</b>
+		  <span class="typename">M</span> =
+		  <span class="typename">D</span>
+		</tt>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>constrainedby</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Canonical Model">
+	  <table class="table">
+	    <tr>
+	      <th>Replaceable Component</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt class="pull-right nobreak">
+		  <b>replaceable</b> <span class="typename">D</span> comp
+		  <b>constrainedby</b> <span class="typename">C</span>;
+		</tt>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>Replaceable Class</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt class="pull-right nobreak">
+		  <b>replaceable</b> <b>model</b>
+		  <span class="typename">M</span> = <span class="typename">D</span> <b>constrainedby</b> <span class="typename">C</span>;
+		</tt>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </span>
+    </span>
+  </div>
+</div>
