@@ -4,6 +4,10 @@
 <tt>{{ name }}</tt>
 {% endmacro %}
 
+{% macro cf(name,n=1) %}
+<td colspan="{{n}}"><tt>{{ name }}</tt></td>
+{% endmacro %}
+
 <!--- MODULE: Information about stuff you find in Modelica expressions -->
 <div id="variability" class="module">
   <h5>Expressions</h5>
@@ -16,14 +20,16 @@
       </tr>
 
       <tr>
-	<td><tt>*</tt></td>
-	<td><tt>+</tt></td>
-	<td><tt>-</tt></td>
-	<td><tt>/</tt></td>
-	<td><tt>.*</tt></td>
-	<td><tt>.+</tt></td>
-	<td><tt>.-</tt></td>
-	<td><tt>./</tt></td>
+	<td colspan="8" class="justified">
+	  {{ f("+") }}
+	  {{ f("-") }}
+	  {{ f("*") }}
+	  {{ f("/") }}
+	  {{ f(".+") }}
+	  {{ f(".-") }}
+	  {{ f(".*") }}
+	  {{ f("./") }}
+	</td>
       </tr>
 
       <tr>
@@ -32,14 +38,57 @@
 	</th>
       </tr>
       <tr>
-	<td><tt><b>and</b></tt></td>
-	<td><tt><b>or</b></tt></td>
-	<td><tt><b>not</b></tt></td>
-	<td><tt>&lt;&gt;</tt></td>
-	<td><tt>&lt;</tt></td>
-	<td><tt>&lt;=</tt></td>
-	<td><tt>&gt;</tt></td>
-	<td><tt>&gt;=</tt></td>
+	<td colspan="8" class="justified">
+	  {{ f("<b>and</b>") }}
+	  {{ f("<b>or</b>") }}
+	  {{ f("<b>not</b>") }}
+	  {{ f("&lt;&gt;") }}
+	  {{ f("&lt;") }}
+	  {{ f("&gt;") }}
+	  {{ f("&lt;=") }}
+	  {{ f("&gt;=") }}
+	</td>
+      </tr>
+      <tr>
+	<th colspan="8">
+	  Trigonometric Functions
+	</th>
+      <tr>
+      <tr>
+	<td colspan="8" class="justified">
+	  {{ f("acos") }}
+	  {{ f("asin") }}
+	  {{ f("atan") }}
+	  {{ f("atan2") }}
+	  {{ f("cos") }}
+	  {{ f("cosh") }}
+	  {{ f("sin") }}
+	  {{ f("sinh") }}
+	  {{ f("tan") }}
+	  {{ f("tanh") }}
+	</td>
+      </tr>
+      <tr>
+	<th colspan="8">
+	  Array Functions
+	</th>
+      <tr>
+      <tr>
+	<td colspan="8" class="justified">
+	  {{ f("cross") }}
+	  {{ f("diagonal") }}
+	  {{ f("fill") }}
+	  {{ f("identity") }}
+	  {{ f("linspace") }}
+	  {{ f("matrix") }}
+	  {{ f("ones") }}
+	  {{ f("outerProduct") }}
+	  {{ f("scalar") }}
+	  {{ f("symmetric") }}
+	  {{ f("transpose") }}
+	  {{ f("vector") }}
+	  {{ f("zeros") }}
+	</td>
       </tr>
       <tr>
 	<th colspan="8">
@@ -49,45 +98,32 @@
       <tr>
 	<td colspan="8" class="justified">
 	  {{ f("abs") }}
-	  {{ f("acos") }}
-	  {{ f("asin") }}
-	  {{ f("atan") }}
-	  {{ f("atan2") }}
 	  {{ f("ceil") }}
-	  {{ f("cos") }}
-	  {{ f("cosh") }}
-	  {{ f("cross") }}
-	  {{ f("diagonal") }}
 	  {{ f("div") }}
 	  {{ f("exp") }}
 	  {{ f("fill") }}
 	  {{ f("floor") }}
-	  {{ f("identity") }}
 	  {{ f("integer") }}
-	  {{ f("Integer") }}
-	  {{ f("linspace") }}
 	  {{ f("log") }}
 	  {{ f("log10") }}
-	  {{ f("matrix") }}
 	  {{ f("max") }}
 	  {{ f("min") }}
 	  {{ f("mod") }}
-	  {{ f("ones") }}
-	  {{ f("outerProduct") }}
 	  {{ f("rem") }}
-	  {{ f("scalar") }}
 	  {{ f("sign") }}
-	  {{ f("sin") }}
-	  {{ f("sinh") }}
 	  {{ f("skew") }}
 	  {{ f("sqrt") }}
+	</td>
+      </tr>
+      <tr>
+	<th colspan="8">
+	  Formatting Functions
+	</th>
+      </tr>
+      <tr>
+	<td colspan="8" class="justified">
+	  {{ f("Integer") }}
 	  {{ f("String") }}
-	  {{ f("symmetric") }}
-	  {{ f("tan") }}
-	  {{ f("tanh") }}
-	  {{ f("transpose") }}
-	  {{ f("vector") }}
-	  {{ f("zeros") }}
 	</td>
       </tr>
     </table>
