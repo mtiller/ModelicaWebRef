@@ -6,20 +6,28 @@
       {% include "modules/variability.html" %}
       {% include "modules/statements.html" %}
     </div>
-    <div id="basic_col2" class="span4">
-    </div>
-    <div id="basic_col3" class="span3">
-      {% include "modules/exprs.html" %}
-      {% include "modules/special_ops.html" %}
-    </div>
-    <div id="basic_col4" class="span3">
-      {% include "modules/con_quals.html" %}
-      {% include "modules/restricted_classes.html" %}
-      {% include "modules/class_definitions.html" %}
+    <div id="basic_col2" class="span3">
       {% include "modules/operators.html" %}
       {% include "modules/std_enums.html" %}
       {% include "modules/lexical.html" %}
       {% include "modules/comp_expr.html" %}
+    </div>
+    <div id="basic_col3" class="span4">
+      {% include "modules/exprs.html" %}
+      <div class="row">
+	<div class="span2">
+	  {% include "modules/restricted_classes.html" %}
+	</div>
+	<div class="span2">
+	  {% include "modules/statements.html" %}	 
+	  {% include "modules/con_quals.html" %}
+	</div>
+      </div>
+    </div>
+    <div id="basic_col4" class="span3">
+      {% include "modules/restricted_classes.html" %}
+      {% include "modules/class_definitions.html" %}
+      {% include "modules/special_ops.html" %}
     </div>
   </div>
 </div>

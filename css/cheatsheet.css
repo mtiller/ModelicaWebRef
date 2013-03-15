@@ -29,6 +29,22 @@ h5 {
     margin-bottom: 10px;
 }
 
+.var-module {
+    background-color: #f8f0f0;
+}
+
+.type-module {
+    background-color: #f0f0f8;
+}
+
+.class-module {
+    background-color: #f0f0f8;
+}
+
+.expr-module {
+    background-color: #f0f0f8;
+}
+
 .modbod {
     padding: 5px;
 }
@@ -202,4 +218,8 @@ button {
 
 .table-centered td {
     text-align: center;
+}
+
+.row-fluid [class*="span"] {
+    margin-left: 17px;
 }
