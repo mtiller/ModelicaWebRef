@@ -197,4 +197,9 @@ button {
 
 .table th {
     background-color: #f4f4f4;
+    border-top: 0 none;
+}
+
+.table-centered td {
+    text-align: center;
 }
