@@ -12,7 +12,7 @@
   <body>
     <!-- Header block -->
     <div class="container">
-      <div class="row">
+      <div id="header" class="row">
 	<div class="span2">
 	  <a href="http://www.xogeny.com"><img src="img/Xogeny.png"></a>
 	</div>
@@ -24,18 +24,32 @@
 	</div>
       </div>
 
-      <!-- Tabs -->
-      <ul class="nav nav-tabs" id="maintabs">
-	{{ tab("Basic",True) }}
-	{{ tab("Templates",False) }}
-      </ul>
-
-      <!-- Tab pages -->
-      <div id="tab_content" class="tab-content">
-	{% include "basic_tab.html" %}
-
-	{% include "template_tab.html" %}
+      <div class="row">
+	<div id="basic_col1" class="span2">
+	  {% include "modules/restricted_classes.html" %}
+	  {% include "modules/variability.html" %}
+	  {% include "modules/statements.html" %}
+	  {% include "modules/operators.html" %}
+	</div>
+	<div id="basic_col2" class="span3">
+	  {% include "modules/builtin_types.html" %}
+	  {% include "modules/std_enums.html" %}
+	  {% include "modules/lexical.html" %}
+	  {% include "modules/comp_expr.html" %}
+	  {% include "modules/statements.html" %}	 
+	</div>
+	<div id="basic_col3" class="span4">
+	  {% include "modules/exprs.html" %}
+	  {% include "modules/annotations.html" %}
+	</div>
+	<div id="basic_col4" class="span3">
+	  {% include "modules/restricted_classes.html" %}
+	  {% include "modules/class_definitions.html" %}
+	  {% include "modules/special_ops.html" %}
+	  {% include "modules/con_quals.html" %}
+	</div>
       </div>
+
       <div id="legend" class="row">
 	<div class="span12">
 	  <ul class="hlist">
@@ -66,6 +80,13 @@
 	  The inspiration for this quick reference card came from
 	  Derek Cheng at <a href="www.cydesign.com">CyDesign</a>.
 	<p>
+	<p>
+	  Although a separate effort, this reference card benefited
+	  from ideas and content in the <tt>ModelicaReference</tt>
+	  package.  We gratefully acknowledge the efforts of its
+	  authors: Modelica Association, DLR, Telemark University
+	  College and Maplesoft.
+	</p>
 	<p>
 	  Both the style and functionality of this quick reference
 	  page is enabled

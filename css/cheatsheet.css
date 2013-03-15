@@ -223,3 +223,7 @@ button {
 .row-fluid [class*="span"] {
     margin-left: 17px;
 }
+
+#header {
+    margin-bottom: 10px;
+}
