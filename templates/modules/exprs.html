@@ -1,10 +1,14 @@
 {% from "macros.html" import xref %}
 
+{% macro f(name) %}
+<tt>{{ name }}</tt>
+{% endmacro %}
+
 <!--- MODULE: Information about stuff you find in Modelica expressions -->
 <div id="variability" class="module">
   <h5>Expressions</h5>
   <div class="modbod">
-    <table class="table table-condensed table-centered">
+    <table class="table table-condensed">
       <tr>
 	<th colspan="8">
 	  Arithmetic Operators
@@ -43,56 +47,48 @@
 	</th>
       </tr>
       <tr>
-	<td>abs</td>
-	<td>acos</td>
-	<td>asin</td>
-	<td>atan</td>
-	<td>atan2</td>
-	<td>ceil</td>
-	<td>cos</td>
-	<td>cosh</td>
-      </tr>
-      <tr>
-	<td>cross</td>
-	<td>diagonal</td>
-	<td>div</td>
-	<td>exp</td>
-	<td>fill</td>
-	<td>floor</td>
-	<td>identity</td>
-	<td>Integer</td>
-      </tr>
-      <tr>
-	<td>integer</td>
-	<td>linspace</td>
-	<td>log</td>
-	<td>log10</td>
-	<td>matrix</td>
-	<td>max</td>
-	<td>min</td>
-      </tr>
-      <tr>
-	<td>mod</td>
-	<td>ones</td>
-	<td>outerProduct</td>
-	<td>rem</td>
-	<td>scalar</td>
-	<td>sign</td>
-	<td>sin</td>
-	<td>sinh</td>
-      </tr>
-      <tr>
-	<td>skew</td>
-	<td>sqrt</td>
-	<td>String</td>
-	<td>symmetric</td>
-	<td>tan</td>
-	<td>tanh</td>
-	<td>transpose</td>
-	<td>vector</td>
-      </tr>
-      <tr>
-	<td>zeros</td>
+	<td colspan="8" class="justified">
+	  {{ f("abs") }}
+	  {{ f("acos") }}
+	  {{ f("asin") }}
+	  {{ f("atan") }}
+	  {{ f("atan2") }}
+	  {{ f("ceil") }}
+	  {{ f("cos") }}
+	  {{ f("cosh") }}
+	  {{ f("cross") }}
+	  {{ f("diagonal") }}
+	  {{ f("div") }}
+	  {{ f("exp") }}
+	  {{ f("fill") }}
+	  {{ f("floor") }}
+	  {{ f("identity") }}
+	  {{ f("integer") }}
+	  {{ f("Integer") }}
+	  {{ f("linspace") }}
+	  {{ f("log") }}
+	  {{ f("log10") }}
+	  {{ f("matrix") }}
+	  {{ f("max") }}
+	  {{ f("min") }}
+	  {{ f("mod") }}
+	  {{ f("ones") }}
+	  {{ f("outerProduct") }}
+	  {{ f("rem") }}
+	  {{ f("scalar") }}
+	  {{ f("sign") }}
+	  {{ f("sin") }}
+	  {{ f("sinh") }}
+	  {{ f("skew") }}
+	  {{ f("sqrt") }}
+	  {{ f("String") }}
+	  {{ f("symmetric") }}
+	  {{ f("tan") }}
+	  {{ f("tanh") }}
+	  {{ f("transpose") }}
+	  {{ f("vector") }}
+	  {{ f("zeros") }}
+	</td>
       </tr>
     </table>
   </div>

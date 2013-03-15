@@ -130,7 +130,7 @@ button {
 
 #legend {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
 }
 
 .modal-header {
@@ -226,4 +226,12 @@ button {
 
 #header {
     margin-bottom: 10px;
+}
+
+.table td.justified {
+    text-align: justify;
+}
+
+.table td.justified tt {
+    margin: 5px;
 }
