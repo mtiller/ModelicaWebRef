@@ -1,4 +1,4 @@
-{% from "macros.html" import xref %}
+{% from "macros.html" import xref, tname, kw %}
 
 {% macro attr_headers() %}
 <tr>
@@ -126,7 +126,7 @@
     <span>
       <tt><b>enumeration</b></tt>
       <span class="pull-right">{{comment}}
-	<div class="popover" title="Enumerations" data-placement="right">
+	<div class="popover" title="Enumerations" data-placement="bottom">
 	  <table class="table">
 	    <tr>
 	      <th colspan="2">
@@ -181,6 +181,21 @@
     </span><br>
     <span>
       <tt class="typename">ExternalObject</tt>
+      <span class="pull-right">{{ comment }}
+	<div class="popover" title="External Objects" data-placement="bottom">
+	  <p class="seminarrow">
+	  External objects are used to refer (opaquely) to data or
+	  information outside the scope of the Modelica langauge.
+	  That are initialized through <tt><b>external</b></tt>
+	  functions and can be passed back to <tt><b>external</b></tt>
+	  functions.
+	  </p>
+	  <p>
+	    More information about the {{tname("ExternalObject")}}
+	    type can be found in {{ xref("12.9.7", 159) }}.
+	  </p>
+	</div>
+      </span>
     </span>
   </div>
 </div>

@@ -15,154 +15,255 @@
 
 <div class="module">
   <h5>Arithmetic Operators</h5>
-  <span class="pull-right">{{comment}}
-    <div class="popover" data-placement="bottom">
-      <table class="table">
-	<tr>
-	  <th></th>
-	  <th>Name</th>
-	  <th>Description</th>
-	</tr>
-	{{ op("+","Addition","Can be used on both scalars and
-	arrays of the same size") }}
-	<tr>
-	  <td><tt>-</tt></td>
-	  <td>Subtraction</td>
-	  <td>Can be used on both scalars and arrays of the
-	    same size</td>
-	</tr>
-	<tr>
-	  <td><tt>*</tt></td>
-	  <td>Multiplication</td>
-	  <td class="narrow">Can be used to multiply arrays by
-	    scalars or to take the inner product between two
-	    arrays.</td>
-	</tr>
-	<tr>
-	  <td><tt>/</tt></td>
-	  <td>Division</td>
-	  <td class="narrow">Can be used on scalars.  Can also
-	    be used with arrays as long as the denominator is a
-	    scalar.</td>
-	</tr>
-	<tr>
-	  <td><tt>.+ .- .* ./</tt></td>
-	  <td>Elementwise<br>Versions</td>
-	  <td class="narrow">When applied to arrays (of the
-	    same size), these operators perform their operation
-	    between scalars at matching positions in each
-	    array.</td>
-	</tr>
-      </table>
-    </div>
-  </span>
-  <span>
-    {{ f("+") }}
-    {{ f("-") }}
-    {{ f("*") }}
-    {{ f("/") }}
-    {{ f(".+") }}
-    {{ f(".-") }}
-    {{ f(".*") }}
-    {{ f("./") }}
-  </span>
+  <div class="modbod">
+    <span class="pull-right">{{comment}}
+      <div class="popover" data-placement="bottom">
+	<table class="table">
+	  <tr>
+	    <th></th>
+	    <th>Name</th>
+	    <th>Description</th>
+	  </tr>
+	  {{ op("+","Addition","Can be used on both scalars and
+	  arrays of the same size") }}
+	  <tr>
+	    <td><tt>-</tt></td>
+	    <td>Subtraction</td>
+	    <td>Can be used on both scalars and arrays of the
+	      same size</td>
+	  </tr>
+	  <tr>
+	    <td><tt>*</tt></td>
+	    <td>Multiplication</td>
+	    <td class="narrow">Can be used to multiply arrays by
+	      scalars or to take the inner product between two
+	      arrays.</td>
+	  </tr>
+	  <tr>
+	    <td><tt>/</tt></td>
+	    <td>Division</td>
+	    <td class="narrow">Can be used on scalars.  Can also
+	      be used with arrays as long as the denominator is a
+	      scalar.</td>
+	  </tr>
+	  <tr>
+	    <td><tt>.+ .- .* ./</tt></td>
+	    <td>Elementwise<br>Versions</td>
+	    <td class="narrow">When applied to arrays (of the
+	      same size), these operators perform their operation
+	      between scalars at matching positions in each
+	      array.</td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <span>
+      {{ f("+") }}
+      {{ f("-") }}
+      {{ f("*") }}
+      {{ f("/") }}
+      {{ f(".+") }}
+      {{ f(".-") }}
+      {{ f(".*") }}
+      {{ f("./") }}
+    </span>
+  </div>
 </div>
 
 <div class="module">
-  <h5>Relational Operators</h5>
-  <span class="pull-right">{{comment}}
-    <div class="popover" data-placement="bottom">
-    </div>
-  </span>
-  <span>
-    {{ f("<b>and</b>") }}
-    {{ f("<b>or</b>") }}
-    {{ f("<b>not</b>") }}
-    {{ f("&lt;&gt;") }}
-    {{ f("&lt;") }}
-    {{ f("&gt;") }}
-    {{ f("&lt;=") }}
-    {{ f("&gt;=") }}
-  </span>
-</div>
-
-<div class="module">
-  <h5>Trigonometric Operators</h5>
-  <span class="pull-right">{{comment}}
-    <div class="popover" data-placement="bottom">
-    </div>
-  </span>
-  <span>
-    {{ f("acos") }}
-    {{ f("asin") }}
-    {{ f("atan") }}
-    {{ f("atan2") }}
-    {{ f("cos") }}
-    {{ f("cosh") }}
-    {{ f("sin") }}
-    {{ f("sinh") }}
-    {{ f("tan") }}
-    {{ f("tanh") }}
-  </span>
-</div>
-
-<div class="module">
-  <h5>Array Functions</h5>
-  <span class="pull-right">{{comment}}
-    <div class="popover" data-placement="bottom">
-    </div>
-  </span>
-  <span>
-    {{ f("cross") }}
-    {{ f("diagonal") }}
-    {{ f("fill") }}
-    {{ f("identity") }}
-    {{ f("linspace") }}
-    {{ f("matrix") }}
-    {{ f("ones") }}
-    {{ f("outerProduct") }}
-    {{ f("scalar") }}
-    {{ f("symmetric") }}
-    {{ f("transpose") }}
-    {{ f("vector") }}
-    {{ f("zeros") }}
-  </span>
+  <h5>Logical and Relational Operators</h5>
+  <div class="modbod">
+    <span class="pull-right">{{warning}}
+      <div class="popover" data-placement="bottom">
+	<p class="seminarrow">
+	These role of these operators is self-expalanatory.  However,
+	it is worth pointing out that the relational
+	operators <tt>&lt;</tt>, <tt>&gt;</tt>, <tt>&lt;=</tt>
+	and <tt>&gt;=</tt> will generate events when used in
+	conjunction with continuous time variables.  More discussion
+	of such events and how to avoid them can be found in {{
+	xref("3.7.3", 29) }}.
+	</p>
+      </div>
+    </span>
+    <span>
+      {{ f("<b>and</b>") }}
+      {{ f("<b>or</b>") }}
+      {{ f("<b>not</b>") }}
+      {{ f("&lt;&gt;") }}
+      {{ f("&lt;") }}
+      {{ f("&gt;") }}
+      {{ f("&lt;=") }}
+      {{ f("&gt;=") }}
+    </span>
+  </div>
 </div>
 
 <div class="module">
   <h5>Mathematical Functions</h5>
-  <span class="pull-right">{{comment}}
-    <div class="popover" data-placement="bottom">
-    </div>
-  </span>
-  <span>
-    {{ f("abs") }}
-    {{ f("ceil") }}
-    {{ f("div") }}
-    {{ f("exp") }}
-    {{ f("fill") }}
-    {{ f("floor") }}
-    {{ f("integer") }}
-    {{ f("log") }}
-    {{ f("log10") }}
-    {{ f("max") }}
-    {{ f("min") }}
-    {{ f("mod") }}
-    {{ f("rem") }}
-    {{ f("sign") }}
-    {{ f("skew") }}
-    {{ f("sqrt") }}
-  </span>
+  <div class="modbod">
+    <span class="pull-right">{{comment}}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <th>Function</th>
+	    <th>Details</th>
+	  </tr>
+	  <tr>
+	    <td><tt>asin(x)</tt></td>
+	    <td>-1 &lt;= <tt>x</tt> &lt;= 1</td>
+	  </tr>
+	  <tr>
+	    <td><tt>acos(x)</tt></td>
+	    <td>-1 &lt;= <tt>x</tt> &lt;= 1</td>
+	  </tr>
+	  <tr>
+	    <td><tt>atan2(y, x)</tt></td>
+	    <td>tangent of <tt>y/x</tt></td>
+	  </tr>
+	  <tr>
+	    <td><tt>log(x)</tt></td>
+	    <td><tt>x</tt>&gt;0</td>
+	  </tr>
+	  <tr>
+	    <td><tt>log10(x)</tt></td>
+	    <td><tt>x</tt>&gt;0</td>
+	  </tr>
+	  <tr>
+	    <td><tt>tan(x)</tt></td>
+	    <td>"<tt>x</tt> shall not be ..., -&pi;/2, &pi;/2,
+	    3&pi;/2, ..."</td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  See {{ xref("3.7.1.2", 21) }} for further details about
+	  these functions.
+	</div>
+      </div>
+    </span>
+    <span>
+      {{ f("acos") }}
+      {{ f("asin") }}
+      {{ f("atan") }}
+      {{ f("atan2") }}
+      {{ f("cos") }}
+      {{ f("cosh") }}
+      {{ f("exp") }}
+      {{ f("log") }}
+      {{ f("log10") }}
+      {{ f("sin") }}
+      {{ f("sinh") }}
+      {{ f("tan") }}
+      {{ f("tanh") }}
+    </span>
+  </div>
 </div>
 
 <div class="module">
-  <h5>Formatting Functions</h5>
-  <span class="pull-right">{{comment}}
-    <div class="popover" data-placement="bottom">
-    </div>
-  </span>
-  <span>
-    {{ f("Integer") }}
-    {{ f("String") }}
-  </span>
+  <h5>Array Functions</h5>
+  <div class="modbod">
+    <span class="pull-right">{{comment}}
+      <div class="popover" data-placement="right" title="Array Functions">
+	<table>
+	  <tr>
+	    <th>Functions</th>
+	    <th>Documentation</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt>scalar(A)</tt><br>
+	      <tt>vector(A)</tt><br>
+	      <tt>matrix(A)</tt><hr>
+	    </td>
+	    <td>{{ xref("10.3.2", 112) }}</td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt>identity(n)</tt><br>
+	      <tt>diagonal(v)</tt><br>
+	      <tt>zeros(n1,n2,n3,...)</tt><br>
+	      <tt>ones(n1,n2,n3,...)</tt><br>
+	      <tt>fill(s,n1,n2,n3,...)</tt><br>
+	      <tt>linspace(x1,x2,n)</tt><hr>
+	    </td>
+	    <td>{{ xref("10.3.3", 112) }}</td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt>transpose(A)</tt><br>
+	      <tt>outerProduct(v1,v2)</tt><br>
+	      <tt>symmetric(A)</tt><br>
+	      <tt>cross(x,y)</tt><br>
+	      <tt>skew(x)</tt>
+	    </td>
+	    <td>{{ xref("10.3.3", 112) }}</td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <span>
+      {{ f("scalar") }}
+      {{ f("vector") }}
+      {{ f("matrix") }}
+      {{ f("identity") }}
+      {{ f("diagonal") }}
+      {{ f("zeros") }}
+      {{ f("ones") }}
+      {{ f("fill") }}
+      {{ f("linspace") }}
+      {{ f("transpose") }}
+      {{ f("outerProduct") }}
+      {{ f("symmetric") }}
+      {{ f("cross") }}
+      {{ f("skew") }}
+    </span>
+  </div>
+</div>
+
+<div class="module">
+  <h5>Event Generating Functions</h5>
+  <div class="modbod">
+    <span class="pull-right">{{comment}}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  The functions shown here <b>generate events</b>.  More
+	  information about these functions can be found in {{
+	  xref("3.7.1.1", 21) }} along with information about how to use
+	  the <tt>noEvent</tt> operator to suppress event generation.
+	</p>
+      </div>
+    </span>
+    <span>
+      {{ f("ceil") }}
+      {{ f("div") }}
+      {{ f("fill") }}
+      {{ f("floor") }}
+      {{ f("integer") }}
+      {{ f("max") }}
+      {{ f("min") }}
+      {{ f("mod") }}
+      {{ f("rem") }}
+    </span>
+  </div>
+</div>
+
+<div class="module">
+  <h5>Numeric and Conversion Functions</h5>
+  <div class="modbod">
+    <span class="pull-right">{{comment}}
+      <div class="popover" data-placement="bottom">
+	<p class="seminarrow">
+	  Explanations for these functions can be found in {{
+	  xref("3.7.1", 20) }}.
+	</p>
+      </div>
+    </span>
+    <span>
+      {{ f("abs") }}
+      {{ f("sign") }}
+      {{ f("sqrt") }}
+      {{ f("Integer") }}
+      {{ f("String") }}
+    </span>
+  </div>
 </div>
