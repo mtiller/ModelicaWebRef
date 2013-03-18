@@ -1,27 +1,78 @@
+{% from "macros.html" import kw, xref %}
+
 <!--- MODULE: Connector qualifiers -->
 <div id="con_quals" class="module">
   <span class="pull-right headbut">
     {{ warning }}
     <div class="popover" data-placement="bottom">
-      If a variable in a connector lacks any qualifier, the default<br>
-      connection behavior is to <b>generate an equality equation</b><br>
-      with its counterpart on all other connectors in the connection<br>
-      set.
+      <p class="seminarrow">
+      If a variable in a connector lacks any qualifier, the
+      default<br> connection behavior is to <b>generate an equality
+      equation</b><br> with its counterpart on all other connectors in
+      the connection<br> set.  More information on connections and
+      connectors can be found in {{ xref("9.1", 93) }}.
+      </p>
     </div>
   </span>
   <h5>Connector Qualifiers</h5>
   <div class="modbod">
     <span>
       <b><tt>input</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	  The {{kw("input")}} qualifier in a connector indicates that
+	  exactly one of that elements counterparts in a resulting
+	  connection set ({{ xref("9.1.1", 94) }}) must have the
+	  {{kw("output")}} qualifier.  More discussion of
+	  {{kw("input")}} and {{kw("output")}} qualifiers can be found
+	  in {{ xref("9.3", 101) }}.
+	  </p>
+	</div>
+      </span>
     </span><br>
     <span>
       <b><tt>output</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	  The {{kw("output")}} qualifier in a connector indicates that
+	  all other matching elements in a connection set must have
+	  the {{kw("input")}} qualifier.  More discussion of
+	  {{kw("input")}} and {{kw("output")}} qualifiers can be found
+	  in {{ xref("9.3", 101) }}.
+	  </p>
+	</div>
+      </span>
     </span><br>
     <span>
       <b><tt>flow</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	  The {{kw("flow")}} qualifier in a connector indicates that
+	  all other matching elements in a connection set must also
+	  have the {{kw("flow")}} qualifier.  When the connection set
+	  is resolved, an equation is generated that sums these
+	  matching elements to zero.  More details on how equations
+	  are generated for {{kw("flow")}} elements can be found in
+	  {{xref("9.2", 98)}}.
+	  </p>
+	</div>
+      </span>
     </span><br>
     <span>
       <b><tt>stream</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	  The {{kw("stream")}} qualifier is used to indicate when a
+	  given element in a connector is an intensive property of
+	  flowing through the connector.  More details about "stream
+	  connectors" can be found in {{ xref("15", 175) }}.
+	  <p class="seminarrow">
+	</div>
+      </span>
     </span>
   </div>
 </div>

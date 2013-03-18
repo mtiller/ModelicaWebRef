@@ -1,4 +1,4 @@
-{% from "macros.html" import xref %}
+{% from "macros.html" import xref, tname, kw %}
 
 <div class="module">
     <div class="pull-right headbut">
@@ -52,18 +52,6 @@
     </span><br>
 
     <span>
-      <b><tt>encapsulated</tt></b>
-    </span><br>
-
-    <span>
-      <b><tt>import</tt></b>
-    </span><br>
-
-    <span>
-      <b><tt>partial</tt></b>
-    </span><br>
-
-    <span>
       <b><tt>constrainedby</tt></b>
       <span class="pull-right">{{example}}
 	<div class="popover" data-placement="right" title="Canonical Model">
@@ -93,6 +81,117 @@
 	  </table>
 	</div>
       </span>
+    </span><br>
+
+    <span>
+      <b><tt>import</tt></b>
+      <span class="pull-right">{{example}}
+	<div class="popover" data-placement="right" title="Imports">
+	  <table class="table">
+
+	      <th colspan="2">
+		Import a named definition
+	      </th>
+	    </tr>
+	    <tr>
+	      <td class="nobreak">
+		<tt><b>import</b> {{tname("Modelica.SIunits.Velocity")}};</tt>
+	      </td>
+	      <td>
+		<p class="seminarrow">
+		Adds the definition
+		{{tname("Modelica.SIunits.Velocity")}} to the local
+		scope under the name {{tname("Velocity")}}.
+		</p>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th colspan="2">Import contents of a {{kw("package")}}</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt><b>import</b> {{tname("Modelica.SIunits.*")}};</tt>
+	      </td>
+	      <td>
+		<p class="seminarrow">
+		Adds all the definitions defined in
+		{{tname("Modelica.SIunits")}} to the local scope
+		(under their normal names).
+		</p>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th colspan="2">Import definition under an alias</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt><b>import</b>
+		{{tname("SI")}}={{tname("Modelica.SIunits")}};</tt>
+	      </td>
+	      <td>
+		<p class="seminarrow">
+		Adds a given definition to the local scope under an
+		alias name (e.g., {{tname("Modelica.SIunits.Velocity")}}
+		could be referenced as {{tname("SI.Velocity")}} in
+		this case).
+		<p>
+	      </td>
+	    </tr>
+	  </table>
+	  <div class="footnote">
+	    <b>Note:</b> Imports always uses fully qualified names.
+	    This means the name used must start from the top-level
+	    namespace.
+	  </div>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>encapsulated</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	    The <tt><b>encapsulated</b></tt> keyword forces all types
+	    not belonging to a definition to be imported.  More details
+	    can be found in {{ xref("5.3.1", 54) }}.
+	  </p>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>partial</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	    The <tt><b>partial</b></tt> keyword is used to indicate
+	    that a given definition is incomplete.  This makes it
+	    clear to both users and the tools that the definition, as
+	    it stands, cannot be instantiated.  Normally,
+	    a <tt><b>partial</b></tt> definition is extended from to
+	    create a complete (instantiable) definition.  See {{
+	    xref("4.7", 43) }} for more details.
+	  </p>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><tt>expandable</tt></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	    The {{kw("expandable")}} keyword can be applied to
+	    a <tt><b>connector</b></tt> to indicate that additional
+	    signals can be added (through connections) beyond those
+	    declared explicitly in the <tt><b>connector</b></tt>
+	    definition.  More information about expandable connectors
+	    can be found in {{ xref("9.1.3", 94) }}.
+	  </p>
+	</div>
+      </span>
     </span>
+
   </div>
 </div>
