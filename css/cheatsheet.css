@@ -206,6 +206,10 @@ button {
     border-top: none;
 }
 
+td.borderless {
+    border-top: none;
+}
+
 /* Not what it sounds like ;-) */
 .headbut {
     padding-right: 5px;

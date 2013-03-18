@@ -8,15 +8,66 @@
 <td colspan="{{n}}"><tt>{{ name }}</tt></td>
 {% endmacro %}
 
+{% macro op(text, name, desc) %}
+<tr>
+  <td><tt>{{text}}</tt></td>
+  <td>{{name}}</td>
+  <td>{{desc}}</td>
+</tr>
+{% endmacro %}
+
 <!--- MODULE: Information about stuff you find in Modelica expressions -->
 <div id="variability" class="module">
   <h5>Expressions</h5>
   <div class="modbod">
     <table class="table table-condensed">
       <tr>
-	<th colspan="8">
+	<th colspan="7">
 	  Arithmetic Operators
 	</th>
+	<td class="borderless">
+	  <span class="pull-right">{{comment}}
+	    <div class="popover" data-placement="bottom">
+	      <table class="table">
+		<tr>
+		  <th></th>
+		  <th>Name</th>
+		  <th>Description</th>
+		</tr>
+		{{ op("+","Addition","Can be used on both scalars and
+		  arrays of the same size") }}
+		<tr>
+		  <td><tt>-</tt></td>
+		  <td>Subtraction</td>
+		  <td>Can be used on both scalars and arrays of the
+		  same size</td>
+		</tr>
+		<tr>
+		  <td><tt>*</tt></td>
+		  <td>Multiplication</td>
+		  <td class="narrow">Can be used to multiply arrays by
+		  scalars or to take the inner product between two
+		  arrays.</td>
+		</tr>
+		<tr>
+		  <td><tt>/</tt></td>
+		  <td>Division</td>
+		  <td class="narrow">Can be used on scalars.  Can also
+		  be used with arrays as long as the denominator is a
+		  scalar.</td>
+		</tr>
+		<tr>
+		  <td><tt>.+ .- .* ./</tt></td>
+		  <td>Elementwise<br>Versions</td>
+		  <td class="narrow">When applied to arrays (of the
+		  same size), these operators perform their operation
+		  between scalars at matching positions in each
+		  array.</td>
+		</tr>
+	      </table>
+	    </div>
+	  </span>
+	</td>
       </tr>
 
       <tr>

@@ -1,0 +1,53 @@
+<table class="table">
+  <tr>
+    <th colspan="2">For Statement ({{ xref("11.2.2", 127) }})
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Syntax
+    </td>
+    <td>
+      <tt>
+	<b>for</b> indices <b>loop</b><br>
+	&nbsp;&nbsp;...<br>
+	<b>end</b> <b>for</b>;
+      </tt>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">Indices</th>
+  </tr>
+  <tr>
+    <td>
+      <tt><b>for<b> i <b>in</b> 1:10 <b>loop</b>
+    </td>
+    <td>Looping over a range of integers<br>
+    <tt>1,2,3,...,10</tt></td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt><b>for<b> i <b>in</b> 1.0 : 1.5 : 5.5 <b>loop</b>
+    </td>
+    <td>Looping over reals<br>
+      <tt>1.0, 2.5, 4.0, 5.5</tt></td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt><b>for<b> i <b>in</b> {1,3,6,7} <b>loop</b>
+    </td>
+    <td>Looping over a collection of values<br>
+    <tt>1, 3, 6, 7</tt></td>
+  </tr>
+
+  <tr>
+    <td>
+      <tt><b>for<b> i <b>in</b> TwoEnums <b>loop</b>
+    </td>
+    <td>Looping over enum values<br>
+    <tt>TwoEnums.one, TwoEnums.two</tt><br>
+    where <tt><b>type</b> TwoEnums = <b>enumeration</b>(one, two)</tt></td>
+  </tr>
+</table>
