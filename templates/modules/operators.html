@@ -1,15 +1,203 @@
+{% from "macros.html" import xref %}
+{% from "macros.html" import f %}
+{% from "macros.html" import kw, tname %}
+
 <!--- MODULE: Restricted classes -->
 <div class="module">
+  <span class="pull-right headbut">{{ comment }}
+    <div class="popover">
+      <p class="seminarrow">
+	Operator overloading is a complex topic and is covered in
+	detail in {{ xref("14", 167) }}
+      </p>
+    </div>
+  </span>
   <h5>Operators</h5>
   <div class="modbod">
-    <span id="operator">
-      <b><tt>operator</tt></b>
-    </span><br>
-    <span id="operator function">
-      <b><tt>operator function</tt></b>
-    </span><br>
     <span id="operator record">
       <b><tt>operator record</tt></b>
-    </span><br>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" title="Records with Overloaded Operators"
+	   data-placement="top">
+	<table class="table">
+	  <tr>
+	    <th>What's an <tt><b>operator record</b></tt>?</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <p class="seminarrow">
+		An <tt><b>operator record</b></tt> is like an
+		ordinary <tt><b>record</b></tt> except that it is
+		possible to define custom behavior for operators
+		like <tt>+</tt>, <tt>-</tt>, etc.  For more details,
+		see {{ xref("14", 167) }}.
+	      </p>
+	    </td>
+	  </tr>
+	  <tr>
+	    <th>
+	      Canonical Syntax
+	    </th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt><b>operator record</b> <tt class="typename">Complex</tt><br>
+		&nbsp;&nbsp;<tt class="typename">Real</tt> re;<br>
+		&nbsp;&nbsp;<tt class="typename">Real</tt> im;<br>
+		&nbsp;&nbsp;...<br>
+		<tt class="comment">
+		  &nbsp;&nbsp;// Definition of <b>operator function</b>s<br>
+		  &nbsp;&nbsp;// <b>operator</b>s<br></tt>
+		<b>end</b> <tt class="typename">Complex</tt>;
+	      </tt>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span id="operator function">
+      <b><tt>operator function</tt></b>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" title="Operator Functions" data-placement="top">
+	<table class="table">
+	  <tr>
+	    <th colspan="2">What's an <tt><b>operator function</b></tt>?</th>
+	  </tr>
+	  <tr>
+	    <td colspan="2">
+	      <p class="seminarrow">
+		An <tt><b>operator function</b></tt> is a function
+		that implements an operator for an <tt><b>operator
+		record</b><tt/>.
+	      </p>
+	    </td>
+	  </tr>
+	  <tr>
+	    <th colspan="2">Possible Operators</th>
+	  </tr>
+	  <tr>
+	    <td>Constructors (see {{ xref("14.2", 168) }}):</td>
+	    <td><tt>constructor</tt>, <tt>0</tt></td>
+	  </tr>
+	  <tr>
+	    <td>Conversions (see {{ xref("14.3", 169) }}):</td>
+	    <td><tt>String</tt></td>
+	  </tr>
+	  <tr>
+	    <td>Binary Operators (see {{ xref("14.4", 169) }}):</td>
+	    <td>
+	      {{ f("+") }} , {{ f("-") }}, {{ f("*") }}, {{ f("/") }},
+	      {{ f("^") }}, {{ f("==") }}, <br> {{ f("&lt;&gt;") }},
+	      {{ f("&gt;") }}, {{ f("&lt;") }}, {{ f("&gt;=") }},
+	      {{ f("&lt;=") }}, {{ f("<b>and</b>") }}, {{ f("<b>or</b>") }}
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>Unary Operators (see {{ xref("14.5", 170) }}):</td>
+	    <td> {{ f("-") }}, {{ f("<b>not</b>") }}</td>
+	  </tr>
+	  <tr>
+	    <th colspan="2">Examples</th>
+	  </tr>
+	  <tr>
+	    <td colspan="2">
+	      <tt><b>encapsulated operator function</b> '+'<br>
+		&nbsp;&nbsp;<b>import</b> <span class="typename">Complex</span>;<br>
+		&nbsp;&nbsp;<b>input</b> <span class="typename">Complex</span>
+		c1;<br>
+		&nbsp;&nbsp;<b>input</b> <span class="typename">Complex</span>
+		c2;<br>
+		&nbsp;&nbsp;<b>output</b> <span class="typename">Complex</span>
+		result;<br>
+		<b>algorithm</b><br>
+		&nbsp;&nbsp;result
+		:= <span class="typename">Complex</span>(c1.re+c2.re,
+		c1.im+c2.im);<br>
+		&nbsp;&nbsp;<b>annotation</b>(Inline=<b>true</b>);<br>
+		<b>end</b> '+';<br>
+	    </td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  <b>Note:</b> An <tt><b>operator function</b></tt> should
+	  be encapsulated.
+	</div>
+      </div>
+    </span>
+    <br>
+    <span id="operator">
+      <b><tt>operator</tt></b>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" title="Multiple Operator Implementations"
+	   data-placement="top">
+	<table class="table">
+	  <tr>
+	    <th>What's an <tt><b>operator</b></tt>?</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <p class="seminarrow">
+		When an <tt><b>operator record</b></tt> requires more
+		than one implementation of a given operator,
+		e.g., <tt>'+'</tt>, a special type
+		of <tt><b>package</b></tt> called
+		an <tt><b>operator</b></tt> is created with the name
+		of the overloaded operator.
+		This <tt><b>operator</b></tt> "package" includes all
+		the various implementations of the operator.
+	      </p>
+	    </td>
+	  </tr>
+	  <tr>
+	    <th>Example</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>enscapsulated operator</b> '-'<br>
+		&nbsp;&nbsp;{{ kw("import") }} {{ tname("Complex")
+		}};<br>
+		&nbsp;&nbsp;{{ kw("function") }} {{ tname("negate")
+		}}<br>
+		&nbsp;&nbsp;&nbsp&nbsp;{{ kw("input") }} {{
+		tname("Complex") }} c;<br>
+		&nbsp;&nbsp;&nbsp&nbsp;{{ kw("output") }} {{
+		tname("Complex") }} result;<br>
+		&nbsp;&nbsp;{{ kw("algorithm") }}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;result := {{ tname("Complex")
+		}}(-c.re, -c.im);<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;{{ kw("annotation")
+		}}(Inline={{kw("true")}});<br>
+		&nbsp;&nbsp;{{kw("end")}} {{tname("negate")}};<br>
+		<br>
+
+		&nbsp;&nbsp;{{ kw("function") }} {{ tname("subtract")
+		}}<br>
+		&nbsp;&nbsp;&nbsp&nbsp;{{ kw("input") }} {{
+		tname("Complex") }} c1;<br>
+		&nbsp;&nbsp;&nbsp&nbsp;{{ kw("input") }} {{
+		tname("Complex") }} c2;<br>
+		&nbsp;&nbsp;&nbsp&nbsp;{{ kw("output") }} {{
+		tname("Complex") }} result;<br>
+		&nbsp;&nbsp;{{ kw("algorithm") }}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;result := {{ tname("Complex")
+		}}(c1.re-c2.re, c1.im-c2.im);<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;{{ kw("annotation")
+		}}(Inline={{kw("true")}});<br>
+		&nbsp;&nbsp;{{kw("end")}} {{tname("subtract")}};
+	      </tt>
+	    </td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  <b>Note:</b> An <tt><b>operator</b></tt> should
+	  be encapsulated.
+	</div>
+      </div>
+    </span>
   </div>
 </div>

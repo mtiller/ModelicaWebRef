@@ -13,3 +13,19 @@
 {%- macro xref(sec,page) -%}
 <a href="{{spec}}#page={{page}}" target="_blank">&sect;{{sec}}</a>
 {%- endmacro -%}
+
+{% macro f(name) %}
+<tt class="op">{{ name }}</tt>
+{% endmacro %}
+
+{%- macro kw(name) -%}
+<tt><b>{{name}}</b></tt>
+{%- endmacro -%}
+
+{%- macro tname(name) -%}
+<tt class="typename">{{name}}</tt>
+{%- endmacro -%}
+
+{%- macro comstr(name) -%}
+<tt class="comment">{{name}}</tt>
+{%- endmacro -%}

@@ -1,8 +1,5 @@
 {% from "macros.html" import xref %}
-
-{% macro f(name) %}
-<tt class="op">{{ name }}</tt>
-{% endmacro %}
+{% from "macros.html" import f %}
 
 {% macro cf(name,n=1) %}
 <td colspan="{{n}}"><tt>{{ name }}</tt></td>

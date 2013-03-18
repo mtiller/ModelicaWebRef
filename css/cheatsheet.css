@@ -178,6 +178,10 @@ button {
     width: 200px;
 }
 
+.seminarrow {
+    width: 400px;
+}
+
 .nav-tabs > li > a {
     color: #808080;
 }
