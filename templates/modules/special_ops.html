@@ -1,38 +1,228 @@
 {% from "macros.html" import xref %}
 
 <!--- MODULE: Information about built-in operators -->
-<div id="variability" class="module">
+<div class="module">
+{#
   <span class="pull-right headbut">
     {{warning}}
     <div class="popover" data-placement="right">
     </div>
   </span>
-  <h5>Special Operators</h5>
+#}
+  <h5>Special Operators&nbsp;&nbsp;&nbsp;</h5>
   <div class="modbod">
     <span><tt><b>connect</b></tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
-	<tt><b>connect</b>(a, b);</tt>
+	<tt>connect(a, b);</tt> (see {{ xref("9.1", 93) }})
       </div>
     </span><br>
-    <span><tt><b>der</b></tt></span><br>
+    <span><tt><b>der</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<tt>der(x)</tt> - Take the derivative of a variables
+	or <b>expression</b> (see {{ xref("3.7.2", 22) }} )
+      </div>
+    </span>
+    <br>
     <span>
       <b><tt><b>inStream</b></tt></b>
-    </span><br>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <td>
+	      <tt>inStream(v)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      <tt>v</tt> must be a stream variable (<i>i.e.,</i> be
+	      preceded by the <tt><b>stream</b></tt> qualifier on a
+	      connector).  This operator provides the value of the
+	      stream variable close to the connection point assuming
+	      inward flow.  For more details, see {{ xref("15.2", 176)
+	      }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
     <span>
       <b><tt><b>actualStream</b></tt></b>
-    </span><br>
-    <span><tt><b>assert</b></tt></span><br>
-    <span><tt><b>cardinality</b></tt></span><br>
-    <span><tt><b>delay</b></tt></span><br>
-    <span><tt><b>isPresent</b></tt></span><br>
-    <span><tt><b>max</b></tt></span><br>
-    <span><tt><b>min</b></tt></span><br>
-    <span><tt><b>ndims</b></tt></span><br>
-    <span><tt><b>product</b></tt></span><br>
-    <span><tt><b>semiLinear</b></tt></span><br>
-    <span><tt><b>size</b></tt></span><br>
-    <span><tt><b>sum</b></tt></span><br>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <td>
+	      <tt>actualStream(v)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the actual value of the stream
+	      variable <tt>v</tt> for any flow direction.  For more
+	      details, see {{ xref("15.3", 179) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+
+    <span><tt><b>semiLinear</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <td>
+	      <tt>semiLinear(x, postivieSlope, negativeSlope)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Equivalent to:
+	      <tt class="nobreak"><b>if</b> x&gt;=0 <b>then</b>
+	      positiveSlope*x <b>else</b> negativeSlope*x;</tt><br>
+	      See {{ xref("3.7.2", 23) }} for more details.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+
+    <br>
+    <span>
+{#      <b><tt><b><span class="toowide">spatialDistribution</span></b></tt></b> #}
+      <b><tt><b><span class="toowide">spatialDistribution</span></b></tt></b>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <td>
+	      <tt>spatialDistribution(...)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      See {{ xref("3.7.2.2", 23) }}
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+
+    <span>
+      <b><tt><b>getInstanceName</b></tt></b>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <td>
+	      <tt>getInstanceName()</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns a string with model/block and instance names
+	      from which it is called.  See {{ xref("3.7.2.6", 28) }}
+	      for further details.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+
+    <span><tt><b>homotopy</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="bottom">
+	<table>
+	  <tr>
+	    <td>
+	      <tt>homotopy(actual=...,simplified=...)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      The <tt>homotopy</tt> operator can be used to ease the
+	      solving of non-linear systems.  Further discussion of
+	      its use can be found in {{ xref("3.7.2", 22) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span><tt><b>cardinality</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	This operator is <b>deprecated</b>.  It should no longer be
+	used (see {{ xref("3.7.2", 22) }}).
+      </div>
+    </span>
+    <br>
+    <span><tt><b>delay</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table>
+	  <tr>
+	    <td><tt>delay(expr, delayTime)</tt><br>
+	      <tt class="nobreak">delay(expr, delayTime, delayMax)</tt>
+	    </td>
+	    <td>Give the value of <tt>expr</tt> delayed by (the
+	      potentially variable) <tt>delayTime</tt>.  See {{
+	      xref("3.7.2", 22) }} and {{ xref("3.7.2.1", 23) }} for
+	      more details.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+
+    <span><tt><b>assert</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+
+    <span><tt><b>isPresent</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+    <span><tt><b>max</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+    <span><tt><b>min</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+    <span><tt><b>ndims</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+    <span><tt><b>product</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+
+    <span><tt><b>size</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
+    <br>
+    <span><tt><b>sum</b></tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+      </div>
+    </span>
   </div>
 </div>
 
