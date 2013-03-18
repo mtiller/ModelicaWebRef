@@ -25,27 +25,44 @@
       </div>
 
       <div class="row">
+	<div class="span12">
+	  <table class="root">
+	    <tr>
+	      <td>
+		{% include "modules/lexical.html" %}
+		{% include "modules/special_ops.html" %}
+		{% include "modules/variability.html" %}
+		{% include "modules/statements.html" %}
+	      </td>
+	      <td>
+		{% include "modules/builtin_types.html" %}
+		{% include "modules/exprs.html" %}
+	      </td>
+	      <td>
+		{% include "modules/restricted_classes.html" %}
+		{% include "modules/class_definitions.html" %}
+		{% include "modules/con_quals.html" %}
+		{% include "modules/event_ops.html" %}
+	      </td>
+	      <td>
+		{% include "modules/comp_expr.html" %}
+		{% include "modules/std_enums.html" %}
+		{% include "modules/annotations.html" %}
+		{% include "modules/operators.html" %}
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </div>
+
+      <div class="row">
 	<div id="basic_col1" class="span2">
-	  {% include "modules/lexical.html" %}
-	  {% include "modules/builtin_types.html" %}
-	  {% include "modules/variability.html" %}
-	  {% include "modules/restricted_classes.html" %}
-	  {% include "modules/statements.html" %}
 	</div>
 	<div id="basic_col2" class="span3">
-	  {% include "modules/std_enums.html" %}
-	  {% include "modules/comp_expr.html" %}
-	  {% include "modules/operators.html" %}
-	  {% include "modules/event_ops.html" %}
 	</div>
 	<div id="basic_col3" class="span4">
-	  {% include "modules/exprs.html" %}
-	  {% include "modules/annotations.html" %}
 	</div>
 	<div id="basic_col4" class="span3">
-	  {% include "modules/class_definitions.html" %}
-	  {% include "modules/special_ops.html" %}
-	  {% include "modules/con_quals.html" %}
 	</div>
       </div>
 

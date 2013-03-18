@@ -18,15 +18,26 @@ h5 {
     text-align: center;
     background-color: #e0e0e0;
     margin-top: 0px;
+    white-space: nowrap;
 }
 
 .module {
-    background-color: #f4f4f4;
-    border: 1px solid #e0e0e0;
+/*    background-color: #f4f4f4; */
+    border: 1px solid white;
+    background-color: white;
     border-radius: 4px 4px 4px 4px;
-    height: 100%;
-    width: 100%;
     margin-bottom: 10px;
+}
+
+div.module h5 {
+    padding-right: 40px;
+}
+
+table.root td {
+    padding-left: 8px;
+    height: 100%;
+    vertical-align: top;
+    min-width: 120px;
 }
 
 .var-module {
@@ -100,7 +111,7 @@ button {
 }
 
 [class*="span"] {
-    margin-left: 17px; 
+    margin-left: 12px; 
 }
 
 
