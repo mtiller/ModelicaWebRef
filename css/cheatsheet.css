@@ -250,3 +250,8 @@ td.borderless {
 .table td.justified tt {
     margin: 4px;
 }
+
+tt.op {
+    margin: 4px;
+}
+
