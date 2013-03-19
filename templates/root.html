@@ -16,12 +16,12 @@
 	<div class="span1">
 	  <a href="http://www.xogeny.com"><img src="img/Xogeny.png"></a>
 	</div>
-	<div class="span3">
+	<div class="span1">
 	</div>
-	<div class="span4">
-	  <h4 class="heading centered">{{ title }} - v{{ version }}</h4>
+	<div class="span8">
+	  <h3 class="heading centered">{{ title }} - v{{ version }}</h3>
 	</div>
-	<div class="span3 rightjust">
+	<div class="span1 rightjust">
 	</div>
 	<div class="span1 rightjust rightlogo">
 	  <a href="http://www.cydesign.com"><img src="img/CyDesign.png"></a>
@@ -71,9 +71,6 @@
 	</div>
       </div>
 
-      <div class="row">
-	<div class="span12"><br></div>
-      </div>
       <div id="legend" class="row">
 	<div class="span12">
 	  <table id="foottab">
@@ -87,7 +84,7 @@
 		</ul>
 	      </td>
 	      <td class="centered">
-		&copy;<small>&nbsp;2013</small>
+		&copy;&nbsp;2013
 		<a href="http://www.xogeny.com/">
 		  <span class="xogeny">Xogeny</span>
 		</a>
@@ -99,6 +96,10 @@
 		</ul>
 		<br><br>
 		<ul class="pull-right hlist">
+		  {#
+		  <!-- I couldn't get this to work -->
+		  <li><a class="close" href="javascript:$('.popover').popover('hide')">&times;</a></li>
+		  #}
 		  <li>
 		    <i class="icon-edit"></i>&nbsp;License
 		    <div class="popover" data-placement="top"
@@ -144,12 +145,13 @@
       <div class="modal-body">
 	<p>
 	  This page was authored
-	  by <a href="https://plus.google.com/u/0/106797365970607309985?rel=author">Michael
-	  Tiller</a>.
+	    by <a href="https://plus.google.com/u/0/106797365970607309985?rel=author">
+	    Michael Tiller
+	  </a>.
 	</p>
 	<p>
 	  The inspiration for this quick reference card came from
-	  Derek Cheng at <a href="www.cydesign.com">CyDesign</a>.
+	  Derek Cheng at <a href="http://www.cydesign.com/">CyDesign</a>.
 	<p>
 	<p>
 	  Although a separate effort, this reference card benefited

@@ -235,6 +235,20 @@
       </div>
     </span>
     <br>
+    <tt>GenerateEvents</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When the <tt>GenerateEvents</tt> annotation is associated
+	  with a function definition and given a value
+	  of <tt><b>true</b></tt>, this indicates that expressions in
+	  the function should generate events (<i>e.g.,</i> as if they
+	  appeared in an <tt><b>equation</b></tt> section).
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
+      </div>
+    </span>
+    <br>
     <tt>HideResult</tt>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
@@ -261,34 +275,6 @@
       </div>
     </span>
     <br>
-    <tt>LateInline</tt>
-    <span class="pull-right">{{ comment }}
-      <div class="popover" data-placement="top">
-	<p class="seminarrow">
-	  When the <tt>LateInline</tt> annotation is associated with a
-	  function definition and given a value
-	  of <tt><b>true</b></tt>, this indicates that the function
-	  should be inlined during the code generation process, but
-	  not before symbolic manipulation has been performed.
-	</p>
-	<p>See {{ xref("18.3", 214) }} for more details.</p>
-      </div>
-    </span>
-    <br>
-    <tt>GenerateEvents</tt>
-    <span class="pull-right">{{ comment }}
-      <div class="popover" data-placement="top">
-	<p class="seminarrow">
-	  When the <tt>GenerateEvents</tt> annotation is associated
-	  with a function definition and given a value
-	  of <tt><b>true</b></tt>, this indicates that expressions in
-	  the function should generate events (<i>e.g.,</i> as if they
-	  appeared in an <tt><b>equation</b></tt> section).
-	</p>
-	<p>See {{ xref("18.3", 214) }} for more details.</p>
-      </div>
-    </span>
-    <br>
     <tt>inverse</tt>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
@@ -303,6 +289,20 @@
 	  {{spaces(21)}}u2=fi2(u1, y)));<br>
 	  <b>end</b> {{tname("f")}};
 	</tt>
+      </div>
+    </span>
+    <br>
+    <tt>LateInline</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When the <tt>LateInline</tt> annotation is associated with a
+	  function definition and given a value
+	  of <tt><b>true</b></tt>, this indicates that the function
+	  should be inlined during the code generation process, but
+	  not before symbolic manipulation has been performed.
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
       </div>
     </span>
     <br>
@@ -346,19 +346,6 @@
       </div>
     </span>
     <br>
-    <tt>version</tt>
-    <span class="pull-right">{{ comment }}
-      <div class="popover" data-placement="top">
-	<p class="seminarrow">
-	  Within a top-level package, the <tt>version</tt> annotation
-	  is used to indicate the version number for that package.
-	  This is used to distinguish between multiple versions when
-	  they are available.  See {{ xref("18.8.2", 228) }} for more
-	  details about version handling.
-	</p>
-      </div>
-    </span>
-    <br>
     <tt>unassignedMessage</tt>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
@@ -369,6 +356,19 @@
 	  message to the user if the structural analysis of the
 	  problem does not yield an equation to compute that variable.
 	  See {{ xref("18.7", 224) }} for complete details.
+	</p>
+      </div>
+    </span>
+    <br>
+    <tt>version</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  Within a top-level package, the <tt>version</tt> annotation
+	  is used to indicate the version number for that package.
+	  This is used to distinguish between multiple versions when
+	  they are available.  See {{ xref("18.8.2", 228) }} for more
+	  details about version handling.
 	</p>
       </div>
     </span>
