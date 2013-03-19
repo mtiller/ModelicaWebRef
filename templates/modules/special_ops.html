@@ -1,4 +1,4 @@
-{% from "macros.html" import xref %}
+{% from "macros.html" import xref, tname, kw %}
 
 <!--- MODULE: Information about built-in operators -->
 <div class="module">
@@ -9,15 +9,15 @@
     </div>
   </span>
 #}
-  <h5>Special Operators&nbsp;&nbsp;&nbsp;</h5>
+  <h5>Special Operators&nbsp;&nbsp;&nbsp;&nbsp;</h5>
   <div class="modbod">
-    <span><tt><b>connect</b></tt></span>
+    <span><tt>connect</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
 	<tt>connect(a, b);</tt> (see {{ xref("9.1", 93) }})
       </div>
     </span><br>
-    <span><tt><b>der</b></tt></span>
+    <span><tt>der</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
 	<tt>der(x)</tt> - Take the derivative of a variables
@@ -26,11 +26,16 @@
     </span>
     <br>
     <span>
-      <b><tt><b>inStream</b></tt></b>
+      <tt>inStream</tt>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
 	  <tr>
 	    <td>
 	      <tt>inStream(v)</tt>
@@ -49,11 +54,16 @@
     </span>
     <br>
     <span>
-      <b><tt><b>actualStream</b></tt></b>
+      <tt>actualStream</tt>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
 	  <tr>
 	    <td>
 	      <tt>actualStream(v)</tt>
@@ -68,10 +78,15 @@
       </div>
     </span>
 
-    <span><tt><b>semiLinear</b></tt></span>
+    <span><tt>semiLinear</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
 	  <tr>
 	    <td>
 	      <tt>semiLinear(x, postivieSlope, negativeSlope)</tt>
@@ -89,12 +104,16 @@
 
     <br>
     <span>
-{#      <b><tt><b><span class="toowide">spatialDistribution</span></b></tt></b> #}
-      <b><tt><b><span class="toowide">spatialDistribution</span></b></tt></b>
+      <tt><span class="toowide">spatialDistribution</span></tt>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
 	  <tr>
 	    <td>
 	      <tt>spatialDistribution(...)</tt>
@@ -109,11 +128,16 @@
     <br>
 
     <span>
-      <b><tt><b>getInstanceName</b></tt></b>
+      <tt>getInstanceName</tt>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
 	  <tr>
 	    <td>
 	      <tt>getInstanceName()</tt>
@@ -129,10 +153,15 @@
     </span>
     <br>
 
-    <span><tt><b>homotopy</b></tt></span>
+    <span><tt>homotopy</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
 	  <tr>
 	    <td>
 	      <tt>homotopy(actual=...,simplified=...)</tt>
@@ -147,23 +176,21 @@
       </div>
     </span>
     <br>
-    <span><tt><b>cardinality</b></tt></span>
-    <span class="pull-right">{{ example }}
-      <div class="popover" data-placement="right">
-	This operator is <b>deprecated</b>.  It should no longer be
-	used (see {{ xref("3.7.2", 22) }}).
-      </div>
-    </span>
-    <br>
-    <span><tt><b>delay</b></tt></span>
+
+    <span><tt>delay</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table>
 	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
 	    <td><tt>delay(expr, delayTime)</tt><br>
-	      <tt class="nobreak">delay(expr, delayTime, delayMax)</tt>
+	      <tt class="nobreak">delay(expr, delayTime, delayMax)&nbsp;</tt>
 	    </td>
-	    <td>Give the value of <tt>expr</tt> delayed by (the
+	    <td class="seminarrow">
+	      Give the value of <tt>expr</tt> delayed by (the
 	      potentially variable) <tt>delayTime</tt>.  See {{
 	      xref("3.7.2", 22) }} and {{ xref("3.7.2.1", 23) }} for
 	      more details.
@@ -174,55 +201,250 @@
     </span>
     <br>
 
-    <span><tt><b>assert</b></tt></span>
+    <span><tt>assert</tt></span>
     <span class="pull-right">{{ example }}
-      <div class="popover" data-placement="right">
+      <div class="popover" data-placement="top">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>assert(cond, message, level={{tname("AssertionLevel")}}.error)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Assertions are used to enforce limitations in a model
+	      through the conditional expression, <tt>cond</tt>.
+	      Normally, the <tt>level</tt> argument defaults to
+	      <tt>{{tname("AssertionLevel")}}.error</tt>.  However, if
+	      a {{kw("false")}} value for <tt>cond</tt> isn't strictly
+	      an error, the <tt>level</tt> argument can be set to
+	      <tt>{{tname("AssertionLevel")}}.warning</tt>.  See {{
+	      xref("8.3.7", 87) }} for more details
+	      about <tt>assert</tt>.
+	    </td>
+	  </tr>
+	</table>
       </div>
     </span>
     <br>
 
-    <span><tt><b>isPresent</b></tt></span>
+    <span><tt>ndims</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
-      </div>
-    </span>
-    <br>
-    <span><tt><b>max</b></tt></span>
-    <span class="pull-right">{{ example }}
-      <div class="popover" data-placement="right">
-      </div>
-    </span>
-    <br>
-    <span><tt><b>min</b></tt></span>
-    <span class="pull-right">{{ example }}
-      <div class="popover" data-placement="right">
-      </div>
-    </span>
-    <br>
-    <span><tt><b>ndims</b></tt></span>
-    <span class="pull-right">{{ example }}
-      <div class="popover" data-placement="right">
-      </div>
-    </span>
-    <br>
-    <span><tt><b>product</b></tt></span>
-    <span class="pull-right">{{ example }}
-      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>ndims(A)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the number of dimensions of <tt>A</tt>.  See {{
+	      xref("10.3.1", 112) }} for more details.
+	    </td>
+	  </tr>
+	</table>
       </div>
     </span>
     <br>
 
-    <span><tt><b>size</b></tt></span>
+    <span><tt>size</tt></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>size(A,i)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the size of dimension <t>i</t> in <tt>A</tt>
+	      where 0 &lt; <tt>i</tt> &lt;= <tt>ndims(A)</tt>.
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>size(A)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns a vector containing the size of each dimension
+	      of <tt>A</tt>.
+	    </td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  See {{ xref("10.3.1", 112) }} for more discussion about
+	  the <tt>size</tt> function.
+	</div>
       </div>
     </span>
     <br>
-    <span><tt><b>sum</b></tt></span>
-    <span class="pull-right">{{ example }}
+
+    <span><tt>cardinality</tt></span>
+    <span class="pull-right">{{ warning }}
       <div class="popover" data-placement="right">
+	This operator is <b>deprecated</b>.  It should no longer be
+	used (see {{ xref("3.7.2", 22) }}).
       </div>
     </span>
+    <br>
+
+    <span><tt>isPresent</tt></span>
+    <span class="pull-right">{{ warning }}
+      <div class="popover" data-placement="right">
+	This operator was <b>removed</b> from the language as of
+	version 3.0.
+      </div>
+    </span>
+
   </div>
 </div>
 
+<div class="module">
+  <span class="pull-right headbut">
+    {{ comment }}
+    <div class="popover" data-placement="top">
+      Reduction operators are discussed in {{ xref("10.3.4", 113) }}.
+    </div>
+  </span>
+  <h5>Reduction Operators</h5>
+  <div class="modbod">
+    <span><tt>max</tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>max(A)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      When applied to an array, the <tt>max</tt> function
+	      returns the element of the array with the greatest value.
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>max(x, y)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      When used with two scalar arguments, <tt>max</tt>
+	      returns the greater of the two arguments.
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>max(e, for i in u, j in v, ...)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the greatest value among all possible values
+	      of <tt>e</tt> over the range of all possible index
+	      combinations.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span><tt>min</tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>min(A)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      When applied to an array, the <tt>min</tt> function
+	      returns the element of the array with the least value.
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>min(x, y)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      When used with two scalar arguments, <tt>min</tt>
+	      returns the lesser of the two arguments.
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>min(e, for i in u, j in v, ...)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the least value among all possible values
+	      of <tt>e</tt> over the range of all possible index
+	      combinations.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span><tt>product</tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>product(e, for i in u, j in v, ...)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the product of all values of <tt>e</tt> over all
+	      possible index combinations.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span><tt>sum</tt></span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt class="nobreak"><tt>sum(e, for i in u, j in v, ...)</tt>
+	    </td>
+	    <td class="seminarrow">
+	      Returns the sum of all values of <tt>e</tt> over all
+	      possible index combinations.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+  </div>
+</div>
