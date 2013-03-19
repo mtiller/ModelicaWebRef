@@ -26,7 +26,16 @@
 <tt class="typename">{{name}}</tt>
 {%- endmacro -%}
 
+{%- macro descstr(name) -%}
+<tt class="descstr">{{name}}</tt>
+{%- endmacro -%}
+
 {%- macro comstr(name) -%}
 <tt class="comment">{{name}}</tt>
 {%- endmacro -%}
 
+{%- macro spaces(n) -%}
+{%- for i in range(0,n) -%}
+&nbsp;
+{%- endfor -%}
+{%- endmacro -%}

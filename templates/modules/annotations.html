@@ -1,26 +1,304 @@
-{% from "macros.html" import xref %}
+{% from "macros.html" import xref, tname, spaces %}
 
 <!--- MODULE: Information about standard annotations -->
 <div id="variability" class="module">
-  <h5>Annotations</h5>
+  <h5 style="padding: 0px 70px">Annotations</h5>
   <div class="modbod">
-    <tt>choices</tt><br>
-    <tt>defaultComponentName</tt><br>
-    <tt>defaultComponentPrefixes&nbsp;&nbsp;&nbsp;</tt><br>
-    <tt>derivative</tt><br>
-    <tt>Dialog</tt><br>
-    <tt>Documentation</tt><br>
-    <tt>DynamicSelect</tt><br>
-    <tt>Evaluate</tt><br>
-    <tt>experiment</tt><br>
-    <tt>HideResult</tt><br>
-    <tt>Inline</tt><br>
-    <tt>inverse</tt><br>
-    <tt>LateInline</tt><br>
-    <tt>missingInnerMessage</tt><br>
-    <tt>preferredView</tt><br>
-    <tt>smoothOrder</tt><br>
-    <tt>version</tt><br>
+    <tt>choices</tt>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table class="table">
+	  <tr><th>Explicit values for a variable</th></tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>parameter</b> {{tname("Integer")}} x<br>
+		&nbsp;&nbsp;<b>annotation</b>(choices(choice=3 "Desc", choice=5 "Desc"));
+	      </tt><br>
+	    </td>
+	  </tr>
+	  <tr><th>Explicit redeclarations</th></tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>replaceable</b> model {{tname("Resistor")}} Load(R=2) <b>constrainedby</b> {{tname("TwoPin")}}<br>
+		&nbsp;&nbsp;<b>annotation</b>(choices(<br>
+		{{spaces(14)}}choice(<b>redeclare</b> {{tname("ThermalResistor")}} Load(R=2,T0=273)),<br>
+		{{spaces(14)}}choice(<b>redeclare</b> {{tname("Capacitor")}} Load(C=2e-3))));<br>
+	      </tt>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+
+    <br>
+    <tt>defaultComponentName</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	The <tt>defaultComponentName</tt> annotation allows a default
+	name to be associated with a given definition.  When dragging
+	new instances of a given definition into a diagram, the string
+	associated with the <tt>defaultComponentName</tt> should be
+	used as the basis for the initial instance name.
+	</p>
+      </div>
+    </span>
+    <br>
+    <tt>defaultComponentPrefixes</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	The <tt>defaultComponentPrefixes</tt> annotation allows a
+	default set of prefixes to be associated with a given
+	definition.  When dragging new instances of a given definition
+	into a diagram, these prefixes should automatically be applied
+	to the new instance.
+	</p>
+      </div>
+    </span>
+    <br>
+    <tt>derivative</tt>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table class="table">
+	  <tr><th>A normal single argument function</th></tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>function</b> {{tname("f0")}}<br>
+		&nbsp;&nbsp;<b>input</b> {{tname("Real")}} x;<br>
+		&nbsp;&nbsp;<b>output</b> {{tname("Real")}} y;<br>
+		<b>algorithm</b><br>
+		&nbsp;&nbsp;...<br>
+		&nbsp;&nbsp;<b>annotation</b>(derivative=f1);<br>
+		<b>end</b> {{tname("f0")}};
+	      </tt>
+	    </td>
+	  </tr>
+	  <tr>
+	    <th>Definition of the first derivative of {{tname("f0")}}</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>function</b> {{tname("f1")}}<br>
+		&nbsp;&nbsp;<b>input</b> {{tname("Real")}} x;<br>
+		&nbsp;&nbsp;<b>input</b> {{tname("Real")}} der_x;<br>
+		&nbsp;&nbsp;<b>output</b> {{tname("Real")}} der_y;<br>
+		<b>algorithm</b><br>
+		&nbsp;&nbsp;...<br>
+		<b>end</b> {{tname("f1")}};
+	      </tt>
+	    </td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  The <tt>derivative</tt> annotation is discussed in great
+	  detail in {{ xref("12.7.1", 145) }}.
+	</div>
+      </div>
+    </span>
+    <br>
+    <tt>Dialog</tt>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<table class="table">
+	  <tr><th>Definition</th></tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>record</b> {{tname("Dialog")}}<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("String")}}  &nbsp;tab = "General";<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("String")}}  &nbsp;group = "Parameters";<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Boolean")}}  enable = <b>true</b>;<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Boolean")}}  showStartAttribute = <b>false</b>;<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("String")}} &nbsp;groupImage = "";<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Boolean")}}  connectorSizing = <b>false</b>;<br>
+		<b>end</b> {{tname("Dialog")}};
+	      </tt>
+	    </td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  A detailed description of each field in the <tt>Dialog</tt>
+	  annotation can be found in {{ xref("18.7", 225) }}.
+	</div>
+      </div>
+    </span>
+
+    <br>
+    <tt>Documentation</tt>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<tt>
+	  <b>annotation</b>(Documentation(info="&lt;html&gt;...&lt;/html&gt;",<br>
+	  {{spaces(25)}}revisions="..."));
+	</tt>
+	<div class="footnote">
+	  <p>
+	    Within the <tt>&lt;html&gt;</tt> tags, it is possible to
+	    use "Modelica URIs" of the form:
+	  </p>
+	  <ul>
+	    <li><tt>Modelica://Fully.Qualfied.Name#layer</tt>: Where layer
+	    can be one of <tt>diagram</tt>, <tt>info</tt>, <tt>text</tt>
+	    or <tt>icon</tt>.</li>
+	    <li><tt>Modelica://Fully.Qualfied.Name/dir/path/filename</tt>:
+	    Where <tt>dir/path</tt> is a directory structure starting
+	    at the point where the
+	    package <tt>Fully.Qualified.Name</tt> is stored
+	    and <tt>filename</tt> is a file in that directory.</li>
+	  </ul>
+	  <p>
+	    Complete documentation for the <tt>Documentation</tt>
+	    annotation can be found in {{ xref("18.2", 214) }}.
+	  </p>
+	</div>
+      </div>
+    </span>
+
+    <br>
+    <tt>DynamicSelect</tt>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top"
+	   title="Animation of Graphical Annotations">
+	<table class="table">
+	  <tr><th>Syntax</th></tr>
+	  <tr>
+	    <td>
+	      <tt>
+		DynamicSelect(val1, val2)
+	      </tt>
+	    </td>
+	  </tr>
+	  <tr><th>Explanation</th></tr>
+	  <tr>
+	    <td>
+	      <p class="seminarrow">
+		The <tt>DynamicSelect</tt> annotation can be used as a
+		value in any graphical annotation.  The first argument
+		must be a literal expression (no variables) and the
+		second argument can reference variables.  Tools can
+		then use the second expression in contexts
+		(<i>e.g.,</i> when simulation results are available)
+		to adjust the graphical representation according to
+		the values of the variables.
+	      </p>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <tt>Evaluate</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When applied to a <tt><b>parameter</b></tt>,
+	  the <tt>Evaluation</tt> annotation indicates that the user
+	  does not intend to modify the value of the parameter between
+	  simulations.  As a result, some potentially significant
+	  symbolic optimizations can often be made.
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
+      </div>
+    </span>
+    <br>
+    <tt>experiment</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<table class="table">
+	  <tr><th>Definition</th></tr>
+	  <tr>
+	    <td>
+	      <tt>
+		<b>record</b> {{tname("experiment")}}<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} StartTime;<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} StopTime;<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} Interval;<br>
+		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} Tolerance;<br>
+		<b>end</b> {{tname("experiment")}};
+	      </tt>
+	    </td>
+	  </tr>
+	</table>
+	<div class="footnote">
+	  <p>
+	    <tt>StartTime</tt>, <tt>StopTime</tt>
+	    and <tt>Interval</tt> are all assumed to have units of
+	    seconds.
+	  </p>
+	  <p>See {{ xref("18.4", 215) }} for more details.</p>
+	</div>
+      </div>
+    </span>
+    <br>
+    <tt>HideResult</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When applied to a variable declaration,
+	  the <tt>HideResult</tt> annotation indicates that the user
+	  does not wish to view this variable among the simulation
+	  results.
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
+      </div>
+    </span>
+    <br>
+    <tt>Inline</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When the <tt>Inline</tt> annotation is associated with a
+	  function definition and given a value
+	  of <tt><b>true</b></tt>, this indicates that the function
+	  should be inlined prior to symbolic manipulation.
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
+      </div>
+    </span>
+    <br>
+    <tt>LateInline</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When the <tt>LateInline</tt> annotation is associated with a
+	  function definition and given a value
+	  of <tt><b>true</b></tt>, this indicates that the function
+	  should be inlined during the code generation process, but
+	  not before symbolic manipulation has been performed.
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
+      </div>
+    </span>
+    <br>
+    <tt>GenerateEvents</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  When the <tt>GenerateEvents</tt> annotation is associated
+	  with a function definition and given a value
+	  of <tt><b>true</b></tt>, this indicates that expressions in
+	  the function should generate events (<i>e.g.,</i> as if they
+	  appeared in an <tt><b>equation</b></tt> section).
+	</p>
+	<p>See {{ xref("18.3", 214) }} for more details.</p>
+      </div>
+    </span>
+    <br>
+    <tt>inverse</tt>
+    <br>
+    <tt>missingInnerMessage</tt>
+    <br>
+    <tt>preferredView</tt>
+    <br>
+    <tt>smoothOrder</tt>
+    <br>
+    <tt>version</tt>
+    <br>
     <tt>unassignedMessage</tt>
   </div>
 </div>

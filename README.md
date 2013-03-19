@@ -1,0 +1,51 @@
+Overview
+========
+
+This repository contains all the source material for the Modelica
+Quick Reference card [hosted by Xogeny](http://modref.xogeny.com).
+
+Goals
+=====
+
+It is impossible to cram the entire Modelica specification
+into this quick reference card.
+
+The goals of this quick reference card are:
+
+  * To provide a distilled version of what is in the specification.
+
+  * To be relatively complete with respect to the keywords, operators,
+    types, functions and annotations defined in the specification.
+
+  * To provide links back to the relevant sections of the
+    specification when the detail included here is not sufficient.
+
+  * To keep all information within one click for users (i.e. no deep
+    hierarchies of organizational structure).
+
+  * Provide a way for people to learn about features in Modelica they
+    were no previously aware of without having to read the entire
+    specification.
+
+Contributions
+=============
+
+I very much welcome any feedback or contributions to this card.  If I
+implement any of your suggestions, I will gladly list you in the
+acknowledgments section.
+
+The simplest way to accept a contribution (i.e. correction or
+improvement) to this card is via pull request.  Alternatively, you can
+submit an issue to [the issue
+tracker](http://github.com/xogeny/ModRef).
+
+License
+=======
+
+This reference material is licensed under a [Creative Commons
+Attribution-NonCommercial-NoDerivs 3.0
+Unported](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US)
+License.  The main reason behind choosing this license is simply to
+avoid a proliferation of slightly different (or worse, erroneous)
+reference cards.  By having one "master" copy of this reference, my
+hope is to keep all improvements funneled into this master copy.
