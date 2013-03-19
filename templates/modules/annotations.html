@@ -290,15 +290,87 @@
     </span>
     <br>
     <tt>inverse</tt>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="top">
+	<tt>
+	  <b>function</b> {{tname("f")}}<br>
+	  &nbsp;&nbsp;<b>input</b> {{tname("T1")}} u1;<br>
+	  &nbsp;&nbsp;<b>input</b> {{tname("T2")}} u2;<br>
+	  &nbsp;&nbsp;<b>output</b> {{tname("R")}} y;<br>
+	  <b>algorithm</b><br>
+	  &nbsp;&nbsp;...<br>
+	  &nbsp;&nbsp;<b>annotation</b>(inverse(u1=fi1(u2,y),<br>
+	  {{spaces(21)}}u2=fi2(u1, y)));<br>
+	  <b>end</b> {{tname("f")}};
+	</tt>
+      </div>
+    </span>
     <br>
     <tt>missingInnerMessage</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<tt><b>annotation</b>(missingInnerMessage="...");</tt><br>
+	<p class="seminarrow">
+	  This annotation allows a tool to provide a customized
+	  message when an <tt><b>outer</b></tt> declaration cannot
+	  find a matching <tt><b>inner</b></tt>.  This allows library
+	  developers to provide more specific and meaningful
+	  diagnostics to users.
+	</p>
+	<p>See {{ xref("18.7", 224) }} for more details.</p>
+      </div>
+    </span>
     <br>
     <tt>preferredView</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  In a definition, the <tt>preferredView</tt> annotation can
+	  be given the values <tt>"info"</tt>, <tt>"diagram"</tt>
+	  or <tt>"text"</tt> to indicate which particular view makes
+	  the most sense as the default view for that definition (see
+	  {{ xref("18.2", 214) }}).
+	</p>
+      </div>
+    </span>
     <br>
     <tt>smoothOrder</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  In a function definition, the <tt>smoothOrder</tt>
+	  annotation indicates how many times the function can be
+	  differentiated and still have continuous outputs.  See {{
+	  xref("18.3", 215) }} for complete details.
+	</p>
+      </div>
+    </span>
     <br>
     <tt>version</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  Within a top-level package, the <tt>version</tt> annotation
+	  is used to indicate the version number for that package.
+	  This is used to distinguish between multiple versions when
+	  they are available.  See {{ xref("18.8.2", 228) }} for more
+	  details about version handling.
+	</p>
+      </div>
+    </span>
     <br>
     <tt>unassignedMessage</tt>
+    <span class="pull-right">{{ comment }}
+      <div class="popover" data-placement="top">
+	<p class="seminarrow">
+	  If the <tt>unassignedMessage</tt> annotation is associated
+	  with a variable, then the value of the annotation (which
+	  must be a {{tname("String")}}) will be used as a diagnostic
+	  message to the user if the structural analysis of the
+	  problem does not yield an equation to compute that variable.
+	  See {{ xref("18.7", 224) }} for complete details.
+	</p>
+      </div>
+    </span>
   </div>
 </div>
