@@ -1,18 +1,250 @@
-{% from "macros.html" import xref %}
+{% from "macros.html" import xref, kw %}
 
 <!--- MODULE: Information about event related operators -->
 <div class="module">
-  <h5>Event  Operators</h5>
+  <span class="pull-right headbut">
+    {{ comment }}
+    <div class="popover" data-placement="top">
+      These event related operators are discussed in {{ xref("3.7.3", 29) }}.
+    </div>
+  </span>
+  <h5>Event Operators</h5>
   <div class="modbod">
-    <span><tt><b>pre</b></tt></span><br>
-    <span><tt><b>noEvent</b></tt></span><br>
-    <span><tt><b>change</b></tt></span><br>
-    <span><tt><b>edge</b></tt></span><br>
-    <span><tt><b>initial</b></tt></span><br>
-    <span><tt><b>terminal</b></tt></span><br>
-    <span><tt><b>reinit</b></tt></span><br>
-    <span><tt><b>sample</b></tt></span><br>
-    <span><tt><b>smooth</b></tt></span><br>
-    <span><tt><b>terminate</b></tt></span><br>
+    <span>
+      <tt>pre</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>pre(y)</tt></td>
+	    <td class="seminarrow">
+	      At an event, the <tt>pre</tt> operator is used to refer
+	      to the value of a variable prior to that event.  There
+	      are several caveats related to the use of <tt>pre</tt>.
+	      These can be found in {{ xref("3.7.3", 29) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>noEvent</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>noEvent(expr)</tt></td>
+	    <td class="seminarrow">
+	      The <tt>noEvent</tt> operator suppresses the generation
+	      of events by any event generating operators or functions
+	      in the expression <tt>expr</tt>.  Further information
+	      about the <tt>noEvent</tt> operator can be found in {{
+	      xref("3.7.3.2", 29) }} and {{ xref("8.5", 88) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>change</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>change(v)</tt></td>
+	    <td class="seminarrow">
+	      The expression <tt>change(v)</tt>
+	      because <tt><b>true</b></tt> only for the instant that
+	      the value of the variable <tt>v</tt> changes
+	      (<i>i.e.,</i> <tt>v<>pre(v)</tt>). See the <tt>pre</tt>
+	      operator and/or {{ xref("3.7.3.1", 30) }} for more
+	      details and restrictions.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>edge</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>edge(b)</tt></td>
+	    <td class="seminarrow">
+	      The <tt>edge</tt> operator because <tt><b>true</b></tt>
+	      only for the instance when the expression <tt>b</tt>
+	      goes from <tt><b>true</b></tt> to <tt><b>false</b></tt>
+	      (<i>i.e.,</i> <tt>b and not pre(b)</tt>). See
+	      the <tt>pre</tt> operator and/or {{ xref("3.7.3.1", 30)
+	      }} for more details and restrictions.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>initial</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>initial()</tt></td>
+	    <td class="seminarrow">
+	      The <tt>initial</tt> operator is <tt><b>true</b></tt>
+	      during the initialization phase of the simulation.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>terminal</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>terminal()</tt></td>
+	    <td class="seminarrow">
+	      The <tt>terminal</tt> operator
+	      becomes <tt><b>true</b></tt> at the end of
+	      a <b>successful</b> simulation.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>reinit</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>reinit(x, expr)</tt></td>
+	    <td class="seminarrow">
+	      The <tt>reinit</tt> operator sets the value of the
+	      variable <tt>x</tt> to be equal to the of <tt>expr</tt>.
+	      Note, <tt>reinit</tt> can only be used within a
+	      {{kw("when")}} clause.  For more details on the usage
+	      and restrictions of <tt>reinit</tt>, see {{
+	      xref("8.3.6", 86) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>sample</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>sample(start, interval)</tt></td>
+	    <td class="seminarrow">
+	      The <tt>sample</tt> operator because true
+	      when <tt>time>=start</tt> and again
+	      every <tt>interval</tt> seconds after that.  Further
+	      details can be found in {{ xref("3.7.3", 29) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>smooth</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>smooth(p, expr)</tt></td>
+	    <td class="seminarrow">
+	      When evaluated, the <tt>smooth</tt> operator simply
+	      returns the value of the expression <tt>expr</tt>.  But
+	      it also acts as a guarantee that <tt>expr</tt> is
+	      <tt>p</tt> times continuously differentiable.  For
+	      further details, see {{ xref("3.7.3.2", 30) }}.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
+    <span>
+      <tt>terminate</tt>
+    </span>
+    <span class="pull-right">{{ example }}
+      <div class="popover" data-placement="right">
+	<table>
+	  <tr>
+	    <th>Usage</th>
+	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td><tt>terminate()</tt></td>
+	    <td class="seminarrow">
+	      The <tt>terminate</tt> operator instructs the underlying
+	      simulation environment to terminate the simulation after
+	      the completion of the next integration step or event
+	      iteration.  See {{ xref("8.3.8", 87) }} for more
+	      details.
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </span>
+    <br>
   </div>
 </div>

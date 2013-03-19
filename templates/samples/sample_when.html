@@ -1,3 +1,5 @@
+{% from "macros.html" import kw %}
+
 <table class="table">
   <tr>
     <th>When Statement ({{ xref("11.2.7", 130) }})
@@ -16,17 +18,29 @@
   </tr>
 </table>
 <div class="footnote">
-  <p><b>Restrictions</b>:
-    <ul>
-      <li>Cannot be used in a function</li>
-      <li>Cannot be nested</li>
-      <li>Cannot occur inside <tt><b>while</b></tt>, <tt><b>if</b></tt> or <tt><b>for</b></tt> clauses.</li>
-    </ul>
-  </p>    
-  <p>
-    If the conditional expression for the <tt><b>when</b></tt> clause
-    is a vector, the contents of the <tt><b>when</b></tt> clause
-    become active when <b><i>any</i></b> of the elements in the vector
-    become true.
-  </p>
+  <div class="seminarrow">
+    <p><b>Tip:</b> It is easy to get into trouble with algebraic loops
+      when using {{kw("when")}} clauses.  To avoid problems, assign
+      your conditional expression, <tt>cond</tt>, to a
+      variable, <tt>v</tt>, and then state your when condition
+      as <tt><b>when</b> pre(v) <b>then</b></tt>.  This is a fancy way
+      of saying "when I know that this condition has happened for sure
+      (and can't be undone by the equations in this when clause), do
+      this...".
+    </p>
+    <br>
+    <p><b>Restrictions</b>:
+      <ul>
+	<li>Cannot be used in a function</li>
+	<li>Cannot be nested</li>
+	<li>Cannot occur inside <tt><b>while</b></tt>, <tt><b>if</b></tt> or <tt><b>for</b></tt> clauses.</li>
+      </ul>
+    </p>    
+    <p>
+      If the conditional expression for the <tt><b>when</b></tt> clause
+      is a vector, the contents of the <tt><b>when</b></tt> clause
+      become active when <b><i>any</i></b> of the elements in the vector
+      become true.
+    </p>
+  </div>
 </div>
