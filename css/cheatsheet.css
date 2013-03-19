@@ -123,6 +123,12 @@ button {
     padding: 0;
 }
 
+.nobullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .hlist li {
     display: inline;
     margin-right: 10px;
@@ -142,8 +148,8 @@ button {
 }
 
 #legend {
-    position: absolute;
-    bottom: 5px;
+/*    position: absolute; */
+/*    bottom: 5px; */
 }
 
 .modal-header {
@@ -247,6 +253,15 @@ td.borderless {
 
 #header {
     margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.row {
+    margin-left: 0px;
+}
+
+.span12 {
+    margin-left: 0px;
 }
 
 .table td.justified {
@@ -261,3 +276,23 @@ tt.op {
     margin: 4px;
 }
 
+.rightlogo {
+    margin-left: 30px;
+}
+
+#ackbutton {
+    color: #333333;
+    text-decoration: none;
+}
+
+#foottab {
+    width: 100%;
+}
+
+#foottab tr td {
+    vertical-align: bottom;
+}
+
+#license {
+    text-align: center;
+}

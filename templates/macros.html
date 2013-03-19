@@ -39,3 +39,31 @@
 &nbsp;
 {%- endfor -%}
 {%- endmacro -%}
+
+{% macro license() %}
+<div id="license" class="seminarrow">
+  <small>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">
+      <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" />
+    </a><br>
+    <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+      Modelica Quick Reference
+    </span> is licensed under a <a rel="license"
+				   href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative
+      Commons Attribution-NonCommercial-NoDerivs 3.0
+      Unported License</a>.
+    <br>
+    Permissions beyond the scope of this license may be available by
+    contacting <a xmlns:cc="http://creativecommons.org/ns#"
+    href="mailto:michael.tiller@xogeny.com"
+    rel="cc:morePermissions">michael.tiller@xogeny.com</a>.
+  </small>
+</div>
+{% endmacro %}
+
+{% macro glike() %}
+<div class="g-plusone" data-size="medium" data-href="http://modref.xogeny.com/"></div>{% endmacro %}
+
+{% macro flike() %}
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmodref.xogeny.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+{% endmacro %}

@@ -4,7 +4,7 @@
 <div class="module">
   <span class="pull-right headbut">
     {{ comment }}
-    <div class="popover" data-placement="top">
+    <div class="popover" data-placement="right">
       See {{ xref("2",11) }} for more details.
     </div>
   </span>
@@ -14,7 +14,7 @@
     <span>
       Comments
       <span class="pull-right">{{ example }}
-	<div class="popover" data-placement="right">
+	<div class="popover" data-placement="bottom">
 	  <table class="table">
 	    <tr>
 	      <th>
@@ -48,7 +48,7 @@
     <span>
       Identifiers
       <span class="pull-right">{{ example }}
-	<div class="popover" data-placement="left">
+	<div class="popover" data-placement="bottom">
 	  <table class="table">
 	    <tr>
 	      <th>
@@ -123,9 +123,19 @@
     <span>
       Numbers
       <span class="pull-right">{{ example }}
-	<div class="popover" data-placement="right">
-	  <tt>
-	  </tt>
+	<div class="popover" data-placement="bottom" title="Numbers">
+	  <table>
+	    <tr><th>Floating Point Numbers</th></tr>
+	    <tr><td><tt>1, 1.0, 0.5, .7, 2.3e-5, 78.2E+2</tt></td></tr>
+	    <tr><th>Complications with signed numbers</th></tr>
+	    <tr><td class="seminarrow">Examples of expressions which
+	    are not allowed in Modelica because of interactions
+	    between binary operators and unary operators (see {{
+	    xref("3.2", 15) }}):<br>
+		<tt>2*-2, --2, ++2, 2--2</tt>
+	      </td>
+	    </tr>
+	  </table>
 	</div>
       </span>
     </span><br>

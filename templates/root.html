@@ -1,4 +1,4 @@
-{% from "macros.html" import tab %}
+{% from "macros.html" import license, glike, flike %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,13 +13,17 @@
     <!-- Header block -->
     <div class="container">
       <div id="header" class="row">
-	<div class="span2">
+	<div class="span1">
 	  <a href="http://www.xogeny.com"><img src="img/Xogeny.png"></a>
 	</div>
-	<div class="span8">
+	<div class="span3">
+	</div>
+	<div class="span4">
 	  <h4 class="heading centered">{{ title }} - v{{ version }}</h4>
 	</div>
-	<div class="span2 rightjust">
+	<div class="span3 rightjust">
+	</div>
+	<div class="span1 rightjust rightlogo">
 	  <a href="http://www.cydesign.com"><img src="img/CyDesign.png"></a>
 	</div>
       </div>
@@ -28,24 +32,24 @@
 	<div class="span12">
 	  <table class="root">
 	    <tr>
-	      <td>
+	      <td class="column col1">
 		{% include "modules/lexical.html" %}
 		{% include "modules/restricted_classes.html" %}
 		{% include "modules/class_definitions.html" %}
 		{% include "modules/con_quals.html" %}
 		{% include "modules/variability.html" %}
 	      </td>
-	      <td>
+	      <td class="column col2">
 		{% include "modules/builtin_types.html" %}
 		{% include "modules/std_enums.html" %}
 		{% include "modules/exprs.html" %}
 	      </td>
-	      <td>
+	      <td class="column col3">
 		{% include "modules/special_ops.html" %}
 		{% include "modules/reduction_ops.html" %}
 		{% include "modules/event_ops.html" %}
 	      </td>
-	      <td>
+	      <td class="column col4">
 		{% include "modules/statements.html" %}
 		{% include "modules/comp_expr.html" %}
 		{% include "modules/operators.html" %}
@@ -67,42 +71,67 @@
 	</div>
       </div>
 
+      <div class="row">
+	<div class="span12"><br></div>
+      </div>
       <div id="legend" class="row">
 	<div class="span12">
-	  <ul class="hlist">
-	    <li>{{ comment }}: Read more</li>
-	    <li>{{ warning }}: Note of caution</li>
-	    <li>{{ example }}: Sample code</li>
-	    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-	    <li><b>Add "Like" Buttons Here</b></li>
-	    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-	    <li>
-	      <i class="icon-bell"></i>&nbsp;Feedback
-	      <div class="popover" data-placement="top"
-		   title="Reporting Bugs">
-		<p class="seminarrow">
-		  If you find any error in this reference sheet or
-		  have any enhancement requests, please report them in
-		  the <a href="http://github.com/xogeny/ModRef">GitHub
-		  Issue Tracker</a>.
-		</p>
-		<p>
-		  Even better, fork the repository and submit a pull
-		  request with your suggested changed.
-		</p>
-		<p>We appreciate any and all feedback.</p>
-	      </div>
-	    </li>
-	    <li class="pull-right">
-	      &copy;<small>2013</small> <a href="http://www.xogeny.com/">
-		<span class="xogeny">Xogeny</span>
-	      </a>
-	      &nbsp; &nbsp;
-	      <a href="#acks" role="button" data-toggle="modal">
-		<i class="icon-bullhorn"></i>
-	      </a>
-	    </li>
-	  </ul>
+	  <table id="foottab">
+	    <tr>
+	      <td>
+		<p><b>Legend</b></p>
+		<ul class="nobullets">
+		  <li>{{ comment }}: Read more</li>
+		  <li>{{ warning }}: Note of caution</li>
+		  <li>{{ example }}: Sample code</li>
+		</ul>
+	      </td>
+	      <td class="centered">
+		&copy;<small>&nbsp;2013</small>
+		<a href="http://www.xogeny.com/">
+		  <span class="xogeny">Xogeny</span>
+		</a>
+	      </td>
+	      <td>
+		<ul class="pull-right hlist">
+		  <li>{{ glike() }}</li>
+		  <li>{{ flike() }}</li>
+		</ul>
+		<br><br>
+		<ul class="pull-right hlist">
+		  <li>
+		    <i class="icon-edit"></i>&nbsp;License
+		    <div class="popover" data-placement="top"
+			 title="License">
+		      {{ license() }}
+		    </div>
+		  </li>
+		  <li>
+		    <i class="icon-bell"></i>&nbsp;Feedback
+		    <div class="popover" data-placement="top"
+			 title="Reporting Bugs">
+		      <p class="seminarrow">
+			If you find any error in this reference sheet or
+			have any enhancement requests, please report them in
+			the <a href="http://github.com/xogeny/ModRef">GitHub
+			  Issue Tracker</a>.
+		      </p>
+		      <p>
+			Even better, fork the repository and submit a pull
+			request with your suggested changed.
+		      </p>
+		      <p>We appreciate any and all feedback.</p>
+		    </div>
+		  </li>
+		  <li>
+		    <a id="ackbutton" href="#acks" role="button" data-toggle="modal">
+		      <i class="icon-bullhorn"></i>&nbsp;Acknowledgments
+		    </a>
+		  </li>
+		</ul>
+	      </td>
+	    </tr>
+	  </table>
 	</div>
       </div>
     </div>
@@ -137,6 +166,15 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/tooltips.js"></script>
     <script src="js/popovers.js"></script>
+
+    <script type="text/javascript">
+      (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+{#
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -144,5 +182,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
+#}
   </body>
 </html>
