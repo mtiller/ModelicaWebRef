@@ -1,16 +1,16 @@
 MODS = modules/model_template.html
 
-all:	ref.html
+all:	index.html
 
-.PHONY: ref.html
+.PHONY: index.html
 
-ref.html:
-	(cd templates; ../jinjafy.py --output ../ref.html root.html)
+index.html:
+	(cd templates; ../jinjafy.py --output ../index.html root.html)
 
 export:
 	-mkdir output
-	cp ref.html output
+	cp index.html output
 	cp -r js img css output
 
 clean:
-	-rm ref.html
+	-rm index.html
