@@ -17,8 +17,20 @@
 	</div>
 	<div class="span1">
 	</div>
-	<div class="span8">
-	  <h3 class="heading centered">{{ title }} - v{{ version }}</h3>
+	<div class="span8 centered">
+	  <span>
+	    <span class="heading">
+	    {{ title }} - v{{ version }}
+	    </span>
+	    <span>
+	      <span class="heading">{{comment}}</span>
+	      <div class="popover" data-placement="bottom"
+		   title="Modelica Version">
+		<strong>Note</strong>: This reference material covers
+		Modelica version <strong>3.3</strong>.
+	      </div>
+	    </span>
+	  </span>
 	</div>
 	<div class="span1 rightjust">
 	</div>
@@ -171,6 +183,17 @@
 	  by <a href="http://twitter.github.com/bootstrap">Bootstrap</a>
 	  and <a href="http://glyphicons.com/">Glyphicons</a>.
 	</p>
+	<div>
+	  <p>
+	    This project benefited greatly from the feedback of the
+	    following individuals:
+	    <ul class="hlist">
+	      <li>Dietmar Winkler</li>
+	      <li>Derek Cheng</li>
+	      <li>Leo Gall</li>
+	    </ul>
+	  </p>
+	</div>
       </div>
     </div>
 
