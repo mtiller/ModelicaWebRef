@@ -279,8 +279,8 @@ td.borderless {
     margin: 4px;
 }
 
-tt.op {
-    margin: 4px;
+code.op {
+    margin-right: 8px;
 }
 
 .rightlogo {
@@ -313,4 +313,5 @@ code {
     border: none;
     color: black;
     font-size: 14px;
+    padding: 0px;
 }
