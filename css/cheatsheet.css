@@ -211,7 +211,7 @@ button {
 
 .xogeny {
     font-family: 'Philosopher', sans-serif;
-    font-size: 16px;
+    font-size: 120%;
 }
 
 .footnote {
@@ -323,4 +323,8 @@ code {
 
 .indented {
     margin-left: 20px;
+}
+
+#copyright {
+    font-size: 120%;
 }
