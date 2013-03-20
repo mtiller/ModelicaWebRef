@@ -52,5 +52,11 @@ avoid a proliferation of slightly different (or worse, erroneous)
 reference cards.  By having one "master" copy of this reference, my
 hope is to keep all improvements funneled into this master copy.
 
+**Note**: For the purpose of these licensing terms, I will not
+	  consider a Fork on GitHub to be a derived work.  Feel free
+	  to fork the code and submit pull requests to me with your
+	  enhancements.  The only thing I want to restrict is the
+	  republications of the completely assembed web page.
+
 Of course, this is a Creative Commons license so you can feel free to
 share or distribute copies of the master version.
