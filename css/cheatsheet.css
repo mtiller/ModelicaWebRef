@@ -320,3 +320,7 @@ code {
 .clickable {
     cursor: pointer;
 }
+
+.indented {
+    margin-left: 20px;
+}

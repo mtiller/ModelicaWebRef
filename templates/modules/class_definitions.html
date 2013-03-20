@@ -52,6 +52,74 @@
     </span><br>
 
     <span>
+      <b><code>redeclare</code></b>
+      <span class="pull-right">{{ example }}
+	<div class="popover" data-placement="right" title="Redeclarations">
+	  <div>
+	    <p class="seminarrow">
+	      The {{kw("redeclare")}} keyword is used to override the
+	      value of a {{kw("replaceable")}} component. This is
+	      typically done either through inheritance or through
+	      modifications applied to components.  To demonstrate,
+	      consider the following model:<br>
+	      <div class="indented">
+		<code>
+		  <b>model</b> {{tname("Circuit")}}<br>
+		  &nbsp;&nbsp;...<br>
+		  &nbsp;&nbsp;<b>replaceable</b> {{tname("Resistor")}} R(R=100.0);<br>
+		  &nbsp;&nbsp;...<br>
+		  <b>end</b> {{tname("Circuit")}};<br>
+		</code>
+	      </div>
+	    </p>
+	  </div>
+	  <table class="table">
+	    <tr>
+	      <th>Redeclaration in {{kw("extends")}} clauses</th>
+	    </tr>
+	    <tr>
+	      <td class="seminarrow">
+		When inheriting from a definition, it is possible to
+		redeclare {{kw("replaceable")}} components as follows:<br><br>
+		<div class="indented">
+		  <code>
+		    <b>model</b> {{tname("ThermalCircuit")}}<br>
+		    &nbsp;&nbsp;<b>extends</b> {{tname("Circuit")}}(<b>redeclare</b>
+		    {{tname("ThermalResistor")}} R(R=100.0));<br>
+		    <b>end</b> {{tname("ThermalCircuit")}};<br>
+		  </code>
+		</div>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th>Redeclaration in component modifications</th>
+	    </tr>
+	    <tr>
+	      <td class="seminarrow">
+		When instantiating a component, it is possible to
+		redeclare {{kw("replaceable")}} sub-components as follows:<br><br>
+		<div class="indented">
+		  <code>
+		    <b>model</b> {{tname("UsesCircuit")}}<br>
+		    &nbsp;&nbsp;{{tname("Circuit")}} circuit(<b>redeclare</b> {{tname("ThermalResistor")}} R(R=100.0));<br>
+		    <b>end</b> {{tname("UsesCircuit")}};<br>
+		  </code>
+		</div>
+	      </td>
+	    </tr>
+	  </table>
+	  <div class="footnote">
+	    <p class="seminarrow">
+	      More details about modifications and redeclarations can be
+	      found in {{ xref("7.2", 70) }} and {{ xref("7.3", 73) }},
+	      respectively.
+	    </p>
+	  </div>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
       <b><code>constrainedby</code></b>
       <span class="pull-right">{{example}}
 	<div class="popover" data-placement="right" title="Canonical Model">
@@ -162,6 +230,19 @@
 	    The <code><b>encapsulated</b></code> keyword forces all types
 	    not belonging to a definition to be imported.  More details
 	    can be found in {{ xref("5.3.1", 54) }}.
+	  </p>
+	</div>
+      </span>
+    </span><br>
+
+    <span>
+      <b><code>final</code></b>
+      <span class="pull-right">{{comment}}
+	<div class="popover" data-placement="top">
+	  <p class="seminarrow">
+	    The <code><b>final</b></code> keyword is used to indicate
+	    that a given no more modifications will be permitted to a
+	    variable. See {{ xref("7.2.6", 73) }} for more details.
 	  </p>
 	</div>
       </span>
