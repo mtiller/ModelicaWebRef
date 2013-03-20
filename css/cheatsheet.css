@@ -150,11 +150,6 @@ button {
     height: 100%;
 }
 
-#legend {
-/*    position: absolute; */
-/*    bottom: 5px; */
-}
-
 .modal-header {
     border-bottom: 1px solid #EEEEEE;
     padding: 9px 15px;
@@ -327,4 +322,15 @@ code {
 
 #copyright {
     font-size: 120%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#legend {
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 6px 6px 6px 6px;
+    padding: 5px;
+    margin-bottom: 0px;
 }
