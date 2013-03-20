@@ -33,7 +33,7 @@ acknowledgments section.
 The simplest way to accept a contribution (i.e. correction or
 improvement) to this card is via pull request.  Alternatively, you can
 submit an issue to [the issue
-tracker](http://github.com/xogeny/ModRef).
+tracker](http://github.com/xogeny/ModelicaWebRef).
 
 The reference was developed under Linux although it should be possible
 to "assemble" the complete web page on any system that has a copy of
