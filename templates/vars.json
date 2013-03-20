@@ -4,5 +4,6 @@
     "comment": "<i class=\"clickable icon-comment\"></i>",
     "warning": "<i class=\"clickable icon-warning-sign\"></i>",
     "example": "<i class=\"clickable icon-align-left\"></i>",
-    "docs": "<i class=\"clickable icon-bookmark\"></i>"
+    "docs": "<i class=\"clickable icon-bookmark\"></i>",
+    "repo": "http://github.com/xogeny/ModRef"
 }
