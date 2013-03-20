@@ -88,7 +88,6 @@
       <span class="pull-right">{{example}}
 	<div class="popover" data-placement="right" title="Imports">
 	  <table class="table">
-
 	      <th colspan="2">
 		Import a named definition
 	      </th>
@@ -102,21 +101,6 @@
 		Adds the definition
 		{{tname("Modelica.SIunits.Velocity")}} to the local
 		scope under the name {{tname("Velocity")}}.
-		</p>
-	      </td>
-	    </tr>
-	    <tr>
-	      <th colspan="2">Import contents of a {{kw("package")}}</th>
-	    </tr>
-	    <tr>
-	      <td>
-		<tt><b>import</b> {{tname("Modelica.SIunits.*")}};</tt>
-	      </td>
-	      <td>
-		<p class="seminarrow">
-		Adds all the definitions defined in
-		{{tname("Modelica.SIunits")}} to the local scope
-		(under their normal names).
 		</p>
 	      </td>
 	    </tr>
@@ -135,6 +119,29 @@
 		could be referenced as {{tname("SI.Velocity")}} in
 		this case).
 		<p>
+	      </td>
+	    </tr>
+	    <tr>
+	      <th colspan="2">Import contents of a {{kw("package")}}</th>
+	    </tr>
+	    <tr>
+	      <td>
+		<tt><b>import</b> {{tname("Modelica.SIunits.*")}};</tt>
+	      </td>
+	      <td>
+		<p class="seminarrow">
+		Adds all the definitions defined in
+		{{tname("Modelica.SIunits")}} to the local scope
+		(under their normal names).
+		</p>
+		<div class="alert alert-error">
+		  <p class="seminarrow">
+		    Use of the so-called "wildcard import" feature is
+		    strongly discouraged.  It makes it unclear which
+		    definitions are actually used and can easily
+		    result in duplicate conflicting local names.
+		  </p>
+		</div>
 	      </td>
 	    </tr>
 	  </table>
