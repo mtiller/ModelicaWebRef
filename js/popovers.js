@@ -3,7 +3,7 @@
    to it's parent element.  The 'title' attribute of the
    element is used as the title in the popover.
 */
-/* $("* > [class=\"popover\"]").each(function(index) { */
+
 $("* > .popover").each(function(index) {
     var parent = $(this).parent()
     var content = $(this).html()
@@ -13,21 +13,13 @@ $("* > .popover").each(function(index) {
 	"html": true,
 	"content": content
     });
+    $(parent).addClass("pparent");
     $(this).remove()
 });
 
-/*
-$("#real_attrs").popover({
-    "title": "Common Attributes",
-    "html": true,
-    "content": "<tt>quantity: <span class=\"pull-right\">String</span></tt><br>\
-<tt>unit: String</tt><br>\
-<tt>displayUnit: String</tt><br>\
-<tt>start: Real</tt><br>\
-<tt>fixed: Boolean</tt><br>\
-<tt>min: Real</tt><br>\
-<tt>max: Real</tt><br>\
-<tt>nominal: Real</tt><br>\
-<tt>stateSelect: StateSelect</tt><br>"
+/* Bind ESC so it closes all windows */
+$(document).bind('keyup', function(e) {
+    if (e.keyCode==27) {
+	$(".pparent").each( function(i) { $(this).popover('hide'); } )
+    }
 })
-*/
