@@ -9,55 +9,55 @@
 {% endmacro %}
 {% macro rib_attrs(T) %}
 <tr>
-  <td><tt>fixed:</tt></td>
-  <td><tt><span class="pull-right typename">Boolean</span></tt></td>
-  <td><span class="pull-right">&nbsp;<tt>false</tt><sup>*</sup></span></td>
+  <td><code>fixed:</code></td>
+  <td><code><span class="pull-right typename">Boolean</span></code></td>
+  <td><span class="pull-right">&nbsp;<code>false</code><sup>*</sup></span></td>
 </tr>
 {% endmacro %}
 {% macro ri_attrs(T) %}
 <tr>
-  <td><tt>min:</tt></td>
-  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td><code>min:</code></td>
+  <td><code><span class="pull-right typename">{{T}}</span></code></td>
   <td><span class="pull-right">&nbsp;-infinity</span></td>
 </tr>
 <tr>
-  <td><tt>max:</tt></td>
-  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td><code>max:</code></td>
+  <td><code><span class="pull-right typename">{{T}}</span></code></td>
   <td><span class="pull-right">&nbsp;-infinity</span></td>
 </tr>
 {% endmacro %}
 {% macro r_attrs(T) %}
 <tr>
-  <td><tt>unit:</tt></td>
-  <td><tt><span class="pull-right typename">String</span></tt></td>
-  <td><tt><span class="pull-right">&nbsp;""</span></tt></td>
+  <td><code>unit:</code></td>
+  <td><code><span class="pull-right typename">String</span></code></td>
+  <td><code><span class="pull-right">&nbsp;""</span></code></td>
 </tr>
 <tr>
-  <td><tt>displayUnit:</tt></td>
-  <td><tt><span class="pull-right typename">String</span></tt></td>
-  <td><tt><span class="pull-right">""</span></tt></td>
+  <td><code>displayUnit:</code></td>
+  <td><code><span class="pull-right typename">String</span></code></td>
+  <td><code><span class="pull-right">""</span></code></td>
 </tr>
 <tr>
-  <td><tt>nominal:</tt></td>
-  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
+  <td><code>nominal:</code></td>
+  <td><code><span class="pull-right typename">{{T}}</span></code></td>
   <td></td>
 </tr>
 <tr>
-  <td><tt>stateSelect:&nbsp;&nbsp;</tt></td>
-  <td><tt><span class="pull-right typename">StateSelect</span></tt></td>
-  <td><tt><span class="pull-right">&nbsp;default</span></tt></td>
+  <td><code>stateSelect:&nbsp;&nbsp;</code></td>
+  <td><code><span class="pull-right typename">StateSelect</span></code></td>
+  <td><code><span class="pull-right">&nbsp;default</span></code></td>
 </tr>
 {% endmacro %}
 {% macro ribs_attrs(T,start) %}
 <tr>
-  <td><tt>quantity:&nbsp;&nbsp;</tt></td>
-  <td><tt><span class="pull-right typename">String</span></tt></td>
-  <td><tt><span class="pull-right">&nbsp;""</span></tt></td>
+  <td><code>quantity:&nbsp;&nbsp;</code></td>
+  <td><code><span class="pull-right typename">String</span></code></td>
+  <td><code><span class="pull-right">&nbsp;""</span></code></td>
 </tr>
 <tr>
-  <td><tt>start:</tt></td>
-  <td><tt><span class="pull-right typename">{{T}}</span></tt></td>
-  <td><tt><span class="pull-right">&nbsp;{{start}}</span></tt></td>
+  <td><code>start:</code></td>
+  <td><code><span class="pull-right typename">{{T}}</span></code></td>
+  <td><code><span class="pull-right">&nbsp;{{start}}</span></code></td>
 </tr>
 {% endmacro %}
 
@@ -74,7 +74,7 @@
   </h5>
   <div class="modbod">
     <span>
-      <tt class="typename">Real</tt>
+      <code class="typename">Real</code>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Real Attributes" data-placement="bottom">
 	  <table class="table table-striped">
@@ -88,7 +88,7 @@
       </span>
     </span><br>
     <span>
-      <tt class="typename">Integer</tt>
+      <code class="typename">Integer</code>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Integer Attributes" data-placement="bottom">
 	  <table class="table table-striped">
@@ -101,7 +101,7 @@
       </span>
     </span><br>
     <span>
-      <tt class="typename">Boolean</tt>
+      <code class="typename">Boolean</code>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="Boolean Attributes" data-placement="bottom">
 	  <table class="table table-striped">
@@ -113,7 +113,7 @@
       </span>
     </span><br>
     <span>
-      <tt class="typename">String</tt>
+      <code class="typename">String</code>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="String Attributes" data-placement="bottom">
 	  <table class="table table-striped">
@@ -124,7 +124,7 @@
       </span>
     </span><br>
     <span>
-      <tt><b>enumeration</b></tt>
+      <code><b>enumeration</b></code>
       <span class="pull-right">{{comment}}
 	<div class="popover" title="Enumerations" data-placement="bottom">
 	  <table class="table">
@@ -135,7 +135,7 @@
 	    </tr>
 	    <tr>
 	      <td colspan="2">
-		<tt><b>type</b> <span class="typename">E</span> = <b>enumeration</b>(e1, ..., en);</tt>
+		<code><b>type</b> <span class="typename">E</span> = <b>enumeration</b>(e1, ..., en);</code>
 	      </td>
 	    </tr>
 	    <tr>
@@ -144,22 +144,22 @@
 	    </tr>
 	    <tr>
 	      <td>
-		<tt><span class="typename">E</span>.e1</tt>,
+		<code><span class="typename">E</span>.e1</code>,
 		...,
-		<tt><span class="typename">E</span>.en</tt>
+		<code><span class="typename">E</span>.en</code>
 		<br>
-		<tt><span class="typename">E</span>.start=e1</tt>
+		<code><span class="typename">E</span>.start=e1</code>
 		<br>
-		<tt><span class="typename">E</span>.min=e1</tt>, 
+		<code><span class="typename">E</span>.min=e1</code>, 
 		<br>
-		<tt><span class="typename">E</span>.max=en</tt>
+		<code><span class="typename">E</span>.max=en</code>
 	      </td>
 	      <td>
-		<tt>Integer(<span class="typename">E</span>.e1)=1</tt>
+		<code>Integer(<span class="typename">E</span>.e1)=1</code>
 		<br>
-		<tt>Integer(<span class="typename">E</span>.en)=n</tt>
+		<code>Integer(<span class="typename">E</span>.en)=n</code>
 		<br>
-		<tt>String(<span class="typename">E</span>.e1)="e1"</tt>
+		<code>String(<span class="typename">E</span>.e1)="e1"</code>
 	      </td>
 	    </tr>
 	    <tr>
@@ -167,8 +167,8 @@
 	    </tr>
 	    <tr>
 	      <td colspan="2">
-		<tt><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</tt><br>
-		<tt><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</tt><br>
+		<code><b>type</b> <span class="typename">AssertionLevel</span> = <b>enumeration</b>(warning, error);</code><br>
+		<code><b>type</b> <span class="typename">StateSelect</span> = <b>enumeration</b>(never, avoid, default, prefer, always);</code><br>
 	      </td>
 	    </tr>
 	  </table>
@@ -180,14 +180,14 @@
       </span>
     </span><br>
     <span>
-      <tt class="typename">ExternalObject</tt>
+      <code class="typename">ExternalObject</code>
       <span class="pull-right">{{ comment }}
 	<div class="popover" title="External Objects" data-placement="bottom">
 	  <p class="seminarrow">
 	  External objects are used to refer (opaquely) to data or
 	  information outside the scope of the Modelica langauge.
-	  That are initialized through <tt><b>external</b></tt>
-	  functions and can be passed back to <tt><b>external</b></tt>
+	  That are initialized through <code><b>external</b></code>
+	  functions and can be passed back to <code><b>external</b></code>
 	  functions.
 	  </p>
 	  <p class="seminarrow">

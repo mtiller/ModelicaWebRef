@@ -15,23 +15,23 @@
 {%- endmacro -%}
 
 {% macro f(name) %}
-<tt class="op">{{ name }}</tt>
+<code class="op">{{ name }}</code>
 {% endmacro %}
 
 {%- macro kw(name) -%}
-<tt><b>{{name}}</b></tt>
+<code><b>{{name}}</b></code>
 {%- endmacro -%}
 
 {%- macro tname(name) -%}
-<tt class="typename">{{name}}</tt>
+<code class="typename">{{name}}</code>
 {%- endmacro -%}
 
 {%- macro descstr(name) -%}
-<tt class="descstr">{{name}}</tt>
+<code class="descstr">{{name}}</code>
 {%- endmacro -%}
 
 {%- macro comstr(name) -%}
-<tt class="comment">{{name}}</tt>
+<code class="comment">{{name}}</code>
 {%- endmacro -%}
 
 {%- macro spaces(n) -%}

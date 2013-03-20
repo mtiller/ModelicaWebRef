@@ -307,3 +307,10 @@ tt.op {
 .popover-title {
     background-color: #e0e0e0;
 }
+
+code {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 14px;
+}

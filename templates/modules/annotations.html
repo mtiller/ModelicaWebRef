@@ -4,28 +4,28 @@
 <div id="variability" class="module">
   <h5 style="padding: 0px 70px">Annotations</h5>
   <div class="modbod">
-    <tt>choices</tt>
+    <code>choices</code>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table class="table">
 	  <tr><th>Explicit values for a variable</th></tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>parameter</b> {{tname("Integer")}} x<br>
 		&nbsp;&nbsp;<b>annotation</b>(choices(choice=3 "Desc", choice=5 "Desc"));
-	      </tt><br>
+	      </code><br>
 	    </td>
 	  </tr>
 	  <tr><th>Explicit redeclarations</th></tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>replaceable</b> model {{tname("Resistor")}} Load(R=2) <b>constrainedby</b> {{tname("TwoPin")}}<br>
 		&nbsp;&nbsp;<b>annotation</b>(choices(<br>
 		{{spaces(14)}}choice(<b>redeclare</b> {{tname("ThermalResistor")}} Load(R=2,T0=273)),<br>
 		{{spaces(14)}}choice(<b>redeclare</b> {{tname("Capacitor")}} Load(C=2e-3))));<br>
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	</table>
@@ -33,24 +33,24 @@
     </span>
 
     <br>
-    <tt>defaultComponentName</tt>
+    <code>defaultComponentName</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	The <tt>defaultComponentName</tt> annotation allows a default
+	The <code>defaultComponentName</code> annotation allows a default
 	name to be associated with a given definition.  When dragging
 	new instances of a given definition into a diagram, the string
-	associated with the <tt>defaultComponentName</tt> should be
+	associated with the <code>defaultComponentName</code> should be
 	used as the basis for the initial instance name.
 	</p>
       </div>
     </span>
     <br>
-    <tt>defaultComponentPrefixes</tt>
+    <code>defaultComponentPrefixes</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	The <tt>defaultComponentPrefixes</tt> annotation allows a
+	The <code>defaultComponentPrefixes</code> annotation allows a
 	default set of prefixes to be associated with a given
 	definition.  When dragging new instances of a given definition
 	into a diagram, these prefixes should automatically be applied
@@ -59,14 +59,14 @@
       </div>
     </span>
     <br>
-    <tt>derivative</tt>
+    <code>derivative</code>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="left">
 	<table class="table">
 	  <tr><th>A normal single argument function</th></tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>function</b> {{tname("f0")}}<br>
 		&nbsp;&nbsp;<b>input</b> {{tname("Real")}} x;<br>
 		&nbsp;&nbsp;<b>output</b> {{tname("Real")}} y;<br>
@@ -74,7 +74,7 @@
 		&nbsp;&nbsp;...<br>
 		&nbsp;&nbsp;<b>annotation</b>(derivative=f1);<br>
 		<b>end</b> {{tname("f0")}};
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	  <tr>
@@ -82,7 +82,7 @@
 	  </tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>function</b> {{tname("f1")}}<br>
 		&nbsp;&nbsp;<b>input</b> {{tname("Real")}} x;<br>
 		&nbsp;&nbsp;<b>input</b> {{tname("Real")}} der_x;<br>
@@ -90,25 +90,25 @@
 		<b>algorithm</b><br>
 		&nbsp;&nbsp;...<br>
 		<b>end</b> {{tname("f1")}};
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	</table>
 	<div class="footnote">
-	  The <tt>derivative</tt> annotation is discussed in great
+	  The <code>derivative</code> annotation is discussed in great
 	  detail in {{ xref("12.7.1", 145) }}.
 	</div>
       </div>
     </span>
     <br>
-    <tt>Dialog</tt>
+    <code>Dialog</code>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table class="table">
 	  <tr><th>Definition</th></tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>record</b> {{tname("Dialog")}}<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("String")}}  &nbsp;tab = "General";<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("String")}}  &nbsp;group = "Parameters";<br>
@@ -117,42 +117,42 @@
 		&nbsp;&nbsp;<b>parameter</b> {{tname("String")}} &nbsp;groupImage = "";<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("Boolean")}}  connectorSizing = <b>false</b>;<br>
 		<b>end</b> {{tname("Dialog")}};
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	</table>
 	<div class="footnote">
-	  A detailed description of each field in the <tt>Dialog</tt>
+	  A detailed description of each field in the <code>Dialog</code>
 	  annotation can be found in {{ xref("18.7", 225) }}.
 	</div>
       </div>
     </span>
 
     <br>
-    <tt>Documentation</tt>
+    <code>Documentation</code>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="left">
-	<tt>
+	<code>
 	  <b>annotation</b>(Documentation(info="&lt;html&gt;...&lt;/html&gt;",<br>
 	  {{spaces(25)}}revisions="..."));
-	</tt>
+	</code>
 	<div class="footnote seminarrow">
 	  <p>
-	    <b>Note:</b> Within the <tt>&lt;html&gt;</tt> tags, it is
+	    <b>Note:</b> Within the <code>&lt;html&gt;</code> tags, it is
 	    possible to use "Modelica URIs" of the form:
 	  </p>
 	  <ul>
-	    <li><tt>Modelica://Fully.Qualfied.Name#layer</tt>: Where layer
-	    can be one of <tt>diagram</tt>, <tt>info</tt>, <tt>text</tt>
-	    or <tt>icon</tt>.</li>
-	    <li><tt>Modelica://Fully.Qualfied.Name/dir/path/filename</tt>:
-	    Where <tt>dir/path</tt> is a directory structure starting
+	    <li><code>Modelica://Fully.Qualfied.Name#layer</code>: Where layer
+	    can be one of <code>diagram</code>, <code>info</code>, <code>text</code>
+	    or <code>icon</code>.</li>
+	    <li><code>Modelica://Fully.Qualfied.Name/dir/path/filename</code>:
+	    Where <code>dir/path</code> is a directory structure starting
 	    at the point where the
-	    package <tt>Fully.Qualified.Name</tt> is stored
-	    and <tt>filename</tt> is a file in that directory.</li>
+	    package <code>Fully.Qualified.Name</code> is stored
+	    and <code>filename</code> is a file in that directory.</li>
 	  </ul>
 	  <p>
-	    Complete documentation for the <tt>Documentation</tt>
+	    Complete documentation for the <code>Documentation</code>
 	    annotation can be found in {{ xref("18.2", 214) }}.
 	  </p>
 	</div>
@@ -160,7 +160,7 @@
     </span>
 
     <br>
-    <tt>DynamicSelect</tt>
+    <code>DynamicSelect</code>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top"
 	   title="Animation of Graphical Annotations">
@@ -168,16 +168,16 @@
 	  <tr><th>Syntax</th></tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		DynamicSelect(val1, val2)
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	  <tr><th>Explanation</th></tr>
 	  <tr>
 	    <td>
 	      <p class="seminarrow">
-		The <tt>DynamicSelect</tt> annotation can be used as a
+		The <code>DynamicSelect</code> annotation can be used as a
 		value in any graphical annotation.  The first argument
 		must be a literal expression (no variables) and the
 		second argument can reference variables.  Tools can
@@ -192,12 +192,12 @@
       </div>
     </span>
     <br>
-    <tt>Evaluate</tt>
+    <code>Evaluate</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  When applied to a <tt><b>parameter</b></tt>,
-	  the <tt>Evaluation</tt> annotation indicates that the user
+	  When applied to a <code><b>parameter</b></code>,
+	  the <code>Evaluation</code> annotation indicates that the user
 	  does not intend to modify the value of the parameter between
 	  simulations.  As a result, some potentially significant
 	  symbolic optimizations can often be made.
@@ -206,28 +206,28 @@
       </div>
     </span>
     <br>
-    <tt>experiment</tt>
+    <code>experiment</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<table class="table">
 	  <tr><th>Definition</th></tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>record</b> {{tname("experiment")}}<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} StartTime;<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} StopTime;<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} Interval;<br>
 		&nbsp;&nbsp;<b>parameter</b> {{tname("Real")}} Tolerance;<br>
 		<b>end</b> {{tname("experiment")}};
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	</table>
 	<div class="footnote">
 	  <p>
-	    <tt>StartTime</tt>, <tt>StopTime</tt>
-	    and <tt>Interval</tt> are all assumed to have units of
+	    <code>StartTime</code>, <code>StopTime</code>
+	    and <code>Interval</code> are all assumed to have units of
 	    seconds.
 	  </p>
 	  <p>See {{ xref("18.4", 215) }} for more details.</p>
@@ -235,26 +235,26 @@
       </div>
     </span>
     <br>
-    <tt>GenerateEvents</tt>
+    <code>GenerateEvents</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  When the <tt>GenerateEvents</tt> annotation is associated
+	  When the <code>GenerateEvents</code> annotation is associated
 	  with a function definition and given a value
-	  of <tt><b>true</b></tt>, this indicates that expressions in
+	  of <code><b>true</b></code>, this indicates that expressions in
 	  the function should generate events (<i>e.g.,</i> as if they
-	  appeared in an <tt><b>equation</b></tt> section).
+	  appeared in an <code><b>equation</b></code> section).
 	</p>
 	<p>See {{ xref("18.3", 214) }} for more details.</p>
       </div>
     </span>
     <br>
-    <tt>HideResult</tt>
+    <code>HideResult</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
 	  When applied to a variable declaration,
-	  the <tt>HideResult</tt> annotation indicates that the user
+	  the <code>HideResult</code> annotation indicates that the user
 	  does not wish to view this variable among the simulation
 	  results.
 	</p>
@@ -262,23 +262,23 @@
       </div>
     </span>
     <br>
-    <tt>Inline</tt>
+    <code>Inline</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  When the <tt>Inline</tt> annotation is associated with a
+	  When the <code>Inline</code> annotation is associated with a
 	  function definition and given a value
-	  of <tt><b>true</b></tt>, this indicates that the function
+	  of <code><b>true</b></code>, this indicates that the function
 	  should be inlined prior to symbolic manipulation.
 	</p>
 	<p>See {{ xref("18.3", 214) }} for more details.</p>
       </div>
     </span>
     <br>
-    <tt>inverse</tt>
+    <code>inverse</code>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
-	<tt>
+	<code>
 	  <b>function</b> {{tname("f")}}<br>
 	  &nbsp;&nbsp;<b>input</b> {{tname("T1")}} u1;<br>
 	  &nbsp;&nbsp;<b>input</b> {{tname("T2")}} u2;<br>
@@ -288,17 +288,17 @@
 	  &nbsp;&nbsp;<b>annotation</b>(inverse(u1=fi1(u2,y),<br>
 	  {{spaces(21)}}u2=fi2(u1, y)));<br>
 	  <b>end</b> {{tname("f")}};
-	</tt>
+	</code>
       </div>
     </span>
     <br>
-    <tt>LateInline</tt>
+    <code>LateInline</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  When the <tt>LateInline</tt> annotation is associated with a
+	  When the <code>LateInline</code> annotation is associated with a
 	  function definition and given a value
-	  of <tt><b>true</b></tt>, this indicates that the function
+	  of <code><b>true</b></code>, this indicates that the function
 	  should be inlined during the code generation process, but
 	  not before symbolic manipulation has been performed.
 	</p>
@@ -306,14 +306,14 @@
       </div>
     </span>
     <br>
-    <tt>missingInnerMessage</tt>
+    <code>missingInnerMessage</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
-	<tt><b>annotation</b>(missingInnerMessage="...");</tt><br>
+	<code><b>annotation</b>(missingInnerMessage="...");</code><br>
 	<p class="seminarrow">
 	  This annotation allows a tool to provide a customized
-	  message when an <tt><b>outer</b></tt> declaration cannot
-	  find a matching <tt><b>inner</b></tt>.  This allows library
+	  message when an <code><b>outer</b></code> declaration cannot
+	  find a matching <code><b>inner</b></code>.  This allows library
 	  developers to provide more specific and meaningful
 	  diagnostics to users.
 	</p>
@@ -321,24 +321,24 @@
       </div>
     </span>
     <br>
-    <tt>preferredView</tt>
+    <code>preferredView</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  In a definition, the <tt>preferredView</tt> annotation can
-	  be given the values <tt>"info"</tt>, <tt>"diagram"</tt>
-	  or <tt>"text"</tt> to indicate which particular view makes
+	  In a definition, the <code>preferredView</code> annotation can
+	  be given the values <code>"info"</code>, <code>"diagram"</code>
+	  or <code>"text"</code> to indicate which particular view makes
 	  the most sense as the default view for that definition (see
 	  {{ xref("18.2", 214) }}).
 	</p>
       </div>
     </span>
     <br>
-    <tt>smoothOrder</tt>
+    <code>smoothOrder</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  In a function definition, the <tt>smoothOrder</tt>
+	  In a function definition, the <code>smoothOrder</code>
 	  annotation indicates how many times the function can be
 	  differentiated and still have continuous outputs.  See {{
 	  xref("18.3", 215) }} for complete details.
@@ -346,11 +346,11 @@
       </div>
     </span>
     <br>
-    <tt>unassignedMessage</tt>
+    <code>unassignedMessage</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  If the <tt>unassignedMessage</tt> annotation is associated
+	  If the <code>unassignedMessage</code> annotation is associated
 	  with a variable, then the value of the annotation (which
 	  must be a {{tname("String")}}) will be used as a diagnostic
 	  message to the user if the structural analysis of the
@@ -360,11 +360,11 @@
       </div>
     </span>
     <br>
-    <tt>version</tt>
+    <code>version</code>
     <span class="pull-right">{{ comment }}
       <div class="popover" data-placement="top">
 	<p class="seminarrow">
-	  Within a top-level package, the <tt>version</tt> annotation
+	  Within a top-level package, the <code>version</code> annotation
 	  is used to indicate the version number for that package.
 	  This is used to distinguish between multiple versions when
 	  they are available.  See {{ xref("18.8.2", 228) }} for more

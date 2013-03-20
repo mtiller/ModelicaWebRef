@@ -15,22 +15,22 @@
   <h5>Operators</h5>
   <div class="modbod">
     <span id="operator record">
-      <b><tt>operator record</tt></b>
+      <b><code>operator record</code></b>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" title="Records with Overloaded Operators"
 	   data-placement="bottom">
 	<table class="table">
 	  <tr>
-	    <th>What's an <tt><b>operator record</b></tt>?</th>
+	    <th>What's an <code><b>operator record</b></code>?</th>
 	  </tr>
 	  <tr>
 	    <td>
 	      <p class="seminarrow">
-		An <tt><b>operator record</b></tt> is like an
-		ordinary <tt><b>record</b></tt> except that it is
+		An <code><b>operator record</b></code> is like an
+		ordinary <code><b>record</b></code> except that it is
 		possible to define custom behavior for operators
-		like <tt>+</tt>, <tt>-</tt>, etc.  For more details,
+		like <code>+</code>, <code>-</code>, etc.  For more details,
 		see {{ xref("14", 167) }}.
 	      </p>
 	    </td>
@@ -42,15 +42,15 @@
 	  </tr>
 	  <tr>
 	    <td>
-	      <tt><b>operator record</b> <tt class="typename">Complex</tt><br>
-		&nbsp;&nbsp;<tt class="typename">Real</tt> re;<br>
-		&nbsp;&nbsp;<tt class="typename">Real</tt> im;<br>
+	      <code><b>operator record</b> <code class="typename">Complex</code><br>
+		&nbsp;&nbsp;<code class="typename">Real</code> re;<br>
+		&nbsp;&nbsp;<code class="typename">Real</code> im;<br>
 		&nbsp;&nbsp;...<br>
-		<tt class="comment">
+		<code class="comment">
 		  &nbsp;&nbsp;// Definition of <b>operator function</b>s<br>
-		  &nbsp;&nbsp;// <b>operator</b>s<br></tt>
-		<b>end</b> <tt class="typename">Complex</tt>;
-	      </tt>
+		  &nbsp;&nbsp;// <b>operator</b>s<br></code>
+		<b>end</b> <code class="typename">Complex</code>;
+	      </code>
 	    </td>
 	  </tr>
 	</table>
@@ -58,20 +58,20 @@
     </span>
     <br>
     <span id="operator function">
-      <b><tt>operator function</tt></b>
+      <b><code>operator function</code></b>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" title="Operator Functions" data-placement="left">
 	<table class="table">
 	  <tr>
-	    <th colspan="2">What's an <tt><b>operator function</b></tt>?</th>
+	    <th colspan="2">What's an <code><b>operator function</b></code>?</th>
 	  </tr>
 	  <tr>
 	    <td colspan="2">
 	      <p class="seminarrow">
-		An <tt><b>operator function</b></tt> is a function
-		that implements an operator for an <tt><b>operator
-		record</b><tt/>.
+		An <code><b>operator function</b></code> is a function
+		that implements an operator for an <code><b>operator
+		record</b><code/>.
 	      </p>
 	    </td>
 	  </tr>
@@ -80,11 +80,11 @@
 	  </tr>
 	  <tr>
 	    <td>Constructors (see {{ xref("14.2", 168) }}):</td>
-	    <td><tt>constructor</tt>, <tt>0</tt></td>
+	    <td><code>constructor</code>, <code>0</code></td>
 	  </tr>
 	  <tr>
 	    <td>Conversions (see {{ xref("14.3", 169) }}):</td>
-	    <td><tt>String</tt></td>
+	    <td><code>String</code></td>
 	  </tr>
 	  <tr>
 	    <td>Binary Operators (see {{ xref("14.4", 169) }}):</td>
@@ -104,7 +104,7 @@
 	  </tr>
 	  <tr>
 	    <td colspan="2">
-	      <tt><b>encapsulated operator function</b> '+'<br>
+	      <code><b>encapsulated operator function</b> '+'<br>
 		&nbsp;&nbsp;<b>import</b> <span class="typename">Complex</span>;<br>
 		&nbsp;&nbsp;<b>input</b> <span class="typename">Complex</span>
 		c1;<br>
@@ -122,32 +122,32 @@
 	  </tr>
 	</table>
 	<div class="footnote">
-	  <b>Note:</b> An <tt><b>operator function</b></tt> should
+	  <b>Note:</b> An <code><b>operator function</b></code> should
 	  be encapsulated.
 	</div>
       </div>
     </span>
     <br>
     <span id="operator">
-      <b><tt>operator</tt></b>
+      <b><code>operator</code></b>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" title="Multiple Operator Implementations"
 	   data-placement="left">
 	<table class="table">
 	  <tr>
-	    <th>What's an <tt><b>operator</b></tt>?</th>
+	    <th>What's an <code><b>operator</b></code>?</th>
 	  </tr>
 	  <tr>
 	    <td>
 	      <p class="seminarrow">
-		When an <tt><b>operator record</b></tt> requires more
+		When an <code><b>operator record</b></code> requires more
 		than one implementation of a given operator,
-		e.g., <tt>'+'</tt>, a special type
-		of <tt><b>package</b></tt> called
-		an <tt><b>operator</b></tt> is created with the name
+		e.g., <code>'+'</code>, a special type
+		of <code><b>package</b></code> called
+		an <code><b>operator</b></code> is created with the name
 		of the overloaded operator.
-		This <tt><b>operator</b></tt> "package" includes all
+		This <code><b>operator</b></code> "package" includes all
 		the various implementations of the operator.
 	      </p>
 	    </td>
@@ -157,7 +157,7 @@
 	  </tr>
 	  <tr>
 	    <td>
-	      <tt>
+	      <code>
 		<b>enscapsulated operator</b> '-'<br>
 		&nbsp;&nbsp;{{ kw("import") }} {{ tname("Complex")
 		}};<br>
@@ -190,12 +190,12 @@
 		}}(Inline={{kw("true")}});<br>
 		&nbsp;&nbsp;{{kw("end")}} {{tname("subtract")}};<br>
 		<b>end</b> '-';
-	      </tt>
+	      </code>
 	    </td>
 	  </tr>
 	</table>
 	<div class="footnote">
-	  <b>Note:</b> An <tt><b>operator</b></tt> should
+	  <b>Note:</b> An <code><b>operator</b></code> should
 	  be encapsulated.
 	</div>
       </div>

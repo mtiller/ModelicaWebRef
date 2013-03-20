@@ -11,7 +11,7 @@
   <h5>Event Operators</h5>
   <div class="modbod">
     <span>
-      <tt>pre</tt>
+      <code>pre</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -21,11 +21,11 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>pre(y)</tt></td>
+	    <td><code>pre(y)</code></td>
 	    <td class="seminarrow">
-	      At an event, the <tt>pre</tt> operator is used to refer
+	      At an event, the <code>pre</code> operator is used to refer
 	      to the value of a variable prior to that event.  There
-	      are several caveats related to the use of <tt>pre</tt>.
+	      are several caveats related to the use of <code>pre</code>.
 	      These can be found in {{ xref("3.7.3", 29) }}.
 	    </td>
 	  </tr>
@@ -34,7 +34,7 @@
     </span>
     <br>
     <span>
-      <tt>noEvent</tt>
+      <code>noEvent</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -44,12 +44,12 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>noEvent(expr)</tt></td>
+	    <td><code>noEvent(expr)</code></td>
 	    <td class="seminarrow">
-	      The <tt>noEvent</tt> operator suppresses the generation
+	      The <code>noEvent</code> operator suppresses the generation
 	      of events by any event generating operators or functions
-	      in the expression <tt>expr</tt>.  Further information
-	      about the <tt>noEvent</tt> operator can be found in {{
+	      in the expression <code>expr</code>.  Further information
+	      about the <code>noEvent</code> operator can be found in {{
 	      xref("3.7.3.2", 29) }} and {{ xref("8.5", 88) }}.
 	    </td>
 	  </tr>
@@ -58,7 +58,7 @@
     </span>
     <br>
     <span>
-      <tt>change</tt>
+      <code>change</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -68,12 +68,12 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>change(v)</tt></td>
+	    <td><code>change(v)</code></td>
 	    <td class="seminarrow">
-	      The expression <tt>change(v)</tt>
-	      because <tt><b>true</b></tt> only for the instant that
-	      the value of the variable <tt>v</tt> changes
-	      (<i>i.e.,</i> <tt>v<>pre(v)</tt>). See the <tt>pre</tt>
+	      The expression <code>change(v)</code>
+	      because <code><b>true</b></code> only for the instant that
+	      the value of the variable <code>v</code> changes
+	      (<i>i.e.,</i> <code>v<>pre(v)</code>). See the <code>pre</code>
 	      operator and/or {{ xref("3.7.3.1", 30) }} for more
 	      details and restrictions.
 	    </td>
@@ -83,7 +83,7 @@
     </span>
     <br>
     <span>
-      <tt>edge</tt>
+      <code>edge</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -93,13 +93,13 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>edge(b)</tt></td>
+	    <td><code>edge(b)</code></td>
 	    <td class="seminarrow">
-	      The <tt>edge</tt> operator because <tt><b>true</b></tt>
-	      only for the instance when the expression <tt>b</tt>
-	      goes from <tt><b>true</b></tt> to <tt><b>false</b></tt>
-	      (<i>i.e.,</i> <tt>b and not pre(b)</tt>). See
-	      the <tt>pre</tt> operator and/or {{ xref("3.7.3.1", 30)
+	      The <code>edge</code> operator because <code><b>true</b></code>
+	      only for the instance when the expression <code>b</code>
+	      goes from <code><b>true</b></code> to <code><b>false</b></code>
+	      (<i>i.e.,</i> <code>b and not pre(b)</code>). See
+	      the <code>pre</code> operator and/or {{ xref("3.7.3.1", 30)
 	      }} for more details and restrictions.
 	    </td>
 	  </tr>
@@ -108,7 +108,7 @@
     </span>
     <br>
     <span>
-      <tt>initial</tt>
+      <code>initial</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -118,9 +118,9 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>initial()</tt></td>
+	    <td><code>initial()</code></td>
 	    <td class="seminarrow">
-	      The <tt>initial</tt> operator is <tt><b>true</b></tt>
+	      The <code>initial</code> operator is <code><b>true</b></code>
 	      during the initialization phase of the simulation.
 	    </td>
 	  </tr>
@@ -129,7 +129,7 @@
     </span>
     <br>
     <span>
-      <tt>terminal</tt>
+      <code>terminal</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -139,10 +139,10 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>terminal()</tt></td>
+	    <td><code>terminal()</code></td>
 	    <td class="seminarrow">
-	      The <tt>terminal</tt> operator
-	      becomes <tt><b>true</b></tt> at the end of
+	      The <code>terminal</code> operator
+	      becomes <code><b>true</b></code> at the end of
 	      a <b>successful</b> simulation.
 	    </td>
 	  </tr>
@@ -151,7 +151,7 @@
     </span>
     <br>
     <span>
-      <tt>reinit</tt>
+      <code>reinit</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -161,13 +161,13 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>reinit(x, expr)</tt></td>
+	    <td><code>reinit(x, expr)</code></td>
 	    <td class="seminarrow">
-	      The <tt>reinit</tt> operator sets the value of the
-	      variable <tt>x</tt> to be equal to the of <tt>expr</tt>.
-	      Note, <tt>reinit</tt> can only be used within a
+	      The <code>reinit</code> operator sets the value of the
+	      variable <code>x</code> to be equal to the of <code>expr</code>.
+	      Note, <code>reinit</code> can only be used within a
 	      {{kw("when")}} clause.  For more details on the usage
-	      and restrictions of <tt>reinit</tt>, see {{
+	      and restrictions of <code>reinit</code>, see {{
 	      xref("8.3.6", 86) }}.
 	    </td>
 	  </tr>
@@ -176,7 +176,7 @@
     </span>
     <br>
     <span>
-      <tt>sample</tt>
+      <code>sample</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -186,11 +186,11 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>sample(start, interval)</tt></td>
+	    <td><code>sample(start, interval)</code></td>
 	    <td class="seminarrow">
-	      The <tt>sample</tt> operator because true
-	      when <tt>time>=start</tt> and again
-	      every <tt>interval</tt> seconds after that.  Further
+	      The <code>sample</code> operator because true
+	      when <code>time>=start</code> and again
+	      every <code>interval</code> seconds after that.  Further
 	      details can be found in {{ xref("3.7.3", 29) }}.
 	    </td>
 	  </tr>
@@ -199,7 +199,7 @@
     </span>
     <br>
     <span>
-      <tt>smooth</tt>
+      <code>smooth</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -209,12 +209,12 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>smooth(p, expr)</tt></td>
+	    <td><code>smooth(p, expr)</code></td>
 	    <td class="seminarrow">
-	      When evaluated, the <tt>smooth</tt> operator simply
-	      returns the value of the expression <tt>expr</tt>.  But
-	      it also acts as a guarantee that <tt>expr</tt> is
-	      <tt>p</tt> times continuously differentiable.  For
+	      When evaluated, the <code>smooth</code> operator simply
+	      returns the value of the expression <code>expr</code>.  But
+	      it also acts as a guarantee that <code>expr</code> is
+	      <code>p</code> times continuously differentiable.  For
 	      further details, see {{ xref("3.7.3.2", 30) }}.
 	    </td>
 	  </tr>
@@ -223,7 +223,7 @@
     </span>
     <br>
     <span>
-      <tt>terminate</tt>
+      <code>terminate</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
@@ -233,9 +233,9 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>terminate()</tt></td>
+	    <td><code>terminate()</code></td>
 	    <td class="seminarrow">
-	      The <tt>terminate</tt> operator instructs the underlying
+	      The <code>terminate</code> operator instructs the underlying
 	      simulation environment to terminate the simulation after
 	      the completion of the next integration step or event
 	      iteration.  See {{ xref("8.3.8", 87) }} for more

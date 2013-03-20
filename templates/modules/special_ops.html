@@ -4,22 +4,22 @@
 <div class="module">
   <h5 style="padding: 0px 20px">Special Operators</h5>
   <div class="modbod">
-    <span><tt>connect</tt></span>
+    <span><code>connect</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
-	<tt>connect(a, b);</tt> (see {{ xref("9.1", 93) }})
+	<code>connect(a, b);</code> (see {{ xref("9.1", 93) }})
       </div>
     </span><br>
-    <span><tt>der</tt></span>
+    <span><code>der</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="right">
-	<tt>der(x)</tt> - Take the derivative of a variables
+	<code>der(x)</code> - Take the derivative of a variables
 	or <b>expression</b> (see {{ xref("3.7.2", 22) }} )
       </div>
     </span>
     <br>
     <span>
-      <tt>inStream</tt>
+      <code>inStream</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
@@ -31,11 +31,11 @@
 
 	  <tr>
 	    <td>
-	      <tt>inStream(v)</tt>
+	      <code>inStream(v)</code>
 	    </td>
 	    <td class="seminarrow">
-	      <tt>v</tt> must be a stream variable (<i>i.e.,</i> be
-	      preceded by the <tt><b>stream</b></tt> qualifier on a
+	      <code>v</code> must be a stream variable (<i>i.e.,</i> be
+	      preceded by the <code><b>stream</b></code> qualifier on a
 	      connector).  This operator provides the value of the
 	      stream variable close to the connection point assuming
 	      inward flow.  For more details, see {{ xref("15.2", 176)
@@ -47,7 +47,7 @@
     </span>
     <br>
     <span>
-      <tt>actualStream</tt>
+      <code>actualStream</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
@@ -59,11 +59,11 @@
 
 	  <tr>
 	    <td>
-	      <tt>actualStream(v)</tt>
+	      <code>actualStream(v)</code>
 	    </td>
 	    <td class="seminarrow">
 	      Returns the actual value of the stream
-	      variable <tt>v</tt> for any flow direction.  For more
+	      variable <code>v</code> for any flow direction.  For more
 	      details, see {{ xref("15.3", 179) }}.
 	    </td>
 	  </tr>
@@ -71,7 +71,7 @@
       </div>
     </span>
 
-    <span><tt>semiLinear</tt></span>
+    <span><code>semiLinear</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
@@ -82,12 +82,12 @@
 
 	  <tr>
 	    <td>
-	      <tt>semiLinear(x, postivieSlope, negativeSlope)</tt>
+	      <code>semiLinear(x, postivieSlope, negativeSlope)</code>
 	    </td>
 	    <td class="seminarrow">
 	      Equivalent to:
-	      <tt class="nobreak"><b>if</b> x&gt;=0 <b>then</b>
-	      positiveSlope*x <b>else</b> negativeSlope*x;</tt><br>
+	      <code class="nobreak"><b>if</b> x&gt;=0 <b>then</b>
+	      positiveSlope*x <b>else</b> negativeSlope*x;</code><br>
 	      See {{ xref("3.7.2", 23) }} for more details.
 	    </td>
 	  </tr>
@@ -97,7 +97,7 @@
 
     <br>
     <span>
-      <tt><span class="toowide">spatialDistribution</span></tt>
+      <code><span class="toowide">spatialDistribution</span></code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
@@ -109,7 +109,7 @@
 
 	  <tr>
 	    <td>
-	      <tt>spatialDistribution(...)</tt>
+	      <code>spatialDistribution(...)</code>
 	    </td>
 	    <td class="seminarrow">
 	      See {{ xref("3.7.2.2", 23) }}
@@ -121,7 +121,7 @@
     <br>
 
     <span>
-      <tt>getInstanceName</tt>
+      <code>getInstanceName</code>
     </span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
@@ -133,7 +133,7 @@
 
 	  <tr>
 	    <td>
-	      <tt>getInstanceName()</tt>
+	      <code>getInstanceName()</code>
 	    </td>
 	    <td class="seminarrow">
 	      Returns a string with model/block and instance names
@@ -146,7 +146,7 @@
     </span>
     <br>
 
-    <span><tt>homotopy</tt></span>
+    <span><code>homotopy</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="bottom">
 	<table>
@@ -157,10 +157,10 @@
 
 	  <tr>
 	    <td>
-	      <tt>homotopy(actual=...,simplified=...)</tt>
+	      <code>homotopy(actual=...,simplified=...)</code>
 	    </td>
 	    <td class="seminarrow">
-	      The <tt>homotopy</tt> operator can be used to ease the
+	      The <code>homotopy</code> operator can be used to ease the
 	      solving of non-linear systems.  Further discussion of
 	      its use can be found in {{ xref("3.7.2", 22) }}.
 	    </td>
@@ -170,7 +170,7 @@
     </span>
     <br>
 
-    <span><tt>delay</tt></span>
+    <span><code>delay</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table>
@@ -179,12 +179,12 @@
 	    <th>Description</th>
 	  </tr>
 	  <tr>
-	    <td><tt>delay(expr, delayTime)</tt><br>
-	      <tt class="nobreak">delay(expr, delayTime, delayMax)&nbsp;</tt>
+	    <td><code>delay(expr, delayTime)</code><br>
+	      <code class="nobreak">delay(expr, delayTime, delayMax)&nbsp;</code>
 	    </td>
 	    <td class="seminarrow">
-	      Give the value of <tt>expr</tt> delayed by (the
-	      potentially variable) <tt>delayTime</tt>.  See {{
+	      Give the value of <code>expr</code> delayed by (the
+	      potentially variable) <code>delayTime</code>.  See {{
 	      xref("3.7.2", 22) }} and {{ xref("3.7.2.1", 23) }} for
 	      more details.
 	    </td>
@@ -194,7 +194,7 @@
     </span>
     <br>
 
-    <span><tt>assert</tt></span>
+    <span><code>assert</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table>
@@ -205,18 +205,18 @@
 
 	  <tr>
 	    <td>
-	      <tt class="nobreak"><tt>assert(cond, message, level={{tname("AssertionLevel")}}.error)</tt>
+	      <code class="nobreak"><code>assert(cond, message, level={{tname("AssertionLevel")}}.error)</code>
 	    </td>
 	    <td class="seminarrow">
 	      Assertions are used to enforce limitations in a model
-	      through the conditional expression, <tt>cond</tt>.
-	      Normally, the <tt>level</tt> argument defaults to
-	      <tt>{{tname("AssertionLevel")}}.error</tt>.  However, if
-	      a {{kw("false")}} value for <tt>cond</tt> isn't strictly
-	      an error, the <tt>level</tt> argument can be set to
-	      <tt>{{tname("AssertionLevel")}}.warning</tt>.  See {{
+	      through the conditional expression, <code>cond</code>.
+	      Normally, the <code>level</code> argument defaults to
+	      <code>{{tname("AssertionLevel")}}.error</code>.  However, if
+	      a {{kw("false")}} value for <code>cond</code> isn't strictly
+	      an error, the <code>level</code> argument can be set to
+	      <code>{{tname("AssertionLevel")}}.warning</code>.  See {{
 	      xref("8.3.7", 87) }} for more details
-	      about <tt>assert</tt>.
+	      about <code>assert</code>.
 	    </td>
 	  </tr>
 	</table>
@@ -224,7 +224,7 @@
     </span>
     <br>
 
-    <span><tt>ndims</tt></span>
+    <span><code>ndims</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table>
@@ -235,10 +235,10 @@
 
 	  <tr>
 	    <td>
-	      <tt class="nobreak"><tt>ndims(A)</tt>
+	      <code class="nobreak"><code>ndims(A)</code>
 	    </td>
 	    <td class="seminarrow">
-	      Returns the number of dimensions of <tt>A</tt>.  See {{
+	      Returns the number of dimensions of <code>A</code>.  See {{
 	      xref("10.3.1", 112) }} for more details.
 	    </td>
 	  </tr>
@@ -247,7 +247,7 @@
     </span>
     <br>
 
-    <span><tt>size</tt></span>
+    <span><code>size</code></span>
     <span class="pull-right">{{ example }}
       <div class="popover" data-placement="top">
 	<table>
@@ -258,33 +258,33 @@
 
 	  <tr>
 	    <td>
-	      <tt class="nobreak"><tt>size(A,i)</tt>
+	      <code class="nobreak"><code>size(A,i)</code>
 	    </td>
 	    <td class="seminarrow">
-	      Returns the size of dimension <t>i</t> in <tt>A</tt>
-	      where 0 &lt; <tt>i</tt> &lt;= <tt>ndims(A)</tt>.
+	      Returns the size of dimension <t>i</t> in <code>A</code>
+	      where 0 &lt; <code>i</code> &lt;= <code>ndims(A)</code>.
 	    </td>
 	  </tr>
 
 	  <tr>
 	    <td>
-	      <tt class="nobreak"><tt>size(A)</tt>
+	      <code class="nobreak"><code>size(A)</code>
 	    </td>
 	    <td class="seminarrow">
 	      Returns a vector containing the size of each dimension
-	      of <tt>A</tt>.
+	      of <code>A</code>.
 	    </td>
 	  </tr>
 	</table>
 	<div class="footnote">
 	  See {{ xref("10.3.1", 112) }} for more discussion about
-	  the <tt>size</tt> function.
+	  the <code>size</code> function.
 	</div>
       </div>
     </span>
     <br>
 
-    <span><tt>cardinality</tt></span>
+    <span><code>cardinality</code></span>
     <span class="pull-right">{{ warning }}
       <div class="popover" data-placement="top">
 	This operator is <b>deprecated</b>.  It should no longer be
@@ -293,7 +293,7 @@
     </span>
     <br>
 
-    <span><tt>isPresent</tt></span>
+    <span><code>isPresent</code></span>
     <span class="pull-right">{{ warning }}
       <div class="popover" data-placement="top">
 	This operator was <b>removed</b> from the language as of
