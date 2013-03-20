@@ -1,16 +1,17 @@
 Overview
 ========
 
-This repository contains all the source material for the Modelica
-Quick Reference card [hosted by Xogeny](http://modref.xogeny.com).
+This repository contains all the source material for the Modelica Web
+Reference application [hosted by Xogeny](http://modref.xogeny.com).
 
 Goals
 =====
 
-It is impossible to cram the entire Modelica specification
-into this quick reference card.
+It is impossible to cram the entire Modelica specification into a
+simple "cheatsheet".  So I tried to leverage technology to create
+this Modelica Web Reference.
 
-The goals of this quick reference card are:
+The goals of this web reference are:
 
   * To provide a distilled version of what is in the specification.
   * To be relatively complete with respect to the keywords, operators,
@@ -26,13 +27,13 @@ The goals of this quick reference card are:
 Contributions
 =============
 
-I very much welcome any feedback or contributions to this card.  If I
-implement any of your suggestions, I will gladly list you in the
-acknowledgments section.
+I very much welcome any feedback or contributions to this reference
+material.  If I implement any of your suggestions, I will gladly list
+you in the acknowledgments section.
 
 The simplest way to accept a contribution (i.e. correction or
-improvement) to this card is via pull request.  Alternatively, you can
-submit an issue to [the issue
+improvement) to this reference material is via pull request.
+Alternatively, you can submit an issue to [the issue
 tracker](http://github.com/xogeny/ModelicaWebRef/issues).
 
 The reference was developed under Linux although it should be possible
@@ -49,7 +50,7 @@ Attribution-NonCommercial-NoDerivs 3.0
 Unported](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US)
 License.  The main reason behind choosing this license is simply to
 avoid a proliferation of slightly different (or worse, erroneous)
-reference cards.  By having one "master" copy of this reference, my
+reference materials.  By having one "master" copy of this reference, my
 hope is to keep all improvements funneled into this master copy.
 
 **Note**: For the purpose of these licensing terms, I will not
