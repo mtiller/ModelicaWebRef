@@ -1,8 +1,8 @@
 {
     "title": "Modelica Quick Reference",
     "version": "0.9&beta;",
-    "comment": "<i class=\"icon-comment\"></i>",
-    "warning": "<i class=\"icon-warning-sign\"></i>",
-    "example": "<i class=\"icon-align-left\"></i>",
-    "docs": "<i class=\"icon-bookmark\"></i>"
+    "comment": "<i class=\"clickable icon-comment\"></i>",
+    "warning": "<i class=\"clickable icon-warning-sign\"></i>",
+    "example": "<i class=\"clickable icon-align-left\"></i>",
+    "docs": "<i class=\"clickable icon-bookmark\"></i>"
 }

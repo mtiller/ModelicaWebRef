@@ -315,3 +315,7 @@ code {
     font-size: 14px;
     padding: 0px;
 }
+
+.clickable {
+    cursor: pointer;
+}
