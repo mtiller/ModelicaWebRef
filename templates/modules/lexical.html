@@ -129,7 +129,11 @@
 	    <tr><td><code>1, 1.0, 0.5, 2.3e-5, 78.2E+2</code></td></tr>
 	    <tr><td><br></td></tr>
 	    <tr><th>Leading zeros</th></tr>
-	    <tr><td><code>.7</code> is <b>not</b> a valid floating point number in Modelica, but several tools accept it anyway</td></tr>
+	    <tr><td><code>.7</code> (as one example) is <b>not</b> a
+	    valid floating point number in Modelica because the
+	    lexical rules state that a floating point number must have
+	    a digit before the decimal point. However, several tools
+	    will accept such numbers anyway.</td></tr>
 	    <tr><th>Complications with signed numbers</th></tr>
 	    <tr><td class="seminarrow">Examples of expressions which
 	    are not allowed in Modelica because of interactions
