@@ -23,3 +23,7 @@ $(document).bind('keyup', function(e) {
 	$(".pparent").each( function(i) { $(this).popover('hide'); } )
     }
 })
+
+$('body').on('click', '.popover div', function() {
+    $(".pparent").each( function(i) { $(this).popover('hide'); } )
+})
