@@ -24,7 +24,12 @@
 	    </td>
 	    <td class="seminarrow">
 	      When applied to an array, the <code>max</code> function
-	      returns the element of the array with the greatest value.
+	      returns the element of the array with the greatest
+	      value.  For example,<br>
+	      <div class="indented">
+		<code>max([1, 5; 7, 3])</code> returns <code>7</code><br>
+		<code>max({3, 8, 1})</code> returns <code>8</code>
+	      </div>
 	    </td>
 	  </tr>
 
@@ -70,6 +75,11 @@
 	    <td class="seminarrow">
 	      When applied to an array, the <code>min</code> function
 	      returns the element of the array with the least value.
+	      For example,<br>
+	      <div class="indented">
+		<code>min([1, 5; 7, 3])</code> returns <code>1</code><br>
+		<code>min({3, 8, 1})</code> returns <code>1</code>
+	      </div>
 	    </td>
 	  </tr>
 	  <tr>
@@ -107,6 +117,20 @@
 	  </tr>
 	  <tr>
 	    <td>
+	      <code class="nobreak">product(A)</code>
+	    </td>
+	    <td class="seminarrow">
+	      When applied to an array, the <code>product</code>
+	      function returns the product of all elements in the
+	      array.  For example,<br>
+	      <div class="indented">
+		<code>product([1, 5; 7, 3])</code> returns <code>105</code><br>
+		<code>product({3, 8, 1})</code> returns <code>24</code>
+	      </div>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>
 	      <code class="nobreak">
 		product(e, for i in u, j in v, ...)&nbsp;&nbsp;
 	      </code>
@@ -127,6 +151,20 @@
 	  <tr>
 	    <th>Usage</th>
 	    <th>Description</th>
+	  </tr>
+	  <tr>
+	    <td>
+	      <code class="nobreak">sum(A)</code>
+	    </td>
+	    <td class="seminarrow">
+	      When applied to an array, the <code>sum</code>
+	      function returns the sum of all elements in the
+	      array.  For example,<br>
+	      <div class="indented">
+		<code>sum([1, 5; 7, 3])</code> returns <code>16</code><br>
+		<code>sum({3, 8, 1})</code> returns <code>12</code>
+	      </div>
+	    </td>
 	  </tr>
 	  <tr>
 	    <td>
