@@ -4,8 +4,12 @@ all:	index.html
 
 .PHONY: index.html
 
-index.html:
-	(cd templates; ../jinjafy.py --output ../index.html root.html)
+build:
+	virtualenv build
+	build/bin/pip install jinja2
+
+index.html: build
+	(cd templates; ../build/bin/python2 ../jinjafy.py --output ../index.html root.html)
 
 export: index.html
 	-mkdir output
@@ -16,4 +20,5 @@ push: export
 	(cd output; git add .; git commit -m "New version to push"; git push)
 
 clean:
+	-rm -rf build
 	-rm index.html
